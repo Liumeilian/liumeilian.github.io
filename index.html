@@ -214,6 +214,76 @@
 
 
   
+    <article id="post-maxLength" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/25/maxLength/">查找两个字符串中最长的公共子串</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/25/maxLength/" class="archive-article-date">
+  	<time datetime="2017-03-25T12:48:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><pre><code>str1=“aaa3333”；str2=“vscscsaaa33”;求str1和str2中最长的公共子串aaa33
+</code></pre><h2 id="思想："><a href="#思想：" class="headerlink" title="思想："></a>思想：</h2><pre><code>在长的字符串str2里面找最长的str1的子串
+</code></pre><h4 id="分析步骤："><a href="#分析步骤：" class="headerlink" title="分析步骤："></a>分析步骤：</h4><ul>
+<li>1现在str2里面找 aaa3333，str1的长度是7，下标是0-6，先在str2中找str1的0-6的字符串aaa3333，找          的长度是7</li>
+<li>2找不到aaa3333，再找str1中0-5的字符串aaa333，找不到，再找1-6的字符串aa3333，找不到，找的         长度是6。</li>
+<li>3再找0-4的字符串aaa33，找到了就结束查找。</li>
+</ul>
+        
+          <a class="article-more-a" href="/2017/03/25/maxLength/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/25/maxLength/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
   
 
 
@@ -301,6 +371,10 @@
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
