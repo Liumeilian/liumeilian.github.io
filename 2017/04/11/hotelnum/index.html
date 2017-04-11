@@ -6,14 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://liumeilian.com.cn">
-  <title>Tag: js | 美小妞的博客</title>
+  <title>笔试中hotelnum | 美小妞的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="美小妞的博客">
-<meta property="og:url" content="http://liumeilian.com.cn/tags/js/index.html">
+  <meta name="description" content="问题你要出去旅游，有N元的预算住酒店，有M家酒店供你挑选，这些酒店都有价格X。 需要你正好花完这N元住酒店（不能多，也不能少）最少能住几晚？返回最少住的天数，没有匹配的返回-1 比如你有1000元，所有酒店都是大于1000的，则返回-1 比如你有1000元，有1家1000元的，有1家300，有1家700。则最少能住1晚，最多住2晚（300+700）。返回1 比如你有1000元，有1家387元，有">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔试中hotelnum">
+<meta property="og:url" content="http://liumeilian.com.cn/2017/04/11/hotelnum/index.html">
 <meta property="og:site_name" content="美小妞的博客">
+<meta property="og:description" content="问题你要出去旅游，有N元的预算住酒店，有M家酒店供你挑选，这些酒店都有价格X。 需要你正好花完这N元住酒店（不能多，也不能少）最少能住几晚？返回最少住的天数，没有匹配的返回-1 比如你有1000元，所有酒店都是大于1000的，则返回-1 比如你有1000元，有1家1000元的，有1家300，有1家700。则最少能住1晚，最多住2晚（300+700）。返回1 比如你有1000元，有1家387元，有">
+<meta property="og:image" content="https://unsplash.it/1000/300/?random">
+<meta property="og:updated_time" content="2017-04-11T03:52:37.029Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="美小妞的博客">
+<meta name="twitter:title" content="笔试中hotelnum">
+<meta name="twitter:description" content="问题你要出去旅游，有N元的预算住酒店，有M家酒店供你挑选，这些酒店都有价格X。 需要你正好花完这N元住酒店（不能多，也不能少）最少能住几晚？返回最少住的天数，没有匹配的返回-1 比如你有1000元，所有酒店都是大于1000的，则返回-1 比如你有1000元，有1家1000元的，有1家300，有1家700。则最少能住1晚，最多住2晚（300+700）。返回1 比如你有1000元，有1家387元，有">
+<meta name="twitter:image" content="https://unsplash.it/1000/300/?random">
   
     <link rel="alternative" href="/atom.xml" title="美小妞的博客" type="application/atom+xml">
   
@@ -147,36 +153,62 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-hotelnum" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      笔试中hotelnum
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/11/hotelnum/" class="archive-article-date">
+
+        
+        <a href="/2017/04/11/hotelnum/" class="archive-article-date">
   	<time datetime="2017-04-11T02:19:59.970Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-11</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/11/hotelnum/">笔试中hotelnum</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
+<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>你要出去旅游，有N元的预算住酒店，有M家酒店供你挑选，这些酒店都有价格X。 需要你正好花完这N元住酒店（不能多，也不能少）最少能住几晚？返回最少住的天数，没有匹配的返回-1<em> 比如你有1000元，所有酒店都是大于1000的，则返回-1</em> 比如你有1000元，有1家1000元的，有1家300，有1家700。则最少能住1晚，最多住2晚（300+700）。返回1<em> 比如你有1000元，有1家387元，有1家2元，有一家611，则返回3（3家各住1天）</em> 比如你有1000元，有1家1元的，有一家2元的，有一家1001元的，则返回500（1元的1000天，2元的500天）输入<br>n个int，最后一个int为你拥有的钱，[0, n-2]为酒店的价格</p>
+<pre><code>样例输入
+</code></pre><p>1001 1002 1003 2001 1000</p>
+<p>  输出<br>返回最少住的天数，没有匹配的返回-1</p>
+<p>  样例输出<br>-1</p>
+ <a id="more"></a>
+<h1 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h1><ul>
+<li>1.先把各个酒店的价格排序，</li>
+<li>2.用剩下的钱除以剩下的酒店中价格最高的，这里如果商大于0，day要不断加加</li>
+<li>3.用剩下的钱对剩下的酒店中价格最高的取余，如果余数为0，跳出循环</li>
+<li><p>4.如果循环正常结束说明钱没有刚好花完，返回-1。</p>
+<h1 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下"></a>代码如下</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str1=<span class="string">'1001 1002 1003 2001 1000'</span>;</div><div class="line">	<span class="keyword">var</span> str2=<span class="string">'300 700 1000 1000'</span>;</div><div class="line">	<span class="keyword">var</span> str3=<span class="string">'387 3 610 1000'</span>;</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">hotelday</span>(<span class="params">str</span>)</span>&#123;</div><div class="line">		<span class="keyword">var</span> arr=str.split(<span class="string">' '</span>);</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</div><div class="line">			arr[i]=<span class="built_in">parseInt</span>(arr[i]);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">var</span> money=arr[arr.length<span class="number">-1</span>];</div><div class="line">		<span class="keyword">var</span> hotel=[];</div><div class="line">		<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;arr.length<span class="number">-1</span>;i++)&#123;</div><div class="line">			hotel.push(arr[i]);</div><div class="line">		&#125;</div><div class="line">		hotel=hotel.sort(<span class="function"><span class="keyword">function</span> <span class="title">compare</span>(<span class="params">a,b</span>)</span>&#123;</div><div class="line">			<span class="keyword">return</span> a-b;<span class="comment">//这里的compare是规定排序的方式</span></div><div class="line">		&#125;);</div><div class="line">		<span class="keyword">var</span> len=hotel.length;</div><div class="line">		<span class="keyword">var</span> day=<span class="number">0</span>;</div><div class="line">		<span class="keyword">for</span>(i=len<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)&#123;</div><div class="line">			<span class="keyword">var</span> shang=<span class="built_in">Math</span>.floor(money/hotel[i]);<span class="comment">//floor为向下取整,ceil为向上取整，round为四舍五入</span></div><div class="line">			<span class="keyword">var</span> yushu=money%hotel[i];</div><div class="line">			<span class="keyword">if</span>(shang!=<span class="number">0</span>)&#123;</div><div class="line">				day+=shang;<span class="comment">//day记录天数</span></div><div class="line">			&#125;</div><div class="line">			<span class="keyword">if</span>(yushu==<span class="number">0</span>)&#123;</div><div class="line">				<span class="keyword">break</span>;<span class="comment">//余数为0就没有跳出循环</span></div><div class="line">			&#125;</div><div class="line">			money=yushu;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span>(i==<span class="number">-1</span>)&#123;</div><div class="line">			<span class="keyword">return</span> <span class="number">-1</span>;<span class="comment">//循环正常结束</span></div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="keyword">return</span> day;</div><div class="line">	&#125;</div><div class="line">	alert(hotelday(str3));</div></pre></td></tr></table></figure>
+<h1 id="区分sort和reverse"><a href="#区分sort和reverse" class="headerlink" title="区分sort和reverse"></a>区分sort和reverse</h1></li>
+<li><p>这两个函数功能不是相反的关系，这两个函数一点关系都没有</p>
+</li>
+<li>sort是把数组里的元素排列顺序</li>
+<li>reverse是颠倒数组的元素的顺序,就是arr[0]和arr[length-1]交换,arr[1]和arr[length-2]交换</li>
+<li>sort一盒带参数，reverse没有参数</li>
+</ul>
+<h2 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h2><ul>
+<li>当sort没有参数时，数组是按照ASCII排列的，此时它把数组里的元素都看成是字符串，字符串排序首字母（a-z）或（1-9）这样的顺序</li>
+<li>如果要对数组排序的话sort就一定要有参数</li>
+<li>数字小到大compare(a,b){return a-b;}</li>
+<li><p>数字大到小compare(a,b){return b-a;}</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"> var arr=[<span class="number">12</span>,<span class="number">23</span>,<span class="number">53</span>,<span class="number">13</span>,<span class="number">15</span>,<span class="number">5</span>];</div><div class="line"> alert(arr.sort());<span class="comment">//12 13 15 23 5 53</span></div><div class="line"></div><div class="line"></div><div class="line"> var arr=[<span class="number">12</span>,<span class="number">23</span>,<span class="number">53</span>,<span class="number">13</span>,<span class="number">15</span>,<span class="number">5</span>];</div><div class="line">function compare(a,b)&#123;</div><div class="line">	return a-b;</div><div class="line">&#125;</div><div class="line">alert(arr.sort(compare));<span class="comment">//5 12 13 15 23 53</span></div><div class="line"></div><div class="line">var arr=[<span class="number">12</span>,<span class="number">23</span>,<span class="number">53</span>,<span class="number">13</span>,<span class="number">15</span>,<span class="number">5</span>];</div><div class="line">function compare(a,b)&#123;</div><div class="line">	return b-a;</div><div class="line">&#125;</div><div class="line">alert(arr.sort(compare));<span class="comment">//53 23 15 13 12 5</span></div></pre></td></tr></table></figure>
+<h2 id="reverse"><a href="#reverse" class="headerlink" title="reverse"></a>reverse</h2><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var arr=[<span class="number">12</span>,<span class="number">23</span>,<span class="number">53</span>,<span class="number">13</span>,<span class="number">15</span>,<span class="number">5</span>];</div><div class="line">alert(arr.reverse());<span class="comment">//5 15 14 53 23 12</span></div></pre></td></tr></table></figure></li>
+</ul>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -192,137 +224,106 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://liumeilian.com.cn/2017/04/11/hotelnum/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/08/function/" class="archive-article-date">
-  	<time datetime="2017-04-08T12:28:16.653Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-08</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/08/function/">函数的定义 函数声明 函数表达式 立即执行函数</a>
-    </h1>
+  
+    <a href="/2017/04/08/function/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">函数的定义 函数声明 函数表达式 立即执行函数</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="hotelnum" data-title="笔试中hotelnum" data-url="http://liumeilian.com.cn/2017/04/11/hotelnum/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"liumeilian"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/08/maxstr/" class="archive-article-date">
-  	<time datetime="2017-04-08T11:53:17.281Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/08/maxstr/">找出字符串中出现最多的字符和次数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/08/reg/" class="archive-article-date">
-  	<time datetime="2017-04-08T08:15:21.110Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/08/reg/">正则表达式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -345,9 +346,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		root: "/",

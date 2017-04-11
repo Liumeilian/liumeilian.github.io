@@ -28,7 +28,8 @@
 
 123var str=&quot;akjkcs123232&quot;;var re=/\D/;alert(re.test(str));//true
 \s : 空格\S : 非空格\d : 数字\D : 非数字\w : 字符   ( 字母 ，数字，下划线_ )\W : 非字符*/">
-<meta property="og:updated_time" content="2017-04-08T12:52:03.048Z">
+<meta property="og:image" content="https://unsplash.it/1000/300/?random">
+<meta property="og:updated_time" content="2017-04-11T03:56:39.527Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正则表达式">
 <meta name="twitter:description" content="正则表达式常用方法test用途：字符串判断
@@ -39,6 +40,7 @@
 
 123var str=&quot;akjkcs123232&quot;;var re=/\D/;alert(re.test(str));//true
 \s : 空格\S : 非空格\d : 数字\D : 非数字\w : 字符   ( 字母 ，数字，下划线_ )\W : 非字符*/">
+<meta name="twitter:image" content="https://unsplash.it/1000/300/?random">
   
     <link rel="alternative" href="/atom.xml" title="美小妞的博客" type="application/atom+xml">
   
@@ -192,7 +194,8 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="正则表达式常用方法"><a href="#正则表达式常用方法" class="headerlink" title="正则表达式常用方法"></a>正则表达式常用方法</h1><h3 id="test"><a href="#test" class="headerlink" title="test"></a>test</h3><p>用途：字符串判断</p>
+        <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
+<h1 id="正则表达式常用方法"><a href="#正则表达式常用方法" class="headerlink" title="正则表达式常用方法"></a>正则表达式常用方法</h1><h3 id="test"><a href="#test" class="headerlink" title="test"></a>test</h3><p>用途：字符串判断</p>
 <ul>
 <li>-返回真假</li>
 <li>-正则.test(字符串)</li>
@@ -249,7 +252,17 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 <h3 id="开始-结束"><a href="#开始-结束" class="headerlink" title="^开始  $结束"></a>^开始  $结束</h3><figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//^ : 正则的最开始位置，就代笔起始的意思</span></div><div class="line"><span class="comment">//$ : 正则的最后位置 , 就代笔结束的意思</span></div></pre></td></tr></table></figure>
-
+<h1 id="用RegExp构造函数来创建正则表达式"><a href="#用RegExp构造函数来创建正则表达式" class="headerlink" title="用RegExp构造函数来创建正则表达式"></a>用RegExp构造函数来创建正则表达式</h1><figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str=<span class="string">"catastrophe"</span>;</div><div class="line"><span class="keyword">var</span> re=<span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"cat"</span>,<span class="string">"g"</span>);</div><div class="line">re.test(str);<span class="comment">//true</span></div></pre></td></tr></table></figure>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>字符\在字符串中通常被转义为\,而在正则表达式中就会被转义为\\</p>
+<p>字面量模式和等价的字符串的比较如下</p>
+<ul>
+<li>/[bc]at/ ==  “\[bc\]at”</li>
+<li>/.at/ ==”\.at”</li>
+<li>/\d.\d{1,2}/ == “\d.\d{1,3}”       </li>
+<li>/\w\hello\123/ == “\w\\hello\\123”</li>
+</ul>
+<p>总之字面量的一个\ 会变成两个\</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str=<span class="string">'R23C45'</span>;</div><div class="line"><span class="keyword">var</span> re1=<span class="regexp">/^R\d+C\d+$/</span>;</div><div class="line"><span class="keyword">var</span> re2=<span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"^R\d+C\d+$"</span>);</div><div class="line"><span class="keyword">var</span> re3=<span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"^R\\d+C\\d+$"</span>);</div><div class="line">alert(str.match(re1));<span class="comment">//[R23C45]</span></div><div class="line">alert(str.match(re2));<span class="comment">//null</span></div><div class="line">alert(str.match(re3));<span class="comment">//[R23C45]</span></div></pre></td></tr></table></figure>
       
 
       
@@ -461,11 +474,15 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">布局</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">布局</a>
+                <a href="javascript:void(0)" class="js-tag color3">测试</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -474,10 +491,6 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">字符串的操作</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">测试</a>
               </li>
             
             <div class="clearfix"></div>

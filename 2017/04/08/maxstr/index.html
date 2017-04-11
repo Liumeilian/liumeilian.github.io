@@ -14,10 +14,12 @@
 <meta property="og:url" content="http://liumeilian.com.cn/2017/04/08/maxstr/index.html">
 <meta property="og:site_name" content="美小妞的博客">
 <meta property="og:description" content="问题12var str = &apos;assssjdssskssalsssdkjsssdss&apos;;//找出str中出现最多的字符s">
-<meta property="og:updated_time" content="2017-04-08T12:09:25.201Z">
+<meta property="og:image" content="https://unsplash.it/1000/300/?random">
+<meta property="og:updated_time" content="2017-04-11T03:56:29.899Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="找出字符串中出现最多的字符和次数">
 <meta name="twitter:description" content="问题12var str = &apos;assssjdssskssalsssdkjsssdss&apos;;//找出str中出现最多的字符s">
+<meta name="twitter:image" content="https://unsplash.it/1000/300/?random">
   
     <link rel="alternative" href="/atom.xml" title="美小妞的博客" type="application/atom+xml">
   
@@ -171,7 +173,8 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'assssjdssskssalsssdkjsssdss'</span>;</div><div class="line"><span class="comment">//找出str中出现最多的字符s</span></div></pre></td></tr></table></figure>
+        <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
+<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'assssjdssskssalsssdkjsssdss'</span>;</div><div class="line"><span class="comment">//找出str中出现最多的字符s</span></div></pre></td></tr></table></figure>
 <a id="more"></a>
 <h1 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h1><figure class="highlight axapta"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">var <span class="keyword">str</span> = <span class="string">'assssjdssskssalsssdkjsssdss'</span>;</div><div class="line"></div><div class="line">var arr = <span class="keyword">str</span>.split(<span class="string">''</span>);</div><div class="line"></div><div class="line"><span class="keyword">str</span> = arr.sort().join(<span class="string">''</span>);</div><div class="line"></div><div class="line">alert(<span class="keyword">str</span>);<span class="comment">//aadddjjkklsssssssssssssssss</span></div><div class="line"></div><div class="line">var value = <span class="string">''</span>;</div><div class="line">var <span class="keyword">index</span> = <span class="number">0</span>;</div><div class="line"></div><div class="line">var re = /(\w)\<span class="number">1</span>+/g;</div><div class="line"></div><div class="line"><span class="keyword">str</span>.replace(re,function($<span class="number">0</span>,$<span class="number">1</span>)&#123;</div><div class="line">	</div><div class="line">	<span class="comment">//alert($0);</span></div><div class="line">	</div><div class="line">	<span class="keyword">if</span>(<span class="keyword">index</span>&lt;$<span class="number">0.</span>length)&#123;</div><div class="line">		<span class="keyword">index</span> = $<span class="number">0.</span>length;</div><div class="line">		value = $<span class="number">1</span>;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">&#125;);</div><div class="line"></div><div class="line">alert(<span class="string">'最多的字符:'</span>+value+<span class="string">',重复的次数:'</span>+<span class="keyword">index</span>);</div></pre></td></tr></table></figure>
 
@@ -390,11 +393,15 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">布局</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">布局</a>
+                <a href="javascript:void(0)" class="js-tag color3">测试</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -403,10 +410,6 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">字符串的操作</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">测试</a>
               </li>
             
             <div class="clearfix"></div>
