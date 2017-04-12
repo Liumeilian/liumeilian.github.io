@@ -6,14 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://liumeilian.com.cn">
-  <title>Archives: 2017 | 美小妞的博客</title>
+  <title>原生jquery是如何写出来的 | 美小妞的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="美小妞的博客">
-<meta property="og:url" content="http://liumeilian.com.cn/archives/2017/index.html">
+  <meta name="description" content="原生jQ的写法$(function(){}) $(‘#div1’)  $(‘.box’)   $(‘p’)的实现">
+<meta property="og:type" content="article">
+<meta property="og:title" content="原生jquery是如何写出来的">
+<meta property="og:url" content="http://liumeilian.com.cn/2017/04/11/originjquery/index.html">
 <meta property="og:site_name" content="美小妞的博客">
+<meta property="og:description" content="原生jQ的写法$(function(){}) $(‘#div1’)  $(‘.box’)   $(‘p’)的实现">
+<meta property="og:image" content="https://unsplash.it/1000/300/?random">
+<meta property="og:updated_time" content="2017-04-11T08:22:18.324Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="美小妞的博客">
+<meta name="twitter:title" content="原生jquery是如何写出来的">
+<meta name="twitter:description" content="原生jQ的写法$(function(){}) $(‘#div1’)  $(‘.box’)   $(‘p’)的实现">
+<meta name="twitter:image" content="https://unsplash.it/1000/300/?random">
   
     <link rel="alternative" href="/atom.xml" title="美小妞的博客" type="application/atom+xml">
   
@@ -147,116 +153,38 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-originjquery" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/12/flex/" class="archive-article-date">
-  	<time datetime="2017-04-12T07:39:59.710Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-12</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/12/flex/">flex布局</a>
+    <h1 class="article-title" itemprop="name">
+      原生jquery是如何写出来的
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">css3</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/11/funcaera/" class="archive-article-date">
-  	<time datetime="2017-04-11T13:50:58.577Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/11/funcaera/">关于变量的作用域</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/11/originjquery/" class="archive-article-date">
+        
+        <a href="/2017/04/11/originjquery/" class="archive-article-date">
   	<time datetime="2017-04-11T08:13:39.563Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-11</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/11/originjquery/">原生jquery是如何写出来的</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
+<h1 id="原生jQ的写法"><a href="#原生jQ的写法" class="headerlink" title="原生jQ的写法"></a>原生jQ的写法</h1><h2 id="function-‘-div1’-‘-box’-‘p’-的实现"><a href="#function-‘-div1’-‘-box’-‘p’-的实现" class="headerlink" title="$(function(){}) $(‘#div1’)  $(‘.box’)   $(‘p’)的实现"></a>$(function(){}) $(‘#div1’)  $(‘.box’)   $(‘p’)的实现</h2> <a id="more"></a>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">$</span>(<span class="params">vArg</span>)</span>&#123;</div><div class="line">	<span class="keyword">return</span> <span class="keyword">new</span> Vquery(vArg);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Vquery</span>(<span class="params">vArg</span>)</span>&#123;</div><div class="line">	</div><div class="line">		<span class="keyword">this</span>.elements = [];  <span class="comment">//选择元素的这样一个集合</span></div><div class="line">	</div><div class="line">		<span class="comment">//vArg : function</span></div><div class="line">		<span class="keyword">switch</span>(<span class="keyword">typeof</span> vArg)&#123;</div><div class="line">			<span class="keyword">case</span> <span class="string">'function'</span>:</div><div class="line">				<span class="comment">//window.onload = vArg;</span></div><div class="line">				bindEvent(<span class="built_in">window</span>,<span class="string">'load'</span>,vArg);</div><div class="line">			<span class="keyword">break</span>;</div><div class="line">			<span class="keyword">case</span> <span class="string">'string'</span>:</div><div class="line">				</div><div class="line">				<span class="keyword">switch</span>( vArg.charAt(<span class="number">0</span>) )&#123;</div><div class="line">					<span class="keyword">case</span> <span class="string">'#'</span>:   <span class="comment">//id</span></div><div class="line">						 <span class="keyword">this</span>.elements.push(<span class="built_in">document</span>.getElementById(vArg.substring(<span class="number">1</span>)));</div><div class="line">					<span class="keyword">break</span>;</div><div class="line">					<span class="keyword">case</span> <span class="string">'.'</span>:   <span class="comment">//class</span></div><div class="line">						<span class="keyword">this</span>.elements = getByClass(<span class="built_in">document</span>,vArg.substring(<span class="number">1</span>));</div><div class="line">					<span class="keyword">break</span>;</div><div class="line">					<span class="keyword">default</span>:  <span class="comment">//tag</span></div><div class="line">						<span class="keyword">this</span>.elements = toArray(<span class="built_in">document</span>.getElementsByTagName(vArg));</div><div class="line">					<span class="keyword">break</span>;</div><div class="line">				&#125;</div><div class="line">				</div><div class="line">			<span class="keyword">break</span>;</div><div class="line">			<span class="keyword">case</span> <span class="string">'object'</span>:</div><div class="line">				<span class="keyword">if</span>( vArg.constructor == <span class="built_in">Array</span> )&#123;</div><div class="line">					<span class="keyword">this</span>.elements = vArg;</div><div class="line">				&#125;</div><div class="line">				<span class="keyword">else</span>&#123;</div><div class="line">					<span class="keyword">this</span>.elements.push( vArg );</div><div class="line">				&#125;</div><div class="line">			<span class="keyword">break</span>;</div><div class="line">		&#125;</div><div class="line">	</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">bindEvent</span>(<span class="params">obj,events,fn</span>)</span>&#123;</div><div class="line">	<span class="keyword">if</span>(obj.addEventListener)&#123;</div><div class="line">		obj.addEventListener(events,<span class="function"><span class="keyword">function</span>(<span class="params">ev</span>)</span>&#123;</div><div class="line">			<span class="comment">//fn() -&gt; false</span></div><div class="line">			<span class="comment">//fn() -&gt; undefined</span></div><div class="line">			</div><div class="line">			<span class="keyword">if</span>( fn() == <span class="literal">false</span> )&#123;</div><div class="line">				ev.preventDefault();</div><div class="line">				ev.cancelBubble = <span class="literal">true</span>;</div><div class="line">			&#125;</div><div class="line">			</div><div class="line">		&#125;,<span class="literal">false</span>);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">else</span>&#123;</div><div class="line">		obj.attachEvent(<span class="string">'on'</span>+events,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">			</div><div class="line">			<span class="keyword">if</span>( fn() == <span class="literal">false</span> )&#123;</div><div class="line">				<span class="built_in">window</span>.event.cancelBubble = <span class="literal">true</span>;</div><div class="line">				<span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">			&#125;</div><div class="line">			</div><div class="line">		&#125;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//下面是一些辅助函数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getByClass</span>(<span class="params">oParent,sClass</span>)</span>&#123;</div><div class="line">	<span class="keyword">var</span> arr = [];</div><div class="line">	<span class="keyword">var</span> elems = oParent.getElementsByTagName(<span class="string">'*'</span>);</div><div class="line">	</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;elems.length;i++)&#123;</div><div class="line">		<span class="keyword">if</span>( elems[i].className == sClass )&#123;</div><div class="line">			arr.push( elems[i] );</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="keyword">return</span> arr;</div><div class="line">	</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">toArray</span>(<span class="params">elems</span>)</span>&#123;</div><div class="line">	<span class="keyword">var</span> arr = [];</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;elems.length;i++)&#123;</div><div class="line">		arr.push(elems[i]);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> arr;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getStyle</span>(<span class="params">obj,attr</span>)</span>&#123;</div><div class="line">	<span class="keyword">if</span>(obj.currentStyle)&#123;</div><div class="line">		<span class="keyword">return</span> obj.currentStyle[attr];</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">else</span>&#123;</div><div class="line">		<span class="keyword">return</span> getComputedStyle(obj,<span class="literal">false</span>)[attr];</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="css-html-的实现"><a href="#css-html-的实现" class="headerlink" title="$().css() $().html()的实现"></a>$().css() $().html()的实现</h2><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">Vquery.prototype.html = function(str)&#123;</div><div class="line"></div><div class="line">	<span class="keyword">if</span>(str)&#123;  <span class="comment">//设置</span></div><div class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="keyword">this</span>.elements.length;i++)&#123;</div><div class="line">			<span class="keyword">this</span>.elements[i].innerHTML = str;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">else</span>&#123;   <span class="comment">//获取</span></div><div class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.elements[<span class="number">0</span>].innerHTML;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">&#125;;</div><div class="line">Vquery.prototype.click = function(fn)&#123;</div><div class="line">	</div><div class="line">	<span class="comment">/*for(var i=0;i&lt;this.elements.length;i++)&#123;</span></div><div class="line">		bindEvent(this.elements[i],'click',fn);</div><div class="line">	&#125;*/</div><div class="line">	</div><div class="line">	<span class="keyword">this</span>.on(<span class="string">'click'</span>,fn);</div><div class="line">	<span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">	</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -272,339 +200,115 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://liumeilian.com.cn/2017/04/11/originjquery/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/11/hotelnum/" class="archive-article-date">
-  	<time datetime="2017-04-11T02:19:59.970Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-11</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/11/hotelnum/">笔试中hotelnum</a>
-    </h1>
+    <a href="/2017/04/11/funcaera/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          关于变量的作用域
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/04/11/hotelnum/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">笔试中hotelnum</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="originjquery" data-title="原生jquery是如何写出来的" data-url="http://liumeilian.com.cn/2017/04/11/originjquery/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"liumeilian"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/08/function/" class="archive-article-date">
-  	<time datetime="2017-04-08T12:28:16.653Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/08/function/">函数的定义 函数声明 函数表达式 立即执行函数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/08/maxstr/" class="archive-article-date">
-  	<time datetime="2017-04-08T11:53:17.281Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/08/maxstr/">找出字符串中出现最多的字符和次数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/08/reg/" class="archive-article-date">
-  	<time datetime="2017-04-08T08:15:21.110Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/08/reg/">正则表达式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/08/replacestring/" class="archive-article-date">
-  	<time datetime="2017-04-08T02:35:32.848Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/08/replacestring/">用对象下的属性替换字符串中的字符</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">字符串的操作</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/07/a/" class="archive-article-date">
-  	<time datetime="2017-04-07T13:50:25.437Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/07/a/">右边固定宽左边自适应的布局和左边固定宽度右边自适应的布局</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/04/text/" class="archive-article-date">
-  	<time datetime="2017-04-04T13:40:13.757Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/04/text/">刘美莲博客测试</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">测试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/25/maxLength/" class="archive-article-date">
-  	<time datetime="2017-03-25T12:48:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/25/maxLength/">查找两个字符串中最长的公共子串</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -627,8 +331,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,

@@ -6,14 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://liumeilian.com.cn">
-  <title>Archives: 2017 | 美小妞的博客</title>
+  <title>关于变量的作用域 | 美小妞的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="美小妞的博客">
-<meta property="og:url" content="http://liumeilian.com.cn/archives/2017/index.html">
+  <meta name="description" content="难以描述，直接上代码方便理解一些1234function a()&amp;#123;			alert(s);//这里会报错 s is not defined	&amp;#125;	a();
+12345var c=s=10;//这里定义了一个全局变量s，且初始化为10function a()&amp;#123;		alert(s);//10&amp;#125;a();
+12345var s=10;	function a(s)&amp;#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于变量的作用域">
+<meta property="og:url" content="http://liumeilian.com.cn/2017/04/11/funcaera/index.html">
 <meta property="og:site_name" content="美小妞的博客">
+<meta property="og:description" content="难以描述，直接上代码方便理解一些1234function a()&amp;#123;			alert(s);//这里会报错 s is not defined	&amp;#125;	a();
+12345var c=s=10;//这里定义了一个全局变量s，且初始化为10function a()&amp;#123;		alert(s);//10&amp;#125;a();
+12345var s=10;	function a(s)&amp;#">
+<meta property="og:image" content="https://unsplash.it/1000/300/?random">
+<meta property="og:updated_time" content="2017-04-12T02:28:06.396Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="美小妞的博客">
+<meta name="twitter:title" content="关于变量的作用域">
+<meta name="twitter:description" content="难以描述，直接上代码方便理解一些1234function a()&amp;#123;			alert(s);//这里会报错 s is not defined	&amp;#125;	a();
+12345var c=s=10;//这里定义了一个全局变量s，且初始化为10function a()&amp;#123;		alert(s);//10&amp;#125;a();
+12345var s=10;	function a(s)&amp;#">
+<meta name="twitter:image" content="https://unsplash.it/1000/300/?random">
   
     <link rel="alternative" href="/atom.xml" title="美小妞的博客" type="application/atom+xml">
   
@@ -147,74 +159,56 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-funcaera" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/12/flex/" class="archive-article-date">
-  	<time datetime="2017-04-12T07:39:59.710Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-12</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/12/flex/">flex布局</a>
+    <h1 class="article-title" itemprop="name">
+      关于变量的作用域
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">css3</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/11/funcaera/" class="archive-article-date">
+        
+        <a href="/2017/04/11/funcaera/" class="archive-article-date">
   	<time datetime="2017-04-11T13:50:58.577Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-11</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/11/funcaera/">关于变量的作用域</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
+<h1 id="难以描述，直接上代码方便理解一些"><a href="#难以描述，直接上代码方便理解一些" class="headerlink" title="难以描述，直接上代码方便理解一些"></a>难以描述，直接上代码方便理解一些</h1><figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="title">a</span>()&#123;</div><div class="line">			alert(s);//这里会报错 s <span class="keyword">is</span> <span class="keyword">not</span> defined</div><div class="line">	&#125;</div><div class="line">	a();</div></pre></td></tr></table></figure>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> c=s=<span class="number">10</span>;<span class="comment">//这里定义了一个全局变量s，且初始化为10</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span><span class="params">()</span></span>&#123;</div><div class="line">		alert(s);<span class="comment">//10</span></div><div class="line">&#125;</div><div class="line">a();</div></pre></td></tr></table></figure>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s=<span class="number">10</span>;</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">a</span><span class="params">(s)</span></span>&#123;</div><div class="line">			alert(s);<span class="comment">//10</span></div><div class="line">	&#125;</div><div class="line">	a(s);</div></pre></td></tr></table></figure>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s=<span class="number">10</span>;</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">a</span><span class="params">(s)</span></span>&#123;</div><div class="line">		<span class="keyword">var</span> s;<span class="comment">//由于s与形参名相同，所以相当于重新定义一边s，其实这个s就是形参s</span></div><div class="line">		<span class="comment">//虽然上面那句话没有初始化s，但是由于他就是形参s，所以里面的值还是10</span></div><div class="line">		alert(s);<span class="comment">//10</span></div><div class="line">	&#125;</div><div class="line">	a(s);</div></pre></td></tr></table></figure>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s=<span class="number">10</span>;</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">a</span><span class="params">(s)</span></span>&#123;</div><div class="line">		<span class="keyword">var</span> s;</div><div class="line">		alert(s);<span class="comment">//10</span></div><div class="line">		s=<span class="number">20</span>;</div><div class="line">		alert(s);<span class="comment">//20</span></div><div class="line">	&#125;</div><div class="line">	a(s);</div></pre></td></tr></table></figure>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s=<span class="number">10</span>;</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">a</span><span class="params">(s)</span></span>&#123;</div><div class="line">		<span class="keyword">var</span> s=<span class="number">20</span>;</div><div class="line">		alert(s);<span class="comment">//20</span></div><div class="line">	&#125;</div><div class="line">	a(s);</div></pre></td></tr></table></figure>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s=<span class="number">10</span>;</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">a</span><span class="params">(s)</span></span>&#123;</div><div class="line">		<span class="keyword">var</span> s;</div><div class="line">		alert(s);<span class="comment">//10</span></div><div class="line">		s=<span class="number">20</span>;</div><div class="line">	&#125;</div><div class="line">	a(s);</div><div class="line">	alert(s);<span class="comment">//10</span></div></pre></td></tr></table></figure>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span><span class="params">()</span></span>&#123;</div><div class="line">		s=<span class="number">3</span>;</div><div class="line">		alert(s);<span class="comment">//3</span></div><div class="line">	&#125;</div><div class="line">	a();</div><div class="line">	alert(s);<span class="comment">//3</span></div></pre></td></tr></table></figure>
+<figure class="highlight axapta"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var <span class="keyword">str</span>=<span class="number">1</span>;</div><div class="line">alert(<span class="keyword">str</span>);<span class="comment">//1</span></div><div class="line"><span class="keyword">str</span>=<span class="string">"adadwds"</span>;</div><div class="line">alert(<span class="keyword">str</span>);<span class="comment">//adadwds，这里是不会报错的，</span></div><div class="line"><span class="comment">//因为js的变量可以用来保存任何类型的值，虽然不推荐但是却没有错</span></div></pre></td></tr></table></figure>
+<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><p>好吧，感觉脑子快炸掉了</p>
+<h1 id="下面分析一下not-define-undefined-null-NaN"><a href="#下面分析一下not-define-undefined-null-NaN" class="headerlink" title="下面分析一下not define  undefined null NaN"></a>下面分析一下not define  undefined null NaN</h1><h2 id="一-not-define"><a href="#一-not-define" class="headerlink" title="一.not define"></a>一.not define</h2><figure class="highlight gcode"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert<span class="comment">(a)</span>;<span class="comment">//报错 a is not define</span></div></pre></td></tr></table></figure>
+<p>not define说明变量没有被定义</p>
+<h2 id="undefined"><a href="#undefined" class="headerlink" title="undefined"></a>undefined</h2><figure class="highlight gcode"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var a;</div><div class="line">alert<span class="comment">(a)</span>;<span class="comment">//undefined</span></div></pre></td></tr></table></figure>
+<p>undefined表示a已经被定义了，但是由于没有被初始化，所以系统给他赋值为undefined</p>
+<h2 id="null"><a href="#null" class="headerlink" title="null"></a>null</h2><figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a=<span class="built_in">document</span>.getElementById(<span class="string">"main"</span>);</div><div class="line">  alert(a);<span class="comment">//null</span></div></pre></td></tr></table></figure>
+<p>null是Null类型的值，null值表示一个空对象的指针，一般用在一个变量想要保存一个对象但是还没有保存<br>上面这个例子的意思就是a本来想保存一个对象，但是获取不到main所以他还是原来的值null</p>
+<h2 id="NaN是Number类型的一个值"><a href="#NaN是Number类型的一个值" class="headerlink" title="NaN是Number类型的一个值"></a>NaN是Number类型的一个值</h2><p>意思是非数值<br>NaN有两个特点，第一，任何涉及NaN的操作都会返回NaN，第二，NaN与任何值都不想等包括NaN本身<br>isNaN函数接受一个参数，这个参数可以是任何类型，而函数会帮我们确定这个参数是否“不是数值”。<br>isNaN（）在接受一个参数之后，会先尝试把这个参数转化成数值。某些不是数值的值会直接转化为数值，比如“10”或Boolean值。而任何不能被转化为数值的值都会导致这个函数返回true</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">alert(<span class="name">isNaN</span>(<span class="name">NaN</span>))<span class="comment">;//true</span></div><div class="line">alert(<span class="name">isNaN</span>(<span class="number">10</span>))<span class="comment">;//false</span></div><div class="line">alert(<span class="name">isNaN</span>(<span class="string">"10"</span>))<span class="comment">;//false</span></div><div class="line">alert(<span class="name">isNaN</span>(<span class="string">"blue"</span>))<span class="comment">;//true</span></div><div class="line">alert(<span class="name">isNaN</span>(<span class="name">true</span>))<span class="comment">;//false</span></div></pre></td></tr></table></figure>
+<h1 id="这里再讨论一个题外话"><a href="#这里再讨论一个题外话" class="headerlink" title="这里再讨论一个题外话"></a>这里再讨论一个题外话</h1><p>当没给setInterval设置时间函数的执行顺序是什么</p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">setInterval(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">				console.<span class="built_in">log</span>(<span class="number">1</span>);</div><div class="line">			&#125;);</div><div class="line">	</div><div class="line">	console.<span class="built_in">log</span>(<span class="number">2</span>);</div></pre></td></tr></table></figure>
+<p>这个程序会先打印2，再打印1</p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -230,381 +224,115 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://liumeilian.com.cn/2017/04/11/funcaera/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/11/originjquery/" class="archive-article-date">
-  	<time datetime="2017-04-11T08:13:39.563Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-11</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/11/originjquery/">原生jquery是如何写出来的</a>
-    </h1>
+    <a href="/2017/04/12/flex/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          flex布局
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/04/11/originjquery/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">原生jquery是如何写出来的</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="funcaera" data-title="关于变量的作用域" data-url="http://liumeilian.com.cn/2017/04/11/funcaera/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"liumeilian"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">测试</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/11/hotelnum/" class="archive-article-date">
-  	<time datetime="2017-04-11T02:19:59.970Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/11/hotelnum/">笔试中hotelnum</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/08/function/" class="archive-article-date">
-  	<time datetime="2017-04-08T12:28:16.653Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/08/function/">函数的定义 函数声明 函数表达式 立即执行函数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/08/maxstr/" class="archive-article-date">
-  	<time datetime="2017-04-08T11:53:17.281Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/08/maxstr/">找出字符串中出现最多的字符和次数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/08/reg/" class="archive-article-date">
-  	<time datetime="2017-04-08T08:15:21.110Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/08/reg/">正则表达式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/08/replacestring/" class="archive-article-date">
-  	<time datetime="2017-04-08T02:35:32.848Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/08/replacestring/">用对象下的属性替换字符串中的字符</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">字符串的操作</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/07/a/" class="archive-article-date">
-  	<time datetime="2017-04-07T13:50:25.437Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/07/a/">右边固定宽左边自适应的布局和左边固定宽度右边自适应的布局</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/04/text/" class="archive-article-date">
-  	<time datetime="2017-04-04T13:40:13.757Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/04/text/">刘美莲博客测试</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">测试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/25/maxLength/" class="archive-article-date">
-  	<time datetime="2017-03-25T12:48:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/25/maxLength/">查找两个字符串中最长的公共子串</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -627,8 +355,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
