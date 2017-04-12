@@ -6,32 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://liumeilian.com.cn">
-  <title>查找两个字符串中最长的公共子串 | 美小妞的博客</title>
+  <title>Tag: css | 美小妞的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="问题：str1=“aaa3333”；str2=“vscscsaaa33”;求str1和str2中最长的公共子串aaa33
-思想：在长的字符串str2里面找最长的str1的子串
-分析步骤：
-1现在str2里面找 aaa3333，str1的长度是7，下标是0-6，先在str2中找str1的0-6的字符串aaa3333，找          的长度是7
-2找不到aaa3333，再找str1中0-5的字">
-<meta property="og:type" content="article">
-<meta property="og:title" content="查找两个字符串中最长的公共子串">
-<meta property="og:url" content="http://liumeilian.com.cn/2017/03/25/maxLength/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="美小妞的博客">
+<meta property="og:url" content="http://liumeilian.com.cn/tags/css/index.html">
 <meta property="og:site_name" content="美小妞的博客">
-<meta property="og:description" content="问题：str1=“aaa3333”；str2=“vscscsaaa33”;求str1和str2中最长的公共子串aaa33
-思想：在长的字符串str2里面找最长的str1的子串
-分析步骤：
-1现在str2里面找 aaa3333，str1的长度是7，下标是0-6，先在str2中找str1的0-6的字符串aaa3333，找          的长度是7
-2找不到aaa3333，再找str1中0-5的字">
-<meta property="og:image" content="https://unsplash.it/1000/300/?random">
-<meta property="og:updated_time" content="2017-04-11T03:56:31.625Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="查找两个字符串中最长的公共子串">
-<meta name="twitter:description" content="问题：str1=“aaa3333”；str2=“vscscsaaa33”;求str1和str2中最长的公共子串aaa33
-思想：在长的字符串str2里面找最长的str1的子串
-分析步骤：
-1现在str2里面找 aaa3333，str1的长度是7，下标是0-6，先在str2中找str1的0-6的字符串aaa3333，找          的长度是7
-2找不到aaa3333，再找str1中0-5的字">
-<meta name="twitter:image" content="https://unsplash.it/1000/300/?random">
+<meta name="twitter:title" content="美小妞的博客">
   
     <link rel="alternative" href="/atom.xml" title="美小妞的博客" type="application/atom+xml">
   
@@ -165,164 +147,60 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-maxLength" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      查找两个字符串中最长的公共子串
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/04/12/layout/" class="archive-article-date">
+  	<time datetime="2017-04-12T08:35:42.295Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-12</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/04/12/layout/">layout和css的hack详解</a>
     </h1>
   
 
-        
-        <a href="/2017/03/25/maxLength/" class="archive-article-date">
-  	<time datetime="2017-03-25T12:48:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
-<h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><pre><code>str1=“aaa3333”；str2=“vscscsaaa33”;求str1和str2中最长的公共子串aaa33
-</code></pre><h2 id="思想："><a href="#思想：" class="headerlink" title="思想："></a>思想：</h2><pre><code>在长的字符串str2里面找最长的str1的子串
-</code></pre><h4 id="分析步骤："><a href="#分析步骤：" class="headerlink" title="分析步骤："></a>分析步骤：</h4><ul>
-<li>1现在str2里面找 aaa3333，str1的长度是7，下标是0-6，先在str2中找str1的0-6的字符串aaa3333，找          的长度是7</li>
-<li>2找不到aaa3333，再找str1中0-5的字符串aaa333，找不到，再找1-6的字符串aa3333，找不到，找的         长度是6。</li>
-<li>3再找0-4的字符串aaa33，找到了就结束查找。</li>
-</ul>
-<a id="more"></a>                  
-<h2 id="js代码实现："><a href="#js代码实现：" class="headerlink" title="js代码实现："></a>js代码实现：</h2><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"> function LongestCommonStr(<span class="built_in">s1</span>,<span class="built_in">s2</span>)&#123;</div><div class="line">    var str=<span class="string">""</span><span class="comment">;</span></div><div class="line">    var L1=<span class="built_in">s1</span>.length<span class="comment">;</span></div><div class="line">    var L2=<span class="built_in">s2</span>.length<span class="comment">;</span></div><div class="line">    if(L1&gt;L2)&#123;</div><div class="line">        L1=L2<span class="comment">;</span></div><div class="line">        var <span class="built_in">s3</span>=<span class="built_in">s2</span><span class="comment">;</span></div><div class="line">        <span class="built_in">s2</span>=<span class="built_in">s1</span><span class="comment">;</span></div><div class="line">        <span class="built_in">s1</span>=<span class="built_in">s3</span><span class="comment">;</span></div><div class="line">    &#125; </div><div class="line">    for(var <span class="keyword">j=L1;j&gt;0;j--)&#123;</span></div><div class="line">         for(var i=<span class="number">0</span><span class="comment">;i&lt;L1-j;i++)&#123;</span></div><div class="line">             str=<span class="built_in">s1</span>.<span class="keyword">substr(i,j);</span></div><div class="line">             if(<span class="built_in">s2</span>.indexOf(str)&gt;=<span class="number">0</span>)&#123;</div><div class="line">                 return str<span class="comment">; </span></div><div class="line">             &#125;</div><div class="line">         &#125;</div><div class="line">     &#125;</div><div class="line">    return <span class="string">""</span><span class="comment">;</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="代码说明："><a href="#代码说明：" class="headerlink" title="代码说明："></a>代码说明：</h4><ul>
-<li>1外层的j循环代表先找7个，再找6个，再找5个str1中的子串</li>
-<li>2内层循环代表先找0-4，再找1-5，再找2-6中的0 1  2这个顺序</li>
-<li>2indexOf（searchvalue，fromindex）这个函数返回searchvalue出现的首位置，fromindex表示开始查到的位置，默认为0；</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://liumeilian.com.cn/2017/03/25/maxLength/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/04/04/text/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          刘美莲博客测试
-        
-      </div>
-    </a>
   
   
-</nav>
-
-
-
-
-
-
-  
-  <div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="maxLength" data-title="查找两个字符串中最长的公共子串" data-url="http://liumeilian.com.cn/2017/03/25/maxLength/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"liumeilian"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
+    </div></section>
   
 
-
+    
 
 
           </div>
@@ -345,9 +223,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: true,
 		root: "/",

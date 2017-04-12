@@ -6,31 +6,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://liumeilian.com.cn">
-  <title>查找两个字符串中最长的公共子串 | 美小妞的博客</title>
+  <title>layout和css的hack详解 | 美小妞的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="问题：str1=“aaa3333”；str2=“vscscsaaa33”;求str1和str2中最长的公共子串aaa33
-思想：在长的字符串str2里面找最长的str1的子串
-分析步骤：
-1现在str2里面找 aaa3333，str1的长度是7，下标是0-6，先在str2中找str1的0-6的字符串aaa3333，找          的长度是7
-2找不到aaa3333，再找str1中0-5的字">
+  <meta name="description" content="一.layout概念看了网上对于layout的各种说法，这里用一句话来总结layout的概念，这个概念仅仅是便于自己的理解，并非官方定义layout：layout是元素的一个属性，有些元素本省具有layout属性，有的元素需要通过设置某些css才能获得layout属性
+一个元素是否具有“layout”可能会引发如下的一些问题：
+IE 很多常见的浮动 bug 。 
+元素本身对一些基本属性的异常处理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="查找两个字符串中最长的公共子串">
-<meta property="og:url" content="http://liumeilian.com.cn/2017/03/25/maxLength/index.html">
+<meta property="og:title" content="layout和css的hack详解">
+<meta property="og:url" content="http://liumeilian.com.cn/2017/04/12/layout/index.html">
 <meta property="og:site_name" content="美小妞的博客">
-<meta property="og:description" content="问题：str1=“aaa3333”；str2=“vscscsaaa33”;求str1和str2中最长的公共子串aaa33
-思想：在长的字符串str2里面找最长的str1的子串
-分析步骤：
-1现在str2里面找 aaa3333，str1的长度是7，下标是0-6，先在str2中找str1的0-6的字符串aaa3333，找          的长度是7
-2找不到aaa3333，再找str1中0-5的字">
+<meta property="og:description" content="一.layout概念看了网上对于layout的各种说法，这里用一句话来总结layout的概念，这个概念仅仅是便于自己的理解，并非官方定义layout：layout是元素的一个属性，有些元素本省具有layout属性，有的元素需要通过设置某些css才能获得layout属性
+一个元素是否具有“layout”可能会引发如下的一些问题：
+IE 很多常见的浮动 bug 。 
+元素本身对一些基本属性的异常处理">
 <meta property="og:image" content="https://unsplash.it/1000/300/?random">
-<meta property="og:updated_time" content="2017-04-11T03:56:31.625Z">
+<meta property="og:updated_time" content="2017-04-12T09:25:57.192Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="查找两个字符串中最长的公共子串">
-<meta name="twitter:description" content="问题：str1=“aaa3333”；str2=“vscscsaaa33”;求str1和str2中最长的公共子串aaa33
-思想：在长的字符串str2里面找最长的str1的子串
-分析步骤：
-1现在str2里面找 aaa3333，str1的长度是7，下标是0-6，先在str2中找str1的0-6的字符串aaa3333，找          的长度是7
-2找不到aaa3333，再找str1中0-5的字">
+<meta name="twitter:title" content="layout和css的hack详解">
+<meta name="twitter:description" content="一.layout概念看了网上对于layout的各种说法，这里用一句话来总结layout的概念，这个概念仅仅是便于自己的理解，并非官方定义layout：layout是元素的一个属性，有些元素本省具有layout属性，有的元素需要通过设置某些css才能获得layout属性
+一个元素是否具有“layout”可能会引发如下的一些问题：
+IE 很多常见的浮动 bug 。 
+元素本身对一些基本属性的异常处理">
 <meta name="twitter:image" content="https://unsplash.it/1000/300/?random">
   
     <link rel="alternative" href="/atom.xml" title="美小妞的博客" type="application/atom+xml">
@@ -165,20 +162,20 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-maxLength" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-layout" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      查找两个字符串中最长的公共子串
+      layout和css的hack详解
     </h1>
   
 
         
-        <a href="/2017/03/25/maxLength/" class="archive-article-date">
-  	<time datetime="2017-03-25T12:48:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-25</time>
+        <a href="/2017/04/12/layout/" class="archive-article-date">
+  	<time datetime="2017-04-12T08:35:42.295Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-12</time>
 </a>
         
       </header>
@@ -186,20 +183,40 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
-<h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><pre><code>str1=“aaa3333”；str2=“vscscsaaa33”;求str1和str2中最长的公共子串aaa33
-</code></pre><h2 id="思想："><a href="#思想：" class="headerlink" title="思想："></a>思想：</h2><pre><code>在长的字符串str2里面找最长的str1的子串
-</code></pre><h4 id="分析步骤："><a href="#分析步骤：" class="headerlink" title="分析步骤："></a>分析步骤：</h4><ul>
-<li>1现在str2里面找 aaa3333，str1的长度是7，下标是0-6，先在str2中找str1的0-6的字符串aaa3333，找          的长度是7</li>
-<li>2找不到aaa3333，再找str1中0-5的字符串aaa333，找不到，再找1-6的字符串aa3333，找不到，找的         长度是6。</li>
-<li>3再找0-4的字符串aaa33，找到了就结束查找。</li>
+<h1 id="一-layout"><a href="#一-layout" class="headerlink" title="一.layout"></a>一.layout</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>看了网上对于layout的各种说法，这里用一句话来总结layout的概念，这个概念仅仅是便于自己的理解，并非官方定义<br>layout：layout是元素的一个属性，有些元素本省具有layout属性，有的元素需要通过设置某些css才能获得layout属性</p>
+<h2 id="一个元素是否具有“layout”可能会引发如下的一些问题："><a href="#一个元素是否具有“layout”可能会引发如下的一些问题：" class="headerlink" title="一个元素是否具有“layout”可能会引发如下的一些问题："></a>一个元素是否具有“layout”可能会引发如下的一些问题：</h2><ul>
+<li>IE 很多常见的浮动 bug 。 </li>
+<li>元素本身对一些基本属性的异常处理问题。 </li>
+<li>容器和其子孙之间的边距重叠(margin collapsing)问题。 </li>
+<li>使用列表时遇到的诸多问题。 </li>
+<li>背景图像的定位偏差问题。 </li>
+<li>使用脚本时遇到的浏览器之间处理不一致的问题。</li>
 </ul>
-<a id="more"></a>                  
-<h2 id="js代码实现："><a href="#js代码实现：" class="headerlink" title="js代码实现："></a>js代码实现：</h2><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"> function LongestCommonStr(<span class="built_in">s1</span>,<span class="built_in">s2</span>)&#123;</div><div class="line">    var str=<span class="string">""</span><span class="comment">;</span></div><div class="line">    var L1=<span class="built_in">s1</span>.length<span class="comment">;</span></div><div class="line">    var L2=<span class="built_in">s2</span>.length<span class="comment">;</span></div><div class="line">    if(L1&gt;L2)&#123;</div><div class="line">        L1=L2<span class="comment">;</span></div><div class="line">        var <span class="built_in">s3</span>=<span class="built_in">s2</span><span class="comment">;</span></div><div class="line">        <span class="built_in">s2</span>=<span class="built_in">s1</span><span class="comment">;</span></div><div class="line">        <span class="built_in">s1</span>=<span class="built_in">s3</span><span class="comment">;</span></div><div class="line">    &#125; </div><div class="line">    for(var <span class="keyword">j=L1;j&gt;0;j--)&#123;</span></div><div class="line">         for(var i=<span class="number">0</span><span class="comment">;i&lt;L1-j;i++)&#123;</span></div><div class="line">             str=<span class="built_in">s1</span>.<span class="keyword">substr(i,j);</span></div><div class="line">             if(<span class="built_in">s2</span>.indexOf(str)&gt;=<span class="number">0</span>)&#123;</div><div class="line">                 return str<span class="comment">; </span></div><div class="line">             &#125;</div><div class="line">         &#125;</div><div class="line">     &#125;</div><div class="line">    return <span class="string">""</span><span class="comment">;</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="代码说明："><a href="#代码说明：" class="headerlink" title="代码说明："></a>代码说明：</h4><ul>
-<li>1外层的j循环代表先找7个，再找6个，再找5个str1中的子串</li>
-<li>2内层循环代表先找0-4，再找1-5，再找2-6中的0 1  2这个顺序</li>
-<li>2indexOf（searchvalue，fromindex）这个函数返回searchvalue出现的首位置，fromindex表示开始查到的位置，默认为0；</li>
+<a id="more"></a>
+<h2 id="下列元素应该是默认具有-layout-的："><a href="#下列元素应该是默认具有-layout-的：" class="headerlink" title="下列元素应该是默认具有 layout 的："></a>下列元素应该是默认具有 layout 的：</h2><p><html>, <body> <table>, <tr>, <th>, </th><td> <img> <hr> <input>, <select>, </select><textarea>, </textarea><button> <iframe>, <embed>, <object>, <applet> <marquee></marquee></applet></object></iframe></button></td></tr></table></body></html></p>
+<h2 id="下列-CSS-属性和取值将会让一个元素获得-layout："><a href="#下列-CSS-属性和取值将会让一个元素获得-layout：" class="headerlink" title="下列 CSS 属性和取值将会让一个元素获得 layout："></a>下列 CSS 属性和取值将会让一个元素获得 layout：</h2><ul>
+<li>position: absolute<br>绝对定位元素的包含区块(containing block)就会经常在这一方面出问题。 </li>
+<li>float: left|right<br>由于 layout 元素的特性，浮动模型会有很多怪异的表现。 </li>
+<li>display: inline-block<br>当一个内联级别的元素需要 layout 的时候往往就要用到它，这也可能也是这个 CSS 属性的唯一效果——让某个元素拥有 layout。“inline-block行为”在IE中是可以实现的，但是非常与众不同： IE/Win: inline-block and hasLayout 。 </li>
+<li>width: 除 “auto” 外的任意值<br>很多人遇到 layout 相关问题发生时，一般都会先尝试用这个来修复。 </li>
+<li>height: 除 “auto” 外的任意值 </li>
+<li>height: 1% 就在 Holly Hack 中用到。 </li>
+<li>zoom: 除 “normal” 外的任意值 (MSDN) </li>
 </ul>
+<h3 id="IE6中很多Bug特别是定位问题都可以通过触发layout得到解决，以上的解决方法无论是设置zoom-1还是设置width和height其实都是为了触发layout。"><a href="#IE6中很多Bug特别是定位问题都可以通过触发layout得到解决，以上的解决方法无论是设置zoom-1还是设置width和height其实都是为了触发layout。" class="headerlink" title="IE6中很多Bug特别是定位问题都可以通过触发layout得到解决，以上的解决方法无论是设置zoom:1还是设置width和height其实都是为了触发layout。"></a>IE6中很多Bug特别是定位问题都可以通过触发layout得到解决，以上的解决方法无论是设置zoom:1还是设置width和height其实都是为了触发layout。</h3><h1 id="二-css-Hack"><a href="#二-css-Hack" class="headerlink" title="二.css Hack"></a>二.css Hack</h1><p><a href="http://www.kwstu.com/Admin/ViewArticle/201409011604277330" target="_blank" rel="external">CSS hack</a></p>
+<h2 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h2><p>CSS hack是通过在CSS样式中加入一些特殊的符号，让不同的浏览器识别不同的符号（什么样的浏览器识别什么样的符号是有标准的，CSS hack就是让你记住这个标准），以达到应用不同的CSS样式的目的<br>简单地讲，css hack指各版本及各品牌浏览器之间对CSS解释后出现网页内容的误差(比如我们常说错位)的处理。由于各浏览器的内核不同，所以会造成一些误差就像JS一样，一个JS网页特效，在微软IE6、IE7、IE8浏览器有效果，但可能在火狐（Mozilla Firefox）谷歌浏览器无效，这样就叫做JS hack ，所以我们对于CSS来说他们来解决各浏览器对CSS解释不同所采取的区别不同浏览器制作不同的CSS样式的设置来解决这些问题就叫作CSS Hack。</p>
+<p>比如：kwstu{width:300px;_width:200px;}，一般浏览器会先给元素使用width:300px;的样式，紧接着后面还有个_width:200px;由于下划线_width只有IE6可以识别，所以此样式在IE6中实际设置对象的宽度为200px，后面的把前面的给覆盖了，而其他浏览器不识别_width不会执行_width:200px;这句样式，所以在其他浏览器中设置对象的宽度就是300px;</p>
+<h2 id="各种css-hack情况"><a href="#各种css-hack情况" class="headerlink" title="各种css hack情况"></a>各种css hack情况</h2><ul>
+<li>1.大部分特殊字符IE浏览器支持，其他主流浏览器firefox，chrome，opera，safari不支持 (opera可识别除外)。</li>
+<li>2.\9    ：所有IE浏览器都支持</li>
+<li>3._和-  ：仅IE6支持</li>
+<li>4.*     ：IE6、E7支持</li>
+<li>5.\0    ：IE8、IE9支持，opera部分支持</li>
+<li>6.\9\0  ：IE8部分支持、IE9支持</li>
+<li>7.\0\9  ：IE8、IE9支持</li>
+</ul>
+<h2 id="兼容各大主流浏览器-最新版本-css-hack汇总如下（最全的）："><a href="#兼容各大主流浏览器-最新版本-css-hack汇总如下（最全的）：" class="headerlink" title="兼容各大主流浏览器(最新版本)css hack汇总如下（最全的）："></a>兼容各大主流浏览器(最新版本)css hack汇总如下（最全的）：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">color:#000;             /*w3c标准*/</div><div class="line">[;color:#f00;];         /*Webkit(chrome和safari)*/</div><div class="line">color:#666\9;           /*IE8*/</div><div class="line">*color:#999;            /*IE7*/</div><div class="line">_color:#333;            /*IE6*/</div><div class="line">&#125;</div><div class="line">:root .element&#123;color:#0f0\9;&#125;  /*IE9*/</div><div class="line">@media all and (-webkit-min-device-pixel-ratio:10000), not all and (</div><div class="line">-webkit-min-device-pixel-ratio:0) &#123; .element&#123;color:#336699;&#125;&#125;  /*opera*/</div><div class="line">@-moz-document url-prefix()&#123; .element&#123;color:#f1f1f1;&#125;&#125; /*Firefox*/</div></pre></td></tr></table></figure>
+<p>上面写的顺序是不能改变的<br>【说明】：“:root”伪类IE系列只有IE9支持，其他主流浏览器均支持，利用这一点来区分IE8和IE9。另外考虑到opera部分支持，完全支持:root,所以不使用。</p>
 
       
 
@@ -213,7 +230,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
         		</li>
       		
 		</ul>
@@ -269,7 +286,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://liumeilian.com.cn/2017/03/25/maxLength/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://liumeilian.com.cn/2017/04/12/layout/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -283,15 +300,11 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2017/04/04/text/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          刘美莲博客测试
-        
-      </div>
-    </a>
   
+    <a href="/2017/04/12/flex/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">flex布局</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -303,7 +316,7 @@ var _hmt = _hmt || [];
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="maxLength" data-title="查找两个字符串中最长的公共子串" data-url="http://liumeilian.com.cn/2017/03/25/maxLength/"></div>
+	<div class="ds-thread" data-thread-key="layout" data-title="layout和css的hack详解" data-url="http://liumeilian.com.cn/2017/04/12/layout/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
