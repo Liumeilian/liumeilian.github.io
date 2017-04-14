@@ -6,14 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://liumeilian.com.cn">
-  <title>Tag: js | 美小妞的博客</title>
+  <title>如何解决div里面img图片下方有空白的问题 | 美小妞的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="美小妞的博客">
-<meta property="og:url" content="http://liumeilian.com.cn/tags/js/index.html">
+  <meta name="description" content="一.问题：相信网站前端开发者可能会遇到这样的问题，&amp;lt;div&amp;gt;&amp;lt;img src=&amp;quot;picture.png&amp;quot;/&amp;gt;&amp;lt;/div&amp;gt;
+这样的格式在html5的文档标准下会有一段空白区域，那么怎样去掉这部分空白区域呢？
+二.原因 首先我们要知道这部分空白产生的原因。图片默认的vertical-align是baseline， 也就是字母x的下边距，我们在图">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何解决div里面img图片下方有空白的问题">
+<meta property="og:url" content="http://liumeilian.com.cn/2017/04/14/img/index.html">
 <meta property="og:site_name" content="美小妞的博客">
+<meta property="og:description" content="一.问题：相信网站前端开发者可能会遇到这样的问题，&amp;lt;div&amp;gt;&amp;lt;img src=&amp;quot;picture.png&amp;quot;/&amp;gt;&amp;lt;/div&amp;gt;
+这样的格式在html5的文档标准下会有一段空白区域，那么怎样去掉这部分空白区域呢？
+二.原因 首先我们要知道这部分空白产生的原因。图片默认的vertical-align是baseline， 也就是字母x的下边距，我们在图">
+<meta property="og:image" content="https://unsplash.it/1001/300/?random">
+<meta property="og:image" content="http://onw1ra7gr.bkt.clouddn.com/img.jpg">
+<meta property="og:updated_time" content="2017-04-14T14:26:39.714Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="美小妞的博客">
+<meta name="twitter:title" content="如何解决div里面img图片下方有空白的问题">
+<meta name="twitter:description" content="一.问题：相信网站前端开发者可能会遇到这样的问题，&amp;lt;div&amp;gt;&amp;lt;img src=&amp;quot;picture.png&amp;quot;/&amp;gt;&amp;lt;/div&amp;gt;
+这样的格式在html5的文档标准下会有一段空白区域，那么怎样去掉这部分空白区域呢？
+二.原因 首先我们要知道这部分空白产生的原因。图片默认的vertical-align是baseline， 也就是字母x的下边距，我们在图">
+<meta name="twitter:image" content="https://unsplash.it/1001/300/?random">
   
     <link rel="alternative" href="/atom.xml" title="美小妞的博客" type="application/atom+xml">
   
@@ -147,342 +160,158 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-img" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      如何解决div里面img图片下方有空白的问题
+    </h1>
+  
+
+        
+        <a href="/2017/04/14/img/" class="archive-article-date">
+  	<time datetime="2017-04-14T12:40:24.288Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-14</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1001/300/?random" alt=""></p>
+<h1 id="一-问题："><a href="#一-问题：" class="headerlink" title="一.问题："></a>一.问题：</h1><pre><code>相信网站前端开发者可能会遇到这样的问题，&lt;div&gt;&lt;img src=&quot;picture.png&quot;/&gt;&lt;/div&gt;
+这样的格式在html5的文档标准下会有一段空白区域，那么怎样去掉这部分空白区域呢？
+</code></pre><h1 id="二-原因"><a href="#二-原因" class="headerlink" title="二.原因"></a>二.原因</h1><p> 首先我们要知道这部分空白产生的原因。图片默认的vertical-align是baseline，<br> 也就是字母x的下边距，我们在图片后面写上x就是这样<br><img src="http://onw1ra7gr.bkt.clouddn.com/img.jpg" alt=""><br><a id="more"></a></p>
+<p>可以看到图片是与字母x的下边距对齐的，也就是baseline，css2的文档中有这么一句解释，翻译过来也就是一个inline-block元素，如果里面没有inline元素，或者overflow不是visible，则该元素的基线就是其margin底边缘，否则，其基线就是元素里面最后一行内联元素的基线</p>
+<h1 id="三-解决方法"><a href="#三-解决方法" class="headerlink" title="三.解决方法"></a>三.解决方法</h1><ul>
+<li><p>1.所以我们只需要将img图片display:block，即可去掉div和img之间的空白</p>
+</li>
+<li><p>2.或者将div的line-height设置得足够小，也可以去掉空白，例如div{line-height:5px;}</p>
+</li>
+<li>3.也可以将font-size设为0，实际上也是改变了line-height</li>
+<li>4.当然，我们可以改变vertical-align，让它不是baseline，比如设置vertical-align:middle</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/13/XXS/" class="archive-article-date">
-  	<time datetime="2017-04-13T14:10:04.579Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/13/XXS/">xxs和cors</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://liumeilian.com.cn/2017/04/14/img/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/13/cross/" class="archive-article-date">
-  	<time datetime="2017-04-13T02:26:13.700Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-13</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/13/cross/">跨文档通信问题</a>
-    </h1>
+  
+    <a href="/2017/04/13/XXS/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">xxs和cors</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="img" data-title="如何解决div里面img图片下方有空白的问题" data-url="http://liumeilian.com.cn/2017/04/14/img/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"liumeilian"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/11/funcaera/" class="archive-article-date">
-  	<time datetime="2017-04-11T13:50:58.577Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/11/funcaera/">关于变量的作用域</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/11/originjquery/" class="archive-article-date">
-  	<time datetime="2017-04-11T08:13:39.563Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/11/originjquery/">原生jquery是如何写出来的</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">jq</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/11/hotelnum/" class="archive-article-date">
-  	<time datetime="2017-04-11T02:19:59.970Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/11/hotelnum/">笔试中hotelnum</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/08/function/" class="archive-article-date">
-  	<time datetime="2017-04-08T12:28:16.653Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/08/function/">函数的定义 函数声明 函数表达式 立即执行函数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/08/maxstr/" class="archive-article-date">
-  	<time datetime="2017-04-08T11:53:17.281Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/08/maxstr/">找出字符串中出现最多的字符和次数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/08/reg/" class="archive-article-date">
-  	<time datetime="2017-04-08T08:15:21.110Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/08/reg/">正则表达式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -505,9 +334,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		root: "/",

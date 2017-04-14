@@ -149,6 +149,147 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-reg" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/08/reg/">正则表达式</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/08/reg/" class="archive-article-date">
+  	<time datetime="2017-04-08T08:15:21.110Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
+<h1 id="正则表达式常用方法"><a href="#正则表达式常用方法" class="headerlink" title="正则表达式常用方法"></a>正则表达式常用方法</h1><h3 id="test"><a href="#test" class="headerlink" title="test"></a>test</h3><p>用途：字符串判断</p>
+<ul>
+<li>-返回真假</li>
+<li>-正则.test(字符串)</li>
+<li>-例子：是否有不知数字的字符</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str=<span class="string">"akjkcs123232"</span>;</div><div class="line"><span class="keyword">var</span> re=<span class="regexp">/\D/</span>;</div><div class="line">alert(re.test(str));<span class="comment">//true</span></div></pre></td></tr></table></figure>
+<p>\s : 空格<br>\S : 非空格<br>\d : 数字<br>\D : 非数字<br>\w : 字符   ( 字母 ，数字，下划线_ )<br>\W : 非字符*/<br>
+        
+          <a class="article-more-a" href="/2017/04/08/reg/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/08/reg/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-replacestring" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/08/replacestring/">用对象下的属性替换字符串中的字符</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/08/replacestring/" class="archive-article-date">
+  	<time datetime="2017-04-08T02:35:32.848Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
+<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str=<span class="string">'my name is <span class="subst">$&#123;name.name&#125;</span>,jian xie <span class="subst">$&#123;b&#125;</span>'</span>;</div><div class="line"><span class="keyword">var</span> json=&#123;</div><div class="line">	<span class="string">"name"</span>:&#123;<span class="string">"name"</span>:<span class="string">"hzhuang"</span>,<span class="string">"minname"</span>:<span class="string">"zhuangzhuang"</span>&#125;,</div><div class="line">	<span class="string">"b"</span>:<span class="string">"hz"</span>,</div><div class="line">	<span class="string">"n"</span>:<span class="number">1</span>,</div><div class="line">	<span class="string">"arr"</span>:[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> result=str.render(json);</div><div class="line">console.log(result);<span class="comment">//my name is hzhuang,jian xie hz</span></div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/04/08/replacestring/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">字符串的操作</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/08/replacestring/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-a" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -469,15 +610,11 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">布局</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">css3</a>
+                <a href="javascript:void(0)" class="js-tag color3">布局</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -486,6 +623,10 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">css3</a>
               </li>
              
               <li class="article-tag-list-item">
