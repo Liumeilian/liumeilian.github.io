@@ -22,11 +22,11 @@ xss类型
 xss类型
 反射式xss  这种xss，跨域代码一般会存在于某个链接中，当被攻击者访问这个链接时，跨域代码就没执行，这类跨域代码一般不会存储在服务器上
 存储型XSS  跨域代码会存储在服">
-<meta property="og:image" content="https://unsplash.it/1000/300/?random">
+<meta property="og:image" content="https://unsplash.it/1007/300/?random">
 <meta property="og:image" content="http://onw1ra7gr.bkt.clouddn.com/xxs.jpg">
 <meta property="og:image" content="http://onw1ra7gr.bkt.clouddn.com/xxs2.jpg">
 <meta property="og:image" content="http://onw1ra7gr.bkt.clouddn.com/xxs3.jpg">
-<meta property="og:updated_time" content="2017-04-14T14:26:37.302Z">
+<meta property="og:updated_time" content="2017-04-15T05:32:29.980Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="xxs和cors">
 <meta name="twitter:description" content="一.xxs什么是xxsxxs叫跨域脚本攻击，它指的是攻击者往web页面里插入恶意html代码，当用户浏览该页面时，嵌入web里的html代码会被执行，从而达到恶意攻击用户的目的
@@ -34,7 +34,7 @@ xss类型
 xss类型
 反射式xss  这种xss，跨域代码一般会存在于某个链接中，当被攻击者访问这个链接时，跨域代码就没执行，这类跨域代码一般不会存储在服务器上
 存储型XSS  跨域代码会存储在服">
-<meta name="twitter:image" content="https://unsplash.it/1000/300/?random">
+<meta name="twitter:image" content="https://unsplash.it/1007/300/?random">
   
     <link rel="alternative" href="/atom.xml" title="美小妞的博客" type="application/atom+xml">
   
@@ -188,13 +188,14 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
+        <p><img src="https://unsplash.it/1007/300/?random" alt=""></p>
 <h1 id="一-xxs"><a href="#一-xxs" class="headerlink" title="一.xxs"></a>一.xxs</h1><h2 id="什么是xxs"><a href="#什么是xxs" class="headerlink" title="什么是xxs"></a>什么是xxs</h2><p>xxs叫跨域脚本攻击，它指的是攻击者往web页面里插入恶意html代码，当用户浏览该页面时，嵌入web里的html代码会被执行，从而达到恶意攻击用户的目的</p>
 <h2 id="为什么会产生xss"><a href="#为什么会产生xss" class="headerlink" title="为什么会产生xss"></a>为什么会产生xss</h2><p>原因是过滤不严</p>
 <h2 id="xss类型"><a href="#xss类型" class="headerlink" title="xss类型"></a>xss类型</h2><ul>
 <li>反射式xss<br>  这种xss，跨域代码一般会存在于某个链接中，当被攻击者访问这个链接时，跨域代码就没执行，这类跨域代码一般不会存储在服务器上</li>
 <li>存储型XSS<br>  跨域代码会存储在服务器上面的数据库中，所以可以进行持久攻击</li>
-<li>基于DOM的xss<br>这是由于客户端脚本自身的解析不正确导致的安全问题<br>&lt;!–more&gt;</li>
+<li>基于DOM的xss<br>这是由于客户端脚本自身的解析不正确导致的安全问题<a id="more"></a>
+</li>
 </ul>
 <h2 id="反射型Xss的攻击原理"><a href="#反射型Xss的攻击原理" class="headerlink" title="反射型Xss的攻击原理"></a>反射型Xss的攻击原理</h2><p>它通过给别人发送带有恶意脚本代码参数的URL，当URL地址呗打开，特有的恶意代码参数呗html解析，他的特点是非持久的用户点击链接才能引起<br>比如：<br>  <a href="http://searchb.dangdang.com/?key=f&#39;,true,1);alert(1);//" target="_blank" rel="external">http://searchb.dangdang.com/?key=f&#39;,true,1);alert(1);//</a></p>
 <p>常用测试方法：<br>对整个输入（特别强调的是，整个HTTP请求都是输入，数据库取来的数据其实也是输入。HTTP请求包括GET、POST参数，COOKIE，URL，头部的REFERER等等）中每个地方都可以如下操作，</p>
@@ -443,11 +444,11 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color3">布局</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">布局</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -459,15 +460,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">css3</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">jq</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">字符串的操作</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">css3</a>
               </li>
              
               <li class="article-tag-list-item">
