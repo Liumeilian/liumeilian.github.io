@@ -6,20 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://liumeilian.com.cn">
-  <title>右边固定宽左边自适应的布局和左边固定宽度右边自适应的布局 | 美小妞的博客</title>
+  <title>ajax的过程 | 美小妞的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="右边固定宽左边自适应的布局这是一个简单的布局实现。">
+  <meta name="description" content="ajax的过程一.创建XMLHttpRequest对象ie浏览器和其他浏览器有差别为了兼容该做如下写法12345if(window.XMLHttpRequest)&amp;#123;	var xhr=new XMLHttpRequest();&amp;#125;else&amp;#123;	var xhr=new ActiveXObject();&amp;#125;
+二.对xhr对象的onreaystatechange事件写事">
 <meta property="og:type" content="article">
-<meta property="og:title" content="右边固定宽左边自适应的布局和左边固定宽度右边自适应的布局">
-<meta property="og:url" content="http://liumeilian.com.cn/2017/04/07/a/index.html">
+<meta property="og:title" content="ajax的过程">
+<meta property="og:url" content="http://liumeilian.com.cn/2017/04/16/ajax/index.html">
 <meta property="og:site_name" content="美小妞的博客">
-<meta property="og:description" content="右边固定宽左边自适应的布局这是一个简单的布局实现。">
-<meta property="og:image" content="https://unsplash.it/1002/300/?random">
-<meta property="og:updated_time" content="2017-04-15T05:30:52.885Z">
+<meta property="og:description" content="ajax的过程一.创建XMLHttpRequest对象ie浏览器和其他浏览器有差别为了兼容该做如下写法12345if(window.XMLHttpRequest)&amp;#123;	var xhr=new XMLHttpRequest();&amp;#125;else&amp;#123;	var xhr=new ActiveXObject();&amp;#125;
+二.对xhr对象的onreaystatechange事件写事">
+<meta property="og:image" content="https://unsplash.it/1000/300/?random">
+<meta property="og:updated_time" content="2017-04-16T15:23:37.908Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="右边固定宽左边自适应的布局和左边固定宽度右边自适应的布局">
-<meta name="twitter:description" content="右边固定宽左边自适应的布局这是一个简单的布局实现。">
-<meta name="twitter:image" content="https://unsplash.it/1002/300/?random">
+<meta name="twitter:title" content="ajax的过程">
+<meta name="twitter:description" content="ajax的过程一.创建XMLHttpRequest对象ie浏览器和其他浏览器有差别为了兼容该做如下写法12345if(window.XMLHttpRequest)&amp;#123;	var xhr=new XMLHttpRequest();&amp;#125;else&amp;#123;	var xhr=new ActiveXObject();&amp;#125;
+二.对xhr对象的onreaystatechange事件写事">
+<meta name="twitter:image" content="https://unsplash.it/1000/300/?random">
   
     <link rel="alternative" href="/atom.xml" title="美小妞的博客" type="application/atom+xml">
   
@@ -153,32 +156,29 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-a" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-ajax" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      右边固定宽左边自适应的布局和左边固定宽度右边自适应的布局
+      ajax的过程
     </h1>
   
 
         
-        <a href="/2017/04/07/a/" class="archive-article-date">
-  	<time datetime="2017-04-07T13:50:25.437Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-07</time>
+        <a href="/2017/04/16/ajax/" class="archive-article-date">
+  	<time datetime="2017-04-16T15:13:12.031Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://unsplash.it/1002/300/?random" alt=""></p>
-<h1 id="右边固定宽左边自适应的布局"><a href="#右边固定宽左边自适应的布局" class="headerlink" title="右边固定宽左边自适应的布局"></a>右边固定宽左边自适应的布局</h1><p>这是一个简单的布局实现。<br><a id="more"></a></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="css"></span></div><div class="line">		*&#123;<span class="attribute">margin</span>:<span class="number">0</span>;<span class="attribute">padding</span>:<span class="number">0</span>;&#125;</div><div class="line">		<span class="selector-tag">body</span> <span class="selector-id">#lay</span>&#123;</div><div class="line">		  <span class="attribute">width</span>:<span class="number">800px</span>;</div><div class="line">		  <span class="attribute">background-color</span>:<span class="number">#ccc</span>;</div><div class="line">		  <span class="attribute">position</span>: relative;</div><div class="line">		&#125;</div><div class="line">		<span class="selector-class">.left</span> &#123;</div><div class="line">		  <span class="attribute">margin-right</span>: <span class="number">200px</span>;</div><div class="line">		  <span class="attribute">background-color</span>:<span class="number">#ff0</span>;</div><div class="line">		  <span class="attribute">height</span>:<span class="number">500px</span>;</div><div class="line">		  &#125;</div><div class="line">		<span class="selector-class">.right</span> &#123;</div><div class="line">		  <span class="attribute">background-color</span>:<span class="number">#f00</span>;</div><div class="line">		  <span class="attribute">height</span>:<span class="number">500px</span>;</div><div class="line">		  <span class="attribute">width</span>:<span class="number">200px</span>;</div><div class="line">		  <span class="attribute">position</span>: absolute;</div><div class="line">		  <span class="attribute">right</span>: <span class="number">0</span>;</div><div class="line">		  <span class="attribute">top</span>: <span class="number">0</span>;</div><div class="line">		&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"lay"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">main</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>left<span class="tag">&lt;/<span class="name">main</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">aside</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span>right<span class="tag">&lt;/<span class="name">aside</span>&gt;</span></div><div class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
-<h1 id="左边固定宽友边自适应的布局"><a href="#左边固定宽友边自适应的布局" class="headerlink" title="左边固定宽友边自适应的布局"></a>左边固定宽友边自适应的布局</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="css"></span></div><div class="line">	*&#123;<span class="attribute">margin</span>:<span class="number">0</span>;<span class="attribute">padding</span>:<span class="number">0</span>;&#125;</div><div class="line">	<span class="selector-tag">body</span> <span class="selector-id">#lay</span>&#123;</div><div class="line">	  <span class="attribute">width</span>:<span class="number">800px</span>;</div><div class="line">	  <span class="attribute">background-color</span>:<span class="number">#ccc</span>;</div><div class="line">	  <span class="attribute">position</span>: relative;</div><div class="line">	&#125;</div><div class="line">	<span class="selector-class">.left</span> &#123;</div><div class="line">		<span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">	  <span class="attribute">background-color</span>:<span class="number">#ff0</span>;</div><div class="line">	  <span class="attribute">height</span>:<span class="number">500px</span>;</div><div class="line">	  <span class="attribute">float</span>: left;</div><div class="line">	  &#125;</div><div class="line">	<span class="selector-class">.right</span> &#123;</div><div class="line">	  <span class="attribute">background-color</span>:<span class="number">#f00</span>;</div><div class="line">	  <span class="attribute">height</span>:<span class="number">500px</span>;</div><div class="line">	  <span class="attribute">margin-left</span>: <span class="number">200px</span>;</div><div class="line">	&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"lay"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">main</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>left<span class="tag">&lt;/<span class="name">main</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">aside</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span>right<span class="tag">&lt;/<span class="name">aside</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>当两个div元素同级时，就像main和aside，main来float与aside来float是不一样的。<br>main来float那么这两个元素并列，如果aside来float那么这两个元素不在同一行，<br>如果aside来float那么aside就会跑到main的下方。</p>
-
+        <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
+<h1 id="ajax的过程"><a href="#ajax的过程" class="headerlink" title="ajax的过程"></a>ajax的过程</h1><h2 id="一-创建XMLHttpRequest对象"><a href="#一-创建XMLHttpRequest对象" class="headerlink" title="一.创建XMLHttpRequest对象"></a>一.创建XMLHttpRequest对象</h2><p>ie浏览器和其他浏览器有差别<br>为了兼容该做如下写法<br><figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(window.XMLHttpRequest)&#123;</div><div class="line">	<span class="keyword">var</span> xhr=<span class="keyword">new</span> <span class="type">XMLHttpRequest</span>();</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">	<span class="keyword">var</span> xhr=<span class="keyword">new</span> <span class="type">ActiveXObject</span>();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="二-对xhr对象的onreaystatechange事件写事件处理函数"><a href="#二-对xhr对象的onreaystatechange事件写事件处理函数" class="headerlink" title="二.对xhr对象的onreaystatechange事件写事件处理函数"></a>二.对xhr对象的onreaystatechange事件写事件处理函数</h2>
       
 
       
@@ -191,7 +191,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">布局</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
@@ -247,7 +247,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://liumeilian.com.cn/2017/04/07/a/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://liumeilian.com.cn/2017/04/16/ajax/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -261,18 +261,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2017/04/08/replacestring/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/04/20/react/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          用对象下的属性替换字符串中的字符
+          react
         
       </div>
     </a>
   
   
-    <a href="/2017/04/04/text/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">刘美莲博客测试</div>
+    <a href="/2017/04/14/img/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何解决div里面img图片下方有空白的问题</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -286,7 +286,7 @@ var _hmt = _hmt || [];
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="a" data-title="右边固定宽左边自适应的布局和左边固定宽度右边自适应的布局" data-url="http://liumeilian.com.cn/2017/04/07/a/"></div>
+	<div class="ds-thread" data-thread-key="ajax" data-title="ajax的过程" data-url="http://liumeilian.com.cn/2017/04/16/ajax/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
