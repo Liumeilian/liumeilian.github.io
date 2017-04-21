@@ -8,20 +8,17 @@
   <link rel="dns-prefetch" href="http://liumeilian.com.cn">
   <title>ajax的过程 | 美小妞的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ajax的过程一.创建XMLHttpRequest对象ie浏览器和其他浏览器有差别为了兼容该做如下写法12345if(window.XMLHttpRequest)&amp;#123;	var xhr=new XMLHttpRequest();&amp;#125;else&amp;#123;	var xhr=new ActiveXObject();&amp;#125;
-二.对xhr对象的onreaystatechange事件写事">
+  <meta name="description" content="ajax的过程一.创建XMLHttpRequest对象ie浏览器和其他浏览器有差别为了兼容该做如下写法12345if(window.XMLHttpRequest)&amp;#123;	var xhr=new XMLHttpRequest();&amp;#125;else&amp;#123;	var xhr=new ActiveXObject();&amp;#125;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ajax的过程">
 <meta property="og:url" content="http://liumeilian.com.cn/2017/04/16/ajax/index.html">
 <meta property="og:site_name" content="美小妞的博客">
-<meta property="og:description" content="ajax的过程一.创建XMLHttpRequest对象ie浏览器和其他浏览器有差别为了兼容该做如下写法12345if(window.XMLHttpRequest)&amp;#123;	var xhr=new XMLHttpRequest();&amp;#125;else&amp;#123;	var xhr=new ActiveXObject();&amp;#125;
-二.对xhr对象的onreaystatechange事件写事">
+<meta property="og:description" content="ajax的过程一.创建XMLHttpRequest对象ie浏览器和其他浏览器有差别为了兼容该做如下写法12345if(window.XMLHttpRequest)&amp;#123;	var xhr=new XMLHttpRequest();&amp;#125;else&amp;#123;	var xhr=new ActiveXObject();&amp;#125;">
 <meta property="og:image" content="https://unsplash.it/1000/300/?random">
-<meta property="og:updated_time" content="2017-04-16T15:23:37.908Z">
+<meta property="og:updated_time" content="2017-04-21T04:04:46.990Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ajax的过程">
-<meta name="twitter:description" content="ajax的过程一.创建XMLHttpRequest对象ie浏览器和其他浏览器有差别为了兼容该做如下写法12345if(window.XMLHttpRequest)&amp;#123;	var xhr=new XMLHttpRequest();&amp;#125;else&amp;#123;	var xhr=new ActiveXObject();&amp;#125;
-二.对xhr对象的onreaystatechange事件写事">
+<meta name="twitter:description" content="ajax的过程一.创建XMLHttpRequest对象ie浏览器和其他浏览器有差别为了兼容该做如下写法12345if(window.XMLHttpRequest)&amp;#123;	var xhr=new XMLHttpRequest();&amp;#125;else&amp;#123;	var xhr=new ActiveXObject();&amp;#125;">
 <meta name="twitter:image" content="https://unsplash.it/1000/300/?random">
   
     <link rel="alternative" href="/atom.xml" title="美小妞的博客" type="application/atom+xml">
@@ -178,7 +175,49 @@ var _hmt = _hmt || [];
       
         <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
 <h1 id="ajax的过程"><a href="#ajax的过程" class="headerlink" title="ajax的过程"></a>ajax的过程</h1><h2 id="一-创建XMLHttpRequest对象"><a href="#一-创建XMLHttpRequest对象" class="headerlink" title="一.创建XMLHttpRequest对象"></a>一.创建XMLHttpRequest对象</h2><p>ie浏览器和其他浏览器有差别<br>为了兼容该做如下写法<br><figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(window.XMLHttpRequest)&#123;</div><div class="line">	<span class="keyword">var</span> xhr=<span class="keyword">new</span> <span class="type">XMLHttpRequest</span>();</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">	<span class="keyword">var</span> xhr=<span class="keyword">new</span> <span class="type">ActiveXObject</span>();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="二-对xhr对象的onreaystatechange事件写事件处理函数"><a href="#二-对xhr对象的onreaystatechange事件写事件处理函数" class="headerlink" title="二.对xhr对象的onreaystatechange事件写事件处理函数"></a>二.对xhr对象的onreaystatechange事件写事件处理函数</h2>
+<a id="more"></a>
+<h2 id="二-设置响应HTTP请求状态变化的函数"><a href="#二-设置响应HTTP请求状态变化的函数" class="headerlink" title="二.设置响应HTTP请求状态变化的函数"></a>二.设置响应HTTP请求状态变化的函数</h2><p>发送HTTP请求的目的是为了接收从服务器中返回的数据。从创建XMLHttpRequest对象开始，到发送数据、接收数据、XMLHttpRequest对象一共会经历以下5中状态</p>
+<ul>
+<li><p>⑴未初始化状态。在创建完XMLHttpRequest对象时，该对象处于未初始化状态，此时XMLHttpRequest对象的readyState属性值为0。</p>
+</li>
+<li><p>⑵初始化状态。在创建完XMLHttpRequest对象后使用open()方法创建了HTTP请求时，该对象处于初始化状态。此时XMLHttpRequest对象的readyState属性值为1。</p>
+</li>
+<li><p>⑶发送数据状态。在初始化XMLHttpRequest对象后，使用send()方法发送数据时，该对象处于发送数据状态，此时XMLHttpRequest对象的readyState属性值为2。</p>
+</li>
+<li><p>⑷接收数据状态。Web服务器接收完数据并进行处理完毕之后，向客户端传送返回的结果。此时，XMLHttpRequest对象处于接收数据状态，XMLHttpRequest对象的readyState属性值为3。</p>
+</li>
+<li><p>⑸完成状态。XMLHttpRequest对象接收数据完毕后，进入完成状态，此时XMLHttpRequest对象的readyState属性值为4。此时接收完毕后的数据存入在客户端计算机的内存中，可以使用responseText属性或responseXml属性来获取数据。</p>
+</li>
+</ul>
+<p>只有在XMLHttpRequest对象完成了以上5个步骤之后，才可以获取从服务器端返回的数据。因此，如果要获得从服务器端返回的数据，就必须要先判断XMLHttpRequest对象的状态。</p>
+<pre><code>XMLHttpRequest对象可以响应readystatechange事件，该事件在XMLHttpRequest对象状态改变时（也就是readyState属性值改变时）激发。因此，可以通过该事件调用一个函数，并在该函数中判断XMLHttpRequest对象的readyState属性值。如果readyState属性值为4则使用responseText属性或responseXml属性来获取数据
+</code></pre><p>XMLHttpRequest对象的三个重要的属性：</p>
+<ul>
+<li><p>1.onreadystatechange    存储函数（或函数名），每当 readyState 属性改变时，就会调用该函数。</p>
+</li>
+<li><p>2.readyState<br>存有 XMLHttpRequest 的状态。从 0 到 4 发生变化。<br>0: 请求未初始化<br>1: 服务器连接已建立<br>2: 请求已接收<br>3: 请求处理中<br>4: 请求已完成，且响应已就绪</p>
+</li>
+<li><p>3.status    200: “OK”<br>404: 未找到页面</p>
+</li>
+</ul>
+<p>一般框架是这样写的<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">xmlhttp.onreadystatechange=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span></div><div class="line">  &#123;</div><div class="line">  <span class="keyword">if</span> (xmlhttp.readyState==<span class="number">4</span> &amp;&amp; xmlhttp.status==<span class="number">200</span>)</div><div class="line">    &#123;</div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"myDiv"</span>).innerHTML=xmlhttp.responseText;<span class="comment">//在这里对请求回来的数据进行处理</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
+<p>服务器常用的状态码及其对应的含义：（感觉笔试老会考到）<br> 200：服务器响应正常。<br> 304：该资源在上次请求之后没有任何修改（这通常用于浏览器的缓存机制，使用GET请求时尤其需要注意）。<br> 400：无法找到请求的资源。<br> 401：访问资源的权限不够。<br> 403：没有权限访问资源。<br> 404：需要访问的资源不存在。<br> 405：需要访问的资源被禁止。<br> 407：访问的资源需要代理身份验证。<br> 414：请求的URL太长。<br> 500：服务器内部错误。</p>
+<h2 id="三-向服务器发送请求"><a href="#三-向服务器发送请求" class="headerlink" title="三.向服务器发送请求"></a>三.向服务器发送请求</h2><p>使用open和send方法发送请求</p>
+<ul>
+<li>open：规定请求的类型，url以及是否异步处理请求<br>open(method,url,async):method为请求类型get和post<pre><code>url：文件在服务器上的位置
+async：true异步，false同步
+</code></pre></li>
+<li>send: 将请求发送到服务器<br>  send（string）：string：仅仅用于post请求<h3 id="get还是post？"><a href="#get还是post？" class="headerlink" title="get还是post？"></a>get还是post？</h3>  与post比get更快更简单，大部分情况都能用</li>
+</ul>
+<p>下面情况只能用post：</p>
+<ul>
+<li>无法使用缓存文件(更新服务器上的文件或数据库)</li>
+<li>向服务器发送大量数据(post没有数据限制)</li>
+<li>发送包含为知字符的用户输入时，post比get更稳定可靠</li>
+</ul>
+<p>对于post请求，如果希望像表单那样post数据，使用setRequestHeader()来添加HTTP头，然后在send方法中规定发送的数据<br><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">xmlhttp.open(<span class="string">"<span class="keyword">POST</span>"</span>,<span class="string">"/try/ajax/demo_post2.php"</span>,true);</div><div class="line">xmlhttp.setRequestHeader(<span class="string">"Content-type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>);</div><div class="line">xmlhttp.send(<span class="string">"fname=Henry&amp;lname=Ford"</span>);</div></pre></td></tr></table></figure></p>
+<p>setRequestHeader(header,value)    :向请求添加 HTTP 头。<br>header: 规定头的名称<br>value: 规定头的值</p>
+
       
 
       
@@ -394,10 +433,6 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">布局</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">css3</a>
               </li>
              
@@ -410,15 +445,19 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">布局</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">jq</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">测试</a>
+                <a href="javascript:void(0)" class="js-tag color2">字符串的操作</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">字符串的操作</a>
+                <a href="javascript:void(0)" class="js-tag color3">测试</a>
               </li>
             
             <div class="clearfix"></div>
