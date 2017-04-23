@@ -149,6 +149,416 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-drag" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/23/drag/">拖拽,磁性吸附，碰撞,模拟滚动条控制内容问题的封装</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/23/drag/" class="archive-article-date">
+  	<time datetime="2017-04-23T07:21:14.704Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1001/300/?random" alt=""></p>
+<h1 id="一-拖拽"><a href="#一-拖拽" class="headerlink" title="一.拖拽"></a>一.拖拽</h1><p>先来普及一下全局捕获<br>aInput[0].setCapture();    //设置全局捕获 ，当我们给一个元素设置全局捕获以后，那么这个元素就会监听后续发生的所有事件，当有事件发生的时候，就会被当前设置了全局捕获的元素所触发</p>
+<pre><code>ie : 有，并且有效果
+ff : 有，但是没效果
+chrome : 没有
+</code></pre><p>1.拖拽的时候，如果有文字被选中，会产生问题<br>        原因：当鼠标按下的时候，如果页面中有文字被选中，那么会触发浏览器默认拖拽文字的效果<br>            解决：<br>                标准：阻止默认行为<br>                非标准ie：全局捕获<br>    拖拽图片会有问题，原因，解决的办法同上<br>
+        
+          <a class="article-more-a" href="/2017/04/23/drag/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/23/drag/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-jsdom" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/22/jsdom/">js操作节点</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/22/jsdom/" class="archive-article-date">
+  	<time datetime="2017-04-22T14:48:52.312Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
+<h1 id="一-概念"><a href="#一-概念" class="headerlink" title="一.概念"></a>一.概念</h1><p>元素对象：在html dom中，元素对象代表着一个html元素，也就是元素对象是标签<br>元素对象的子节点：可以是元素节点，文本节点，注释节点<br>NodeList对象：代表了节点列表</p>
+<h1 id="二-元素常用的的属性和方法"><a href="#二-元素常用的的属性和方法" class="headerlink" title="二.元素常用的的属性和方法"></a>二.元素常用的的属性和方法</h1><p>element.attributes    返回一个元素的属性数组</p>
+<p>element.classlist    返回元素的类名，作为 DOMTokenList 对象。classList 属性是只读的，但你可以使用 add() 和 remove() 方法修改它。<br>element.className    设置或返回元素的class属性<br>
+        
+          <a class="article-more-a" href="/2017/04/22/jsdom/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/22/jsdom/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-time" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/22/time/">关于时间和时间戳</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/22/time/" class="archive-article-date">
+  	<time datetime="2017-04-22T08:06:51.131Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
+<h1 id="一-时间对象Date"><a href="#一-时间对象Date" class="headerlink" title="一.时间对象Date"></a>一.时间对象Date</h1><p>数字的形式：new Date(2013,4,14,9,45,20);//页就是年月日时分秒<br>字符串的形式：new Date(‘November 27,2013 22:3:0’);//只有一个逗号，前面写月日，后面写年 时分秒，注意空格<br>字符串的形式：new Date(“2014-07-19 20:10:1”);</p>
+<p>未来时间与现在时间的差：<br>var inow=new Date();<br>var iNew=new Date(November 27,2017 20:16:0);</p>
+<p>var t=Math.floor((inow-iNew)/1000);</p>
+<p>天：Math.floor(t/86400)<br>时：Math.floor(t%86400/3600)<br>分：Math.floor(t%86400%3600/60)<br>秒：t%60</p>
+        
+          <a class="article-more-a" href="/2017/04/22/time/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/22/time/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-domoveAndSetOpacity" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/22/domoveAndSetOpacity/">domove和setOpacity和shake的封装</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/22/domoveAndSetOpacity/" class="archive-article-date">
+  	<time datetime="2017-04-22T07:40:10.624Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1005/300/?random" alt=""></p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">function doMove ( obj, attr, <span class="keyword">dir</span>, target, endFn ) &#123;</div><div class="line">	</div><div class="line">	<span class="keyword">dir</span> = parseInt(getStyle( obj, attr )) &lt; target ? <span class="keyword">dir</span> : -<span class="keyword">dir</span>;</div><div class="line">	</div><div class="line">	clearInterval( obj.<span class="keyword">timer</span> );</div><div class="line">	</div><div class="line">	obj.<span class="keyword">timer</span> = setInterval(function () &#123;</div><div class="line">		</div><div class="line">		<span class="keyword">var</span> speed = parseInt(getStyle( obj, attr )) + <span class="keyword">dir</span>;			<span class="comment">// 步长</span></div><div class="line">		</div><div class="line">		<span class="keyword">if</span> ( speed &gt; target &amp;&amp; <span class="keyword">dir</span> &gt; 0 ||  speed &lt; target &amp;&amp; <span class="keyword">dir</span> &lt; 0  ) &#123;</div><div class="line">			speed = target;</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		obj.style[attr] = speed + 'px';</div><div class="line">		</div><div class="line">		<span class="keyword">if</span> ( speed == target ) &#123;</div><div class="line">			clearInterval( obj.<span class="keyword">timer</span> );</div><div class="line">			</div><div class="line">			<span class="comment">/*</div><div class="line">			if ( endFn ) &#123;</div><div class="line">				endFn();</div><div class="line">			&#125;</div><div class="line">			*/</span></div><div class="line">			endFn &amp;&amp; endFn();</div><div class="line">			</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">	&#125;, 30);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/04/22/domoveAndSetOpacity/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/22/domoveAndSetOpacity/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-jsjiexiqi" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/22/jsjiexiqi/">js解析器解析变量和函数</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/22/jsjiexiqi/" class="archive-article-date">
+  	<time datetime="2017-04-22T06:59:50.868Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1003/300/?random" alt=""></p>
+<h1 id="js解析器是如何解析代码的"><a href="#js解析器是如何解析代码的" class="headerlink" title="js解析器是如何解析代码的"></a>js解析器是如何解析代码的</h1><h2 id="第一步：“找一些东西”-：var-function-参数"><a href="#第一步：“找一些东西”-：var-function-参数" class="headerlink" title="第一步：“找一些东西”    ：var  function 参数"></a>第一步：“找一些东西”    ：var  function 参数</h2><p>如何解析:<br>a = …<br>        所有的变量，在正式运行代码之前，都提前赋了一个值：未定义<br>fn1 = function fn1(){ alert(2); }<br>        所有的函数，在正式运行代码之前，都是整个函数块</p>
+<p>JS 的预解析</p>
+<p>遇到重名的：只留一个<br>变量和函数重名了，就只留下函数</p>
+<h2 id="第二步：逐行解读代码："><a href="#第二步：逐行解读代码：" class="headerlink" title="第二步：逐行解读代码："></a>第二步：逐行解读代码：</h2><pre><code>表达式：= + - * / % ++ -- ! 参数……
+
+表达式可以修改预解析的值！
+</code></pre><figure class="highlight delphi"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">alert(a);					<span class="comment">// function a ()&#123; alert(4); &#125;</span></div><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">alert(a);					<span class="comment">// 1</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span> <span class="params">()</span><span class="comment">&#123; alert(2); &#125;</span></span></div><div class="line"><span class="title">alert</span><span class="params">(a)</span>;					<span class="comment">// 1</span></div><div class="line"><span class="keyword">var</span> a = <span class="number">3</span>;		</div><div class="line">alert(a);					<span class="comment">// 3</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span> <span class="params">()</span><span class="comment">&#123; alert(4); &#125;</span></span></div><div class="line"><span class="title">alert</span><span class="params">(a)</span>;					<span class="comment">// 3</span></div><div class="line"></div><div class="line">alert( typeof a );</div><div class="line"><span class="comment">// a();									// 报错</span></div></pre></td></tr></table></figure>
+<figure class="highlight delphi"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn1</span><span class="params">()</span><span class="comment">&#123;</span></span></div><div class="line">	alert(a);						// undefined</div><div class="line">	var a = 2;</div><div class="line">&#125;</div><div class="line"><span class="title">fn1</span><span class="params">()</span>;</div><div class="line">alert(a);							<span class="comment">// 1</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn1</span><span class="params">()</span><span class="comment">&#123;</span></span></div><div class="line">	alert(a);						// 1</div><div class="line">	a = 2;</div><div class="line">&#125;</div><div class="line"><span class="title">fn1</span><span class="params">()</span>;</div><div class="line">alert(a);							<span class="comment">// 2</span></div></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/22/jsjiexiqi/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-headresorce" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/21/headresorce/">头部信息header</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/21/headresorce/" class="archive-article-date">
+  	<time datetime="2017-04-21T08:09:24.858Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1002/300/?random" alt=""></p>
+<p>http头域有：请求头，响应头，实体头，通用头</p>
+<ul>
+<li>1.通用头部是客户端和服务器都可以使用的头部可以在客户端、服务器和其他应用程序之间提供一些非常有用的通用功能，如Date头部。</li>
+<li>2.请求头部是请求报文特有的，它们为服务器提供了一些额外信息，比如客户端希望接收什么类型的数据，如Accept头部</li>
+<li>3.响应头部便于客户端提供信息，比如，客服端在与哪种类型的服务器进行交互，如Server头部</li>
+<li>4.实体头部指的是用于应对实体主体部分的头部，比如，可以用实体头部来说明实体主体部分的数据类型，如Content-Type头部。</li>
+</ul>
+<h2 id="一些常用头的介绍"><a href="#一些常用头的介绍" class="headerlink" title="一些常用头的介绍"></a>一些常用头的介绍</h2>
+        
+          <a class="article-more-a" href="/2017/04/21/headresorce/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/21/headresorce/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-prototype" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -422,419 +832,9 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-img" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/14/img/">如何解决div里面img图片下方有空白的问题</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/14/img/" class="archive-article-date">
-  	<time datetime="2017-04-14T12:40:24.288Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://unsplash.it/1001/300/?random" alt=""></p>
-<h1 id="一-问题："><a href="#一-问题：" class="headerlink" title="一.问题："></a>一.问题：</h1><pre><code>相信网站前端开发者可能会遇到这样的问题，&lt;div&gt;&lt;img src=&quot;picture.png&quot;/&gt;&lt;/div&gt;
-这样的格式在html5的文档标准下会有一段空白区域，那么怎样去掉这部分空白区域呢？
-</code></pre><h1 id="二-原因"><a href="#二-原因" class="headerlink" title="二.原因"></a>二.原因</h1><p> 首先我们要知道这部分空白产生的原因。图片默认的vertical-align是baseline，<br> 也就是字母x的下边距，我们在图片后面写上x就是这样<br><img src="http://onw1ra7gr.bkt.clouddn.com/img.jpg" alt=""><br>
-        
-          <a class="article-more-a" href="/2017/04/14/img/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/14/img/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-XXS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/13/XXS/">xxs和cors</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/13/XXS/" class="archive-article-date">
-  	<time datetime="2017-04-13T14:10:04.579Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://unsplash.it/1007/300/?random" alt=""></p>
-<h1 id="一-xxs"><a href="#一-xxs" class="headerlink" title="一.xxs"></a>一.xxs</h1><h2 id="什么是xxs"><a href="#什么是xxs" class="headerlink" title="什么是xxs"></a>什么是xxs</h2><p>xxs叫跨域脚本攻击，它指的是攻击者往web页面里插入恶意html代码，当用户浏览该页面时，嵌入web里的html代码会被执行，从而达到恶意攻击用户的目的</p>
-<h2 id="为什么会产生xss"><a href="#为什么会产生xss" class="headerlink" title="为什么会产生xss"></a>为什么会产生xss</h2><p>原因是过滤不严</p>
-<h2 id="xss类型"><a href="#xss类型" class="headerlink" title="xss类型"></a>xss类型</h2><ul>
-<li>反射式xss<br>  这种xss，跨域代码一般会存在于某个链接中，当被攻击者访问这个链接时，跨域代码就没执行，这类跨域代码一般不会存储在服务器上</li>
-<li>存储型XSS<br>  跨域代码会存储在服务器上面的数据库中，所以可以进行持久攻击</li>
-<li>基于DOM的xss<br>这是由于客户端脚本自身的解析不正确导致的安全问题
-        
-          <a class="article-more-a" href="/2017/04/13/XXS/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/13/XXS/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-cross" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/13/cross/">跨文档通信问题</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/13/cross/" class="archive-article-date">
-  	<time datetime="2017-04-13T02:26:13.700Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
-<h1 id="一-窗口跨域操作问题和postmessage的使用"><a href="#一-窗口跨域操作问题和postmessage的使用" class="headerlink" title="一.窗口跨域操作问题和postmessage的使用"></a>一.窗口跨域操作问题和postmessage的使用</h1><h2 id="当父子页面在同一个域www-a-com下的时候，父子页面有包含关系，服页面通过iframe引入子页面"><a href="#当父子页面在同一个域www-a-com下的时候，父子页面有包含关系，服页面通过iframe引入子页面" class="headerlink" title="当父子页面在同一个域www.a.com下的时候，父子页面有包含关系，服页面通过iframe引入子页面"></a>当父子页面在同一个域www.a.com下的时候，父子页面有包含关系，服页面通过iframe引入子页面</h2><p>这个时候可以用js在父页面中操作子页面的DoM元素，也可以在子页面中用js操作父页面</p>
-        
-          <a class="article-more-a" href="/2017/04/13/cross/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/13/cross/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-layout" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/12/layout/">layout和css的hack详解</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/12/layout/" class="archive-article-date">
-  	<time datetime="2017-04-12T08:35:42.295Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
-<h1 id="一-layout"><a href="#一-layout" class="headerlink" title="一.layout"></a>一.layout</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>看了网上对于layout的各种说法，这里用一句话来总结layout的概念，这个概念仅仅是便于自己的理解，并非官方定义<br>layout：layout是元素的一个属性，有些元素本省具有layout属性，有的元素需要通过设置某些css才能获得layout属性</p>
-<h2 id="一个元素是否具有“layout”可能会引发如下的一些问题："><a href="#一个元素是否具有“layout”可能会引发如下的一些问题：" class="headerlink" title="一个元素是否具有“layout”可能会引发如下的一些问题："></a>一个元素是否具有“layout”可能会引发如下的一些问题：</h2><ul>
-<li>IE 很多常见的浮动 bug 。 </li>
-<li>元素本身对一些基本属性的异常处理问题。 </li>
-<li>容器和其子孙之间的边距重叠(margin collapsing)问题。 </li>
-<li>使用列表时遇到的诸多问题。 </li>
-<li>背景图像的定位偏差问题。 </li>
-<li>使用脚本时遇到的浏览器之间处理不一致的问题。</li>
-</ul>
-        
-          <a class="article-more-a" href="/2017/04/12/layout/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/12/layout/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-flex" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/12/flex/">flex布局</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/12/flex/" class="archive-article-date">
-  	<time datetime="2017-04-12T07:39:59.710Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://unsplash.it/1003/300/?random" alt=""></p>
-<h1 id="flex布局也就是弹性布局"><a href="#flex布局也就是弹性布局" class="headerlink" title="flex布局也就是弹性布局"></a>flex布局也就是弹性布局</h1><p>由于觉得阮一峰老师的博客已经写得非常详细，而且通俗易懂，这里附上他的链接，以后方便复习</p>
-<p><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">Flex 布局教程：语法篇</a><br><a href="http://www.ruanyifeng.com/blog/2015/07/flex-examples.html">Flex 布局教程：实例篇</a></p>
-        
-          <a class="article-more-a" href="/2017/04/12/flex/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">css3</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/12/flex/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-funcaera" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/11/funcaera/">关于变量的作用域</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/11/funcaera/" class="archive-article-date">
-  	<time datetime="2017-04-11T13:50:58.577Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://unsplash.it/1005/300/?random" alt=""></p>
-<h1 id="难以描述，直接上代码方便理解一些"><a href="#难以描述，直接上代码方便理解一些" class="headerlink" title="难以描述，直接上代码方便理解一些"></a>难以描述，直接上代码方便理解一些</h1>
-        
-          <a class="article-more-a" href="/2017/04/11/funcaera/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/11/funcaera/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -925,6 +925,10 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">布局</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">css3</a>
               </li>
              
@@ -937,19 +941,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">布局</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">jq</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">字符串的操作</a>
+                <a href="javascript:void(0)" class="js-tag color3">测试</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">测试</a>
+                <a href="javascript:void(0)" class="js-tag color2">字符串的操作</a>
               </li>
             
             <div class="clearfix"></div>

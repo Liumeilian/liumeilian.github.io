@@ -6,14 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://liumeilian.com.cn">
-  <title>Tag: 字符串的操作 | 美小妞的博客</title>
+  <title>js操作节点 | 美小妞的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="美小妞的博客">
-<meta property="og:url" content="http://liumeilian.com.cn/tags/字符串的操作/index.html">
+  <meta name="description" content="一.概念元素对象：在html dom中，元素对象代表着一个html元素，也就是元素对象是标签元素对象的子节点：可以是元素节点，文本节点，注释节点NodeList对象：代表了节点列表
+二.元素常用的的属性和方法element.attributes    返回一个元素的属性数组
+element.classlist    返回元素的类名，作为 DOMTokenList 对象。classList 属性是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js操作节点">
+<meta property="og:url" content="http://liumeilian.com.cn/2017/04/22/jsdom/index.html">
 <meta property="og:site_name" content="美小妞的博客">
+<meta property="og:description" content="一.概念元素对象：在html dom中，元素对象代表着一个html元素，也就是元素对象是标签元素对象的子节点：可以是元素节点，文本节点，注释节点NodeList对象：代表了节点列表
+二.元素常用的的属性和方法element.attributes    返回一个元素的属性数组
+element.classlist    返回元素的类名，作为 DOMTokenList 对象。classList 属性是">
+<meta property="og:image" content="https://unsplash.it/1000/300/?random">
+<meta property="og:updated_time" content="2017-04-23T07:53:20.936Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="美小妞的博客">
+<meta name="twitter:title" content="js操作节点">
+<meta name="twitter:description" content="一.概念元素对象：在html dom中，元素对象代表着一个html元素，也就是元素对象是标签元素对象的子节点：可以是元素节点，文本节点，注释节点NodeList对象：代表了节点列表
+二.元素常用的的属性和方法element.attributes    返回一个元素的属性数组
+element.classlist    返回元素的类名，作为 DOMTokenList 对象。classList 属性是">
+<meta name="twitter:image" content="https://unsplash.it/1000/300/?random">
   
     <link rel="alternative" href="/atom.xml" title="美小妞的博客" type="application/atom+xml">
   
@@ -147,64 +159,200 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-jsdom" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/08/replacestring/" class="archive-article-date">
-  	<time datetime="2017-04-08T02:35:32.848Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-08</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/08/replacestring/">用对象下的属性替换字符串中的字符</a>
+    <h1 class="article-title" itemprop="name">
+      js操作节点
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/04/22/jsdom/" class="archive-article-date">
+  	<time datetime="2017-04-22T14:48:52.312Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
+<h1 id="一-概念"><a href="#一-概念" class="headerlink" title="一.概念"></a>一.概念</h1><p>元素对象：在html dom中，元素对象代表着一个html元素，也就是元素对象是标签<br>元素对象的子节点：可以是元素节点，文本节点，注释节点<br>NodeList对象：代表了节点列表</p>
+<h1 id="二-元素常用的的属性和方法"><a href="#二-元素常用的的属性和方法" class="headerlink" title="二.元素常用的的属性和方法"></a>二.元素常用的的属性和方法</h1><p>element.attributes    返回一个元素的属性数组</p>
+<p>element.classlist    返回元素的类名，作为 DOMTokenList 对象。classList 属性是只读的，但你可以使用 add() 和 remove() 方法修改它。<br>element.className    设置或返回元素的class属性<br><a id="more"></a><br>element.childNodes    返回元素的一个子节点的数组<br>element.firstChild    返回元素的第一个子节点<br>element.lastChild    返回的最后一个子元素<br>element.nextSibling    返回该元素紧跟的一个节点<br>element.parentNode    返回元素的父节点<br>element.previousSibling    返回某个元素紧接之前元素<br><!--more--><br>element.appendChild()    为元素添加一个新的子元素<br>element.insertBefore()    现有的子元素之前插入一个新的子元素<br>element.removeChild()    删除一个子元素<br>element.replaceChild()    替换一个子元素</p>
+<p>element.cloneNode()    克隆某个元素<br>element.focus()    设置文档或元素获取焦点</p>
+<p>element.getAttributeNode()    返回指定属性节点<br>element.getElementsByTagName()    返回指定标签名的所有子元素集合。<br>element. getElementsByClassName()    返回文档中所有指定类名的元素集合，作为 NodeList 对象。</p>
+<p>element.querySelector()    返回匹配指定 CSS 选择器元素的第一个子元素<br>document.querySelectorAll()    返回匹配指定 CSS 选择器元素的所有子元素节点列表</p>
+<p>element.removeAttribute()    从元素中删除指定的属性<br>element.setAttribute()    设置或者改变指定属性并指定值。<br>element.getAttribute()    返回指定元素的属性值<br>用.和[]的形式无法操作元素的自定义属性<br>getAttribute可以操作元素的自定义属性</p>
+<p>element.addEventListener()    向指定元素添加事件句柄<br>element.removeEventListener()    移除由 </p>
+<p>element.clientHeight    在页面上返回内容的可视高度（不包括边框，边距或滚动条）<br>element.clientWidth    在页面上返回内容的可视宽度（不包括边框，边距或滚动条）<br>element.scrollHeight    返回整个元素的高度（包括带滚动条的隐蔽的地方）<br>element.scrollLeft    返回当前视图中的实际元素的左边缘和左边缘之间的距离<br>element.scrollTop    返回当前视图中的实际元素的顶部边缘和顶部边缘之间的距离<br>element.scrollWidth    返回元素的整个宽度（包括带滚动条的隐蔽的地方）</p>
+<p>element.offsetHeight    返回，任何一个元素的高度包括边框和填充，但不是边距<br>element.offsetWidth       返回元素的宽度，包括边框和填充，但不是边距<br>element.offsetLeft      返回当前元素的相对水平偏移位置的偏移容器<br>element.offsetParent    返回元素的偏移容器<br>element.offsetTop    返回当前元素的相对垂直偏移位置的偏移容器</p>
+<h1 id="三-parentNode和offsetParent的区别"><a href="#三-parentNode和offsetParent的区别" class="headerlink" title="三.parentNode和offsetParent的区别"></a>三.parentNode和offsetParent的区别</h1><p>element.parentNode：只读属性，指当前元素的父级节点<br>offsetParent：只读 属性 离当前元素最近的一个有定位属性的父节点<br>如果没有定位父级，默认是body，有兼容性问题。</p>
+<p>经过测试parentNode没有什么兼容性问题，可以大胆使用。<br>offsetParent：只读 属性 离当前元素最近的一个有定位属性的父节点<br>如果没有定位父级，默认是body<br>Ie7以下，如果当前元素没有定位默认是body，如果有定位则是html<br>Ie7以下，如果当前元素的某个父级触发了layout，那么offsetParent就会被指 向到这个触发了layout特性的父节点上</p>
+<h1 id="四-children和childNodes-的区别"><a href="#四-children和childNodes-的区别" class="headerlink" title="四. children和childNodes 的区别"></a>四. children和childNodes 的区别</h1><ul>
+<li>childNodes 属性，标准的<br>element.childNodes    返回元素的一个子节点的数组,包括HTML节点，所有属性节点，文本节点<br>可以通过nodeType来判断是哪种类型的节点，只有当nodeType==1时才是元素节点，2是属性节点，3是文本节点。</li>
+</ul>
+<p>标准下：包含了文本和元素类型的节点，也会包含非法嵌套的子节点<br>            非标准下：只包含元素类型的节点，ie7以下不会包含非法嵌套子节点</p>
+<ul>
+<li>children 属性，非标准的，它返回指定元素的子元素集合。经测试，它只返回HTML节点，甚至不返回文本节点</li>
+</ul>
+<h1 id="五-firstChild与firstElementChild"><a href="#五-firstChild与firstElementChild" class="headerlink" title="五.firstChild与firstElementChild"></a>五.firstChild与firstElementChild</h1><ul>
+<li>元素.firstChild : 只读 属性 第一个子节点<pre><code>标准下：firstChild会包含文本类型的节点
+非标准下：只包含元素节点
+</code></pre></li>
+<li>元素.firstElementChild : 只读 属性 标准下获取第一个元素类型的子节点</li>
+</ul>
+<p>兼容方式：var oFirst = oUl.firstElementChild || oUl.firstChild;<br>var oLast = oUl.lastElementChild || oUl.lastChild;<br>var oNext = oFirst.nextElementSibling || oFirst.nextSibling;<br>var oPrev = oLast.previousElementSibling || oLast.previousSibling;</p>
+<h1 id="六-offsetTop等"><a href="#六-offsetTop等" class="headerlink" title="六.offsetTop等"></a>六.offsetTop等</h1><p>元素.offsetLeft[Top] : 只读 属性 当前元素到定位父级的距离（偏移值）<br>            到当前元素的offsetParent的距离</p>
+<pre><code>如果没有定位父级
+    offsetParent -&gt; body
+    offsetLeft -&gt; html
+
+如果有定位父级
+    ie7以下：如果自己没有定位，那么offsetLeft[Top]是到body的距离
+            如果自己有定位，那么就是到定位父级的距离
+    其他：到定位父级的距离
+</code></pre><h1 id="七-offsetWidth与clientWidth与scrollHeight"><a href="#七-offsetWidth与clientWidth与scrollHeight" class="headerlink" title="七.offsetWidth与clientWidth与scrollHeight"></a>七.offsetWidth与clientWidth与scrollHeight</h1><pre><code>alert( oDiv.style.width );    //100
+alert( oDiv.clientWidth );    //样式宽 + padding    120  也就是说只与oDiv有关，如果子元素比他宽也不管
+alert( oDiv.offsetWidth );    //样式宽 + padding + border  可视区宽 + 边框    122
+scrollHeight : 内容实际宽高//高+padding+border    不仅与oDiv有关还与子元素的宽有关，如果子元素比oDiv宽
+</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> oDiv1 = <span class="built_in">document</span>.getElementById(<span class="string">'div1'</span>);</div><div class="line">		</div><div class="line">		<span class="comment">//scrollHeight : 内容实际宽高</span></div><div class="line">		alert(oDiv1.scrollHeight);<span class="comment">//812</span></div><div class="line">		alert(oDiv1.clientHeight);<span class="comment">//140</span></div><div class="line">		alert(oDiv1.style.Height);<span class="comment">//undefined</span></div><div class="line">		alert(oDiv1.offsetHeight);<span class="comment">//142</span></div><div class="line"></div><div class="line"></div><div class="line">body style=<span class="string">"height:2000px;"</span>&gt;</div><div class="line">	<span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"div1"</span> <span class="attr">style</span>=<span class="string">"width:120px;height:120px;border: 1px solid red; overflow: -auto; padding: 10px;"</span>&gt;</span></span></div><div class="line">    	<span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"height: 800px;width: 100px; background: red;border: 1px solid green;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">&lt;<span class="regexp">/body&gt;</span></div></pre></td></tr></table></figure>
+<h1 id="五-文档对象模型的概念"><a href="#五-文档对象模型的概念" class="headerlink" title="五.文档对象模型的概念"></a>五.文档对象模型的概念</h1><p>DOM : Document Object Model 文档对象模型<br>文档：html页面<br>文档对象：页面中元素<br>文档对象模型：定义 为了能够让程序(js)去操作页面中的元素</p>
+<p>DOM会把文档看作是一棵树，同时定义了很多方法来操作这棵数中的每一个元素（节点）</p>
+<h1 id="八-如何判断是不是ie"><a href="#八-如何判断是不是ie" class="headerlink" title="八.如何判断是不是ie"></a>八.如何判断是不是ie</h1><p>if ( window.navigator.userAgent.indexOf(‘MSIE’) != -1 ) {<br>    alert(‘我是ie’);<br>} else {<br>    alert(‘我不是ie’);<br>}</p>
+<h1 id="window-location"><a href="#window-location" class="headerlink" title="window.location"></a>window.location</h1><p>window.location.href = window.location内容<br>window.location.search = url?后面的内容<br>window.location.hash = url#后面的内容</p>
+<h1 id="十-attatchEvent与addEventListener"><a href="#十-attatchEvent与addEventListener" class="headerlink" title="十.attatchEvent与addEventListener"></a>十.attatchEvent与addEventListener</h1><p>ie：obj.attachEvent(事件名称，事件函数);<br>    1.没有捕获<br>    2.事件名称有on<br>    3.事件函数执行的顺序：标准ie-》正序   非标准ie-》倒序<br>    4.this指向window<br>标准：obj.addEventListener(事件名称，事件函数，是否捕获);<br>    1.有捕获<br>    2.事件名称没有on<br>    3.事件执行的顺序是正序<br>    4.this触发该事件的对象</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">字符串的操作</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://liumeilian.com.cn/2017/04/22/jsdom/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/04/23/drag/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          拖拽,磁性吸附，碰撞,模拟滚动条控制内容问题的封装
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2017/04/22/time/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于时间和时间戳</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="jsdom" data-title="js操作节点" data-url="http://liumeilian.com.cn/2017/04/22/jsdom/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"liumeilian"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
   
 
-    
+
 
 
           </div>
@@ -227,9 +375,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		root: "/",

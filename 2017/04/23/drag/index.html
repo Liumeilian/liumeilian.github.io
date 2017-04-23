@@ -6,14 +6,32 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://liumeilian.com.cn">
-  <title>Tag: 字符串的操作 | 美小妞的博客</title>
+  <title>拖拽,磁性吸附，碰撞,模拟滚动条控制内容问题的封装 | 美小妞的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="美小妞的博客">
-<meta property="og:url" content="http://liumeilian.com.cn/tags/字符串的操作/index.html">
+  <meta name="description" content="一.拖拽先来普及一下全局捕获aInput[0].setCapture();    //设置全局捕获 ，当我们给一个元素设置全局捕获以后，那么这个元素就会监听后续发生的所有事件，当有事件发生的时候，就会被当前设置了全局捕获的元素所触发
+ie : 有，并且有效果
+ff : 有，但是没效果
+chrome : 没有
+1.拖拽的时候，如果有文字被选中，会产生问题        原因：当鼠标按下的时候，如果">
+<meta property="og:type" content="article">
+<meta property="og:title" content="拖拽,磁性吸附，碰撞,模拟滚动条控制内容问题的封装">
+<meta property="og:url" content="http://liumeilian.com.cn/2017/04/23/drag/index.html">
 <meta property="og:site_name" content="美小妞的博客">
+<meta property="og:description" content="一.拖拽先来普及一下全局捕获aInput[0].setCapture();    //设置全局捕获 ，当我们给一个元素设置全局捕获以后，那么这个元素就会监听后续发生的所有事件，当有事件发生的时候，就会被当前设置了全局捕获的元素所触发
+ie : 有，并且有效果
+ff : 有，但是没效果
+chrome : 没有
+1.拖拽的时候，如果有文字被选中，会产生问题        原因：当鼠标按下的时候，如果">
+<meta property="og:image" content="https://unsplash.it/1001/300/?random">
+<meta property="og:updated_time" content="2017-04-23T07:53:18.010Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="美小妞的博客">
+<meta name="twitter:title" content="拖拽,磁性吸附，碰撞,模拟滚动条控制内容问题的封装">
+<meta name="twitter:description" content="一.拖拽先来普及一下全局捕获aInput[0].setCapture();    //设置全局捕获 ，当我们给一个元素设置全局捕获以后，那么这个元素就会监听后续发生的所有事件，当有事件发生的时候，就会被当前设置了全局捕获的元素所触发
+ie : 有，并且有效果
+ff : 有，但是没效果
+chrome : 没有
+1.拖拽的时候，如果有文字被选中，会产生问题        原因：当鼠标按下的时候，如果">
+<meta name="twitter:image" content="https://unsplash.it/1001/300/?random">
   
     <link rel="alternative" href="/atom.xml" title="美小妞的博客" type="application/atom+xml">
   
@@ -147,64 +165,153 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-drag" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/08/replacestring/" class="archive-article-date">
-  	<time datetime="2017-04-08T02:35:32.848Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-08</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/08/replacestring/">用对象下的属性替换字符串中的字符</a>
+    <h1 class="article-title" itemprop="name">
+      拖拽,磁性吸附，碰撞,模拟滚动条控制内容问题的封装
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/04/23/drag/" class="archive-article-date">
+  	<time datetime="2017-04-23T07:21:14.704Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1001/300/?random" alt=""></p>
+<h1 id="一-拖拽"><a href="#一-拖拽" class="headerlink" title="一.拖拽"></a>一.拖拽</h1><p>先来普及一下全局捕获<br>aInput[0].setCapture();    //设置全局捕获 ，当我们给一个元素设置全局捕获以后，那么这个元素就会监听后续发生的所有事件，当有事件发生的时候，就会被当前设置了全局捕获的元素所触发</p>
+<pre><code>ie : 有，并且有效果
+ff : 有，但是没效果
+chrome : 没有
+</code></pre><p>1.拖拽的时候，如果有文字被选中，会产生问题<br>        原因：当鼠标按下的时候，如果页面中有文字被选中，那么会触发浏览器默认拖拽文字的效果<br>            解决：<br>                标准：阻止默认行为<br>                非标准ie：全局捕获<br>    拖拽图片会有问题，原因，解决的办法同上<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	</div><div class="line">	<span class="keyword">var</span> oDiv = <span class="built_in">document</span>.getElementById(<span class="string">'div1'</span>);</div><div class="line">	<span class="keyword">var</span> oImg = <span class="built_in">document</span>.getElementById(<span class="string">'img1'</span>);</div><div class="line">	</div><div class="line">	drag(oImg);</div><div class="line">	</div><div class="line">	drag(oDiv);</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">drag</span>(<span class="params">obj</span>) </span>&#123;</div><div class="line">		</div><div class="line">		obj.onmousedown = <span class="function"><span class="keyword">function</span>(<span class="params">ev</span>) </span>&#123;</div><div class="line">			<span class="keyword">var</span> ev = ev || event;</div><div class="line">			</div><div class="line">			<span class="keyword">var</span> disX = ev.clientX - <span class="keyword">this</span>.offsetLeft;</div><div class="line">			<span class="keyword">var</span> disY = ev.clientY - <span class="keyword">this</span>.offsetTop;</div><div class="line">			</div><div class="line">			<span class="keyword">if</span> ( obj.setCapture ) &#123;</div><div class="line">				obj.setCapture();</div><div class="line">			&#125;</div><div class="line">			</div><div class="line">			<span class="built_in">document</span>.onmousemove = <span class="function"><span class="keyword">function</span>(<span class="params">ev</span>) </span>&#123;</div><div class="line">				<span class="keyword">var</span> ev = ev || event;</div><div class="line">				</div><div class="line">				obj.style.left = ev.clientX - disX + <span class="string">'px'</span>;</div><div class="line">				obj.style.top = ev.clientY - disY + <span class="string">'px'</span>;</div><div class="line">			&#125;</div><div class="line">			</div><div class="line">			<span class="built_in">document</span>.onmouseup = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">				<span class="built_in">document</span>.onmousemove = <span class="built_in">document</span>.onmouseup = <span class="literal">null</span>;</div><div class="line">				<span class="comment">//释放全局捕获 releaseCapture();</span></div><div class="line">				<span class="keyword">if</span> ( obj.releaseCapture ) &#123;</div><div class="line">					obj.releaseCapture();</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			</div><div class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">			</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="二-磁性吸附"><a href="#二-磁性吸附" class="headerlink" title="二.磁性吸附"></a>二.磁性吸附</h1><figure class="highlight livescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.onload = <span class="keyword">function</span>() &#123;</div><div class="line">	</div><div class="line">	<span class="keyword">var</span> oDiv = <span class="built_in">document</span>.getElementById(<span class="string">'div1'</span>);</div><div class="line">	<span class="keyword">var</span> oImg = <span class="built_in">document</span>.getElementById(<span class="string">'img1'</span>);</div><div class="line">	</div><div class="line">	drag(oImg);</div><div class="line">	</div><div class="line">	drag(oDiv);</div><div class="line">	</div><div class="line">	<span class="keyword">function</span> drag(obj) &#123;</div><div class="line">		</div><div class="line">		obj.onmousedown = <span class="keyword">function</span>(ev) &#123;</div><div class="line">			<span class="keyword">var</span> ev = ev || event;</div><div class="line">			</div><div class="line">			<span class="keyword">var</span> disX = ev.clientX - <span class="keyword">this</span>.offsetLeft;</div><div class="line">			<span class="keyword">var</span> disY = ev.clientY - <span class="keyword">this</span>.offsetTop;</div><div class="line">			</div><div class="line">			<span class="keyword">if</span> ( obj.setCapture ) &#123;</div><div class="line">				obj.setCapture();</div><div class="line">			&#125;</div><div class="line">			</div><div class="line">			<span class="built_in">document</span>.onmousemove = <span class="keyword">function</span>(ev) &#123;</div><div class="line">				<span class="keyword">var</span> ev = ev || event;</div><div class="line">				</div><div class="line">				<span class="keyword">var</span> L = ev.clientX - disX;</div><div class="line">				<span class="keyword">var</span> T = ev.clientY - disY;</div><div class="line">				</div><div class="line">				<span class="keyword">if</span> ( L &lt; <span class="number">100</span> ) &#123;</div><div class="line">					L = <span class="number">0</span>;</div><div class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> ( L &gt; <span class="built_in">document</span>.documentElement.clientWidth - obj.offsetWidth ) &#123;</div><div class="line">					L = <span class="built_in">document</span>.documentElement.clientWidth - obj.offsetWidth;</div><div class="line">				&#125;</div><div class="line">				</div><div class="line">				<span class="keyword">if</span> ( T &lt; <span class="number">0</span> ) &#123;</div><div class="line">					T = <span class="number">0</span>;</div><div class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> ( T &gt; <span class="built_in">document</span>.documentElement.clientHeight - obj.offsetHeight ) &#123;</div><div class="line">					T = <span class="built_in">document</span>.documentElement.clientHeight - obj.offsetHeight;</div><div class="line">				&#125;</div><div class="line">				</div><div class="line">				obj.style.left = L + <span class="string">'px'</span>;</div><div class="line">				obj.style.top = T + <span class="string">'px'</span>;</div><div class="line">				</div><div class="line">			&#125;</div><div class="line">			</div><div class="line">			<span class="built_in">document</span>.onmouseup = <span class="keyword">function</span>() &#123;</div><div class="line">				<span class="built_in">document</span>.onmousemove = <span class="built_in">document</span>.onmouseup = <span class="literal">null</span>;</div><div class="line">				<span class="keyword">if</span> ( obj.releaseCapture ) &#123;</div><div class="line">					obj.releaseCapture();</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			</div><div class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">			</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">&lt;body&gt;</div><div class="line">	&lt;div id=<span class="string">"div1"</span>&gt;&lt;/div&gt;</div><div class="line">    &lt;img src=<span class="string">"1.jpg"</span> id=<span class="string">"img1"</span> /&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<h1 id="三-碰撞检测"><a href="#三-碰撞检测" class="headerlink" title="三.碰撞检测"></a>三.碰撞检测</h1><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div></pre></td><td class="code"><pre><div class="line">window.onload = <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</div><div class="line">	</div><div class="line">	<span class="keyword">var</span> oDiv = document.getElementById(<span class="string">'div1'</span>);</div><div class="line">	<span class="keyword">var</span> oImg = document.getElementById(<span class="string">'img1'</span>);</div><div class="line">	</div><div class="line">	drag(oDiv);</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">drag</span><span class="params">(obj)</span> </span>&#123;</div><div class="line">		</div><div class="line">		obj.onmousedown = <span class="function"><span class="keyword">function</span><span class="params">(ev)</span> </span>&#123;</div><div class="line">			<span class="keyword">var</span> ev = ev || event;</div><div class="line">			</div><div class="line">			<span class="keyword">var</span> disX = ev.clientX - <span class="keyword">this</span>.offsetLeft;</div><div class="line">			<span class="keyword">var</span> disY = ev.clientY - <span class="keyword">this</span>.offsetTop;</div><div class="line">			</div><div class="line">			<span class="keyword">if</span> ( obj.setCapture ) &#123;</div><div class="line">				obj.setCapture();</div><div class="line">			&#125;</div><div class="line">			</div><div class="line">			document.onmousemove = <span class="function"><span class="keyword">function</span><span class="params">(ev)</span> </span>&#123;</div><div class="line">				<span class="keyword">var</span> ev = ev || event;</div><div class="line">				</div><div class="line">				<span class="keyword">var</span> L = ev.clientX - disX;</div><div class="line">				<span class="keyword">var</span> T = ev.clientY - disY;</div><div class="line">				</div><div class="line">				<span class="keyword">var</span> L1 = L;</div><div class="line">				<span class="keyword">var</span> R1 = L + obj.offsetWidth;</div><div class="line">				<span class="keyword">var</span> T1 = T;</div><div class="line">				<span class="keyword">var</span> B1 = T + obj.offsetHeight;</div><div class="line">				</div><div class="line">				<span class="keyword">var</span> L2 = oImg.offsetLeft;</div><div class="line">				<span class="keyword">var</span> R2 = L2 + oImg.offsetWidth;</div><div class="line">				<span class="keyword">var</span> T2 = oImg.offsetTop;</div><div class="line">				<span class="keyword">var</span> B2 = T2 + oImg.offsetHeight;</div><div class="line">				</div><div class="line">				<span class="keyword">if</span> ( R1 &lt; L2 || L1 &gt; R2 || B1 &lt; T2 || T1 &gt; B2 ) &#123;</div><div class="line">					oImg.src = <span class="string">'1.jpg'</span>;</div><div class="line">				&#125; <span class="keyword">else</span> &#123;</div><div class="line">					oImg.src = <span class="string">'2.jpg'</span>;</div><div class="line">				&#125;</div><div class="line">				</div><div class="line">				obj.style.left = L + <span class="string">'px'</span>;</div><div class="line">				obj.style.top = T + <span class="string">'px'</span>;</div><div class="line">				</div><div class="line">			&#125;</div><div class="line">			</div><div class="line">			document.onmouseup = <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</div><div class="line">				document.onmousemove = document.onmouseup = <span class="literal">null</span>;</div><div class="line">				<span class="keyword">if</span> ( obj.releaseCapture ) &#123;</div><div class="line">					obj.releaseCapture();</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			</div><div class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">			</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">&lt;body&gt;</div><div class="line">	&lt;div id=<span class="string">"div1"</span>&gt;&lt;/div&gt;</div><div class="line">    &lt;img src=<span class="string">"1.jpg"</span> id=<span class="string">"img1"</span> /&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<h1 id="四-模拟个滚动条控制内容"><a href="#四-模拟个滚动条控制内容" class="headerlink" title="四.模拟个滚动条控制内容"></a>四.模拟个滚动条控制内容</h1><figure class="highlight livescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.onload = <span class="keyword">function</span>() &#123;</div><div class="line">	</div><div class="line">	<span class="keyword">var</span> oDiv1 = <span class="built_in">document</span>.getElementById(<span class="string">'div1'</span>);</div><div class="line">	<span class="keyword">var</span> oDiv2 = <span class="built_in">document</span>.getElementById(<span class="string">'div2'</span>);</div><div class="line">	<span class="keyword">var</span> oDiv3 = <span class="built_in">document</span>.getElementById(<span class="string">'div3'</span>);</div><div class="line">	<span class="keyword">var</span> oDiv4 = <span class="built_in">document</span>.getElementById(<span class="string">'div4'</span>);</div><div class="line">	</div><div class="line">	<span class="keyword">var</span> iMaxTop = oDiv1.offsetHeight - oDiv2.offsetHeight;</div><div class="line">	</div><div class="line">	oDiv2.onmousedown = <span class="keyword">function</span>(ev) &#123;</div><div class="line">		</div><div class="line">		<span class="keyword">var</span> ev = ev || event;</div><div class="line">		</div><div class="line">		<span class="keyword">var</span> disY = ev.clientY - <span class="keyword">this</span>.offsetTop;</div><div class="line">		</div><div class="line">		<span class="built_in">document</span>.onmousemove = <span class="keyword">function</span>(ev) &#123;</div><div class="line">			</div><div class="line">			<span class="keyword">var</span> ev = ev || event;</div><div class="line">			</div><div class="line">			<span class="keyword">var</span> T = ev.clientY - disY;</div><div class="line">			</div><div class="line">			<span class="keyword">if</span> ( T &lt; <span class="number">0</span> ) &#123;</div><div class="line">				T = <span class="number">0</span>;</div><div class="line">			&#125; <span class="keyword">else</span> <span class="keyword">if</span> ( T &gt; iMaxTop ) &#123;</div><div class="line">				T = iMaxTop;</div><div class="line">			&#125;</div><div class="line">			</div><div class="line">			oDiv2.style.top = T + <span class="string">'px'</span>;</div><div class="line">			</div><div class="line">			<span class="keyword">var</span> iScale = T / iMaxTop;</div><div class="line">			</div><div class="line">			<span class="built_in">document</span>.title = iScale;</div><div class="line">			</div><div class="line">			oDiv4.style.top = (oDiv3.clientHeight - oDiv4.offsetHeight) * iScale + <span class="string">'px'</span>;</div><div class="line">			</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		<span class="built_in">document</span>.onmouseup = <span class="keyword">function</span>() &#123;</div><div class="line">			</div><div class="line">			<span class="built_in">document</span>.onmousemove = <span class="built_in">document</span>.onmouseup = <span class="literal">null</span>;</div><div class="line">			</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">&lt;body&gt;</div><div class="line">	&lt;div id=<span class="string">"div1"</span>&gt;</div><div class="line">    	&lt;div id=<span class="string">"div2"</span>&gt;&lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;div id=<span class="string">"div3"</span>&gt;</div><div class="line">    	&lt;div id=<span class="string">"div4"</span>&gt;</div><div class="line">        	搜索设置|百度首页|登录注册</div><div class="line">新闻　网页　贴吧　知道　音乐　图片　视频　地图　文库　更多»</div><div class="line">推荐 : 用手机随时随地上百度</div><div class="line">其他人还搜</div><div class="line"></div><div class="line">烤鱼</div><div class="line">动搜索的结果，不代表百度赞成被搜索网站的内容或立场</div><div class="line">        &lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">字符串的操作</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://liumeilian.com.cn/2017/04/23/drag/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/04/22/jsdom/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js操作节点</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="drag" data-title="拖拽,磁性吸附，碰撞,模拟滚动条控制内容问题的封装" data-url="http://liumeilian.com.cn/2017/04/23/drag/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"liumeilian"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
   
 
-    
+
 
 
           </div>
@@ -227,9 +334,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		root: "/",
