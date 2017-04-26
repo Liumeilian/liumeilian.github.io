@@ -6,32 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://liumeilian.com.cn">
-  <title>查找两个字符串中最长的公共子串 | 美小妞的博客</title>
+  <title>继承的几种方法 | 美小妞的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="问题：str1=“aaa3333”；str2=“vscscsaaa33”;求str1和str2中最长的公共子串aaa33
-思想：在长的字符串str2里面找最长的str1的子串
-分析步骤：
-1现在str2里面找 aaa3333，str1的长度是7，下标是0-6，先在str2中找str1的0-6的字符串aaa3333，找          的长度是7
-2找不到aaa3333，再找str1中0-5的字">
+  <meta name="description" content="一.组合继承思想：原型链实现对原型的属性和方法的继承，通过借用构造函数实现对实例属性的继承
+1234567891011121314151617function SuperType(name)&amp;#123;	this.name=name;	this.color=[&quot;red&quot;,&quot;blue&quot;];&amp;#125;SuperType.prototype.sayName=function()&amp;#123;	aler">
 <meta property="og:type" content="article">
-<meta property="og:title" content="查找两个字符串中最长的公共子串">
-<meta property="og:url" content="http://liumeilian.com.cn/2017/03/25/maxLength/index.html">
+<meta property="og:title" content="继承的几种方法">
+<meta property="og:url" content="http://liumeilian.com.cn/2017/04/23/jicheng/index.html">
 <meta property="og:site_name" content="美小妞的博客">
-<meta property="og:description" content="问题：str1=“aaa3333”；str2=“vscscsaaa33”;求str1和str2中最长的公共子串aaa33
-思想：在长的字符串str2里面找最长的str1的子串
-分析步骤：
-1现在str2里面找 aaa3333，str1的长度是7，下标是0-6，先在str2中找str1的0-6的字符串aaa3333，找          的长度是7
-2找不到aaa3333，再找str1中0-5的字">
-<meta property="og:image" content="https://unsplash.it/1001/300/?random">
-<meta property="og:updated_time" content="2017-04-15T05:32:38.190Z">
+<meta property="og:description" content="一.组合继承思想：原型链实现对原型的属性和方法的继承，通过借用构造函数实现对实例属性的继承
+1234567891011121314151617function SuperType(name)&amp;#123;	this.name=name;	this.color=[&quot;red&quot;,&quot;blue&quot;];&amp;#125;SuperType.prototype.sayName=function()&amp;#123;	aler">
+<meta property="og:image" content="https://unsplash.it/1000/300/?random">
+<meta property="og:updated_time" content="2017-04-24T04:18:05.825Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="查找两个字符串中最长的公共子串">
-<meta name="twitter:description" content="问题：str1=“aaa3333”；str2=“vscscsaaa33”;求str1和str2中最长的公共子串aaa33
-思想：在长的字符串str2里面找最长的str1的子串
-分析步骤：
-1现在str2里面找 aaa3333，str1的长度是7，下标是0-6，先在str2中找str1的0-6的字符串aaa3333，找          的长度是7
-2找不到aaa3333，再找str1中0-5的字">
-<meta name="twitter:image" content="https://unsplash.it/1001/300/?random">
+<meta name="twitter:title" content="继承的几种方法">
+<meta name="twitter:description" content="一.组合继承思想：原型链实现对原型的属性和方法的继承，通过借用构造函数实现对实例属性的继承
+1234567891011121314151617function SuperType(name)&amp;#123;	this.name=name;	this.color=[&quot;red&quot;,&quot;blue&quot;];&amp;#125;SuperType.prototype.sayName=function()&amp;#123;	aler">
+<meta name="twitter:image" content="https://unsplash.it/1000/300/?random">
   
     <link rel="alternative" href="/atom.xml" title="美小妞的博客" type="application/atom+xml">
   
@@ -165,41 +156,35 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-maxLength" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-jicheng" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      查找两个字符串中最长的公共子串
+      继承的几种方法
     </h1>
   
 
         
-        <a href="/2017/03/25/maxLength/" class="archive-article-date">
-  	<time datetime="2017-03-25T12:48:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-25</time>
+        <a href="/2017/04/23/jicheng/" class="archive-article-date">
+  	<time datetime="2017-04-23T14:56:52.931Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://unsplash.it/1001/300/?random" alt=""></p>
-<h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><pre><code>str1=“aaa3333”；str2=“vscscsaaa33”;求str1和str2中最长的公共子串aaa33
-</code></pre><h2 id="思想："><a href="#思想：" class="headerlink" title="思想："></a>思想：</h2><pre><code>在长的字符串str2里面找最长的str1的子串
-</code></pre><h4 id="分析步骤："><a href="#分析步骤：" class="headerlink" title="分析步骤："></a>分析步骤：</h4><ul>
-<li>1现在str2里面找 aaa3333，str1的长度是7，下标是0-6，先在str2中找str1的0-6的字符串aaa3333，找          的长度是7</li>
-<li>2找不到aaa3333，再找str1中0-5的字符串aaa333，找不到，再找1-6的字符串aa3333，找不到，找的         长度是6。</li>
-<li>3再找0-4的字符串aaa33，找到了就结束查找。</li>
-</ul>
-<a id="more"></a>                  
-<h2 id="js代码实现："><a href="#js代码实现：" class="headerlink" title="js代码实现："></a>js代码实现：</h2><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"> function LongestCommonStr(<span class="built_in">s1</span>,<span class="built_in">s2</span>)&#123;</div><div class="line">    var str=<span class="string">""</span><span class="comment">;</span></div><div class="line">    var L1=<span class="built_in">s1</span>.length<span class="comment">;</span></div><div class="line">    var L2=<span class="built_in">s2</span>.length<span class="comment">;</span></div><div class="line">    if(L1&gt;L2)&#123;</div><div class="line">        L1=L2<span class="comment">;</span></div><div class="line">        var <span class="built_in">s3</span>=<span class="built_in">s2</span><span class="comment">;</span></div><div class="line">        <span class="built_in">s2</span>=<span class="built_in">s1</span><span class="comment">;</span></div><div class="line">        <span class="built_in">s1</span>=<span class="built_in">s3</span><span class="comment">;</span></div><div class="line">    &#125; </div><div class="line">    for(var <span class="keyword">j=L1;j&gt;0;j--)&#123;</span></div><div class="line">         for(var i=<span class="number">0</span><span class="comment">;i&lt;L1-j;i++)&#123;</span></div><div class="line">             str=<span class="built_in">s1</span>.<span class="keyword">substr(i,j);</span></div><div class="line">             if(<span class="built_in">s2</span>.indexOf(str)&gt;=<span class="number">0</span>)&#123;</div><div class="line">                 return str<span class="comment">; </span></div><div class="line">             &#125;</div><div class="line">         &#125;</div><div class="line">     &#125;</div><div class="line">    return <span class="string">""</span><span class="comment">;</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="代码说明："><a href="#代码说明：" class="headerlink" title="代码说明："></a>代码说明：</h4><ul>
-<li>1外层的j循环代表先找7个，再找6个，再找5个str1中的子串</li>
-<li>2内层循环代表先找0-4，再找1-5，再找2-6中的0 1  2这个顺序</li>
-<li>2indexOf（searchvalue，fromindex）这个函数返回searchvalue出现的首位置，fromindex表示开始查到的位置，默认为0；</li>
-</ul>
+        <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
+<h1 id="一-组合继承"><a href="#一-组合继承" class="headerlink" title="一.组合继承"></a>一.组合继承</h1><p>思想：原型链实现对原型的属性和方法的继承，通过借用构造函数实现对实例属性的继承</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperType</span><span class="params">(name)</span></span>&#123;</div><div class="line">	<span class="keyword">this</span>.name=name;</div><div class="line">	<span class="keyword">this</span>.color=[<span class="string">"red"</span>,<span class="string">"blue"</span>];</div><div class="line">&#125;</div><div class="line">SuperType.prototype.sayName=<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">	alert(<span class="keyword">this</span>.name);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubType</span><span class="params">(name,age)</span></span>&#123;</div><div class="line">	SubType.call(<span class="keyword">this</span>,name);</div><div class="line">	<span class="keyword">this</span>.age=age;</div><div class="line">&#125;</div><div class="line">SubType.prototype=<span class="keyword">new</span> SuperType();</div><div class="line">SubType.prototype.constructor=SubType;</div><div class="line">SubType.prototype.sayAge=<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">	alert(<span class="keyword">this</span>.age);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="二-原型式继承"><a href="#二-原型式继承" class="headerlink" title="二.原型式继承"></a>二.原型式继承</h1><p>思想：原型可以基于一个已有的对象创建对象，首先需要有一个对象作为另一个对象的基础</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">object</span>(<span class="params">o</span>)</span>&#123;</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">F</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">	F.prototype=o;</div><div class="line">	<span class="keyword">return</span> <span class="keyword">new</span> F();</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> person=&#123;</div><div class="line">	<span class="attr">namae</span>:<span class="string">'nike'</span>,</div><div class="line">	<span class="attr">friends</span>:[<span class="string">"shek"</span>,<span class="string">"court"</span>,<span class="string">"van"</span>]</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> anotherPerson=object(person);</div><div class="line">anotherPerson.name=<span class="string">"Grag"</span>;</div><div class="line">anotherPerson.friends.push(<span class="string">"Rob"</span>);</div><div class="line">alert(person.friends);<span class="comment">//["shek","court","van","Rob"]</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">另一种：</div><div class="line"><span class="keyword">var</span> anotherPerson=<span class="built_in">Object</span>.create(person,&#123;</div><div class="line">	<span class="attr">name</span>:&#123;</div><div class="line">		<span class="attr">value</span>:<span class="string">'Greg'</span></div><div class="line">	&#125;</div><div class="line">&#125;);</div><div class="line">alert(anotherPerson.name);<span class="comment">//Greg</span></div></pre></td></tr></table></figure>
+<p>在没有必要新师动众的创建构造函数，而只想要一个对象与另一个对象保持类似时，原型继承可以胜任，但是包含引用类型值的属性始终都会共享</p>
+<h1 id="三-寄生式继承"><a href="#三-寄生式继承" class="headerlink" title="三.寄生式继承"></a>三.寄生式继承</h1><p>创建一个用于封装继承过程的函数，该函数在内部以某种方式来争强对象，最后返回这个对象</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createAnother</span><span class="params">(original)</span></span>&#123;</div><div class="line">	<span class="keyword">var</span> <span class="keyword">clone</span>=object(original);</div><div class="line">	<span class="keyword">clone</span>.sayHi=<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">		alert(<span class="string">'hi'</span>);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="keyword">clone</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这种不能做到函数复用，效率低</p>
 
       
 
@@ -213,7 +198,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
@@ -269,7 +254,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://liumeilian.com.cn/2017/03/25/maxLength/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://liumeilian.com.cn/2017/04/23/jicheng/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -283,15 +268,20 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2017/04/04/text/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/04/24/delegate/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          刘美莲博客测试
+          事件委托的实现
         
       </div>
     </a>
   
+  
+    <a href="/2017/04/23/drag/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">拖拽,磁性吸附，碰撞,模拟滚动条控制内容问题的封装</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -303,7 +293,7 @@ var _hmt = _hmt || [];
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="maxLength" data-title="查找两个字符串中最长的公共子串" data-url="http://liumeilian.com.cn/2017/03/25/maxLength/"></div>
+	<div class="ds-thread" data-thread-key="jicheng" data-title="继承的几种方法" data-url="http://liumeilian.com.cn/2017/04/23/jicheng/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

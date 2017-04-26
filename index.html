@@ -149,6 +149,205 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-grunt" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/26/grunt/">grunt打包压缩的使用</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/26/grunt/" class="archive-article-date">
+  	<time datetime="2017-04-26T03:40:54.315Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
+<p><a href="http://developer.51cto.com/art/201506/479127.htm">参考网址</a></p>
+<h1 id="一-grunt的概念"><a href="#一-grunt的概念" class="headerlink" title="一.grunt的概念"></a>一.grunt的概念</h1><p>就是一个前端构建工具，比如打包代码，压缩代码等等<br>
+        
+          <a class="article-more-a" href="/2017/04/26/grunt/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/26/grunt/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-delegate" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/24/delegate/">事件委托的实现</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/24/delegate/" class="archive-article-date">
+  	<time datetime="2017-04-24T15:23:54.838Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
+<p>#方法一：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"ul-box"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>我是li-1<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>我是li-2<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">    (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> ulNode = <span class="built_in">document</span>.querySelector(<span class="string">'.ul-box'</span>);</div><div class="line">        ulNode.addEventListener(<span class="string">'click'</span>, handleClick, <span class="literal">false</span>);</div><div class="line">        <span class="function"><span class="keyword">function</span> <span class="title">handleClick</span>(<span class="params">evt</span>) </span>&#123;</div><div class="line">            evt.preventDefault();</div><div class="line">            <span class="keyword">var</span> target = evt.target;</div><div class="line">            alert(target.innerHTML);</div><div class="line">        &#125;</div><div class="line">    &#125;)()</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/24/delegate/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-jicheng" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/23/jicheng/">继承的几种方法</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/23/jicheng/" class="archive-article-date">
+  	<time datetime="2017-04-23T14:56:52.931Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
+<h1 id="一-组合继承"><a href="#一-组合继承" class="headerlink" title="一.组合继承"></a>一.组合继承</h1><p>思想：原型链实现对原型的属性和方法的继承，通过借用构造函数实现对实例属性的继承</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperType</span><span class="params">(name)</span></span>&#123;</div><div class="line">	<span class="keyword">this</span>.name=name;</div><div class="line">	<span class="keyword">this</span>.color=[<span class="string">"red"</span>,<span class="string">"blue"</span>];</div><div class="line">&#125;</div><div class="line">SuperType.prototype.sayName=<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">	alert(<span class="keyword">this</span>.name);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubType</span><span class="params">(name,age)</span></span>&#123;</div><div class="line">	SubType.call(<span class="keyword">this</span>,name);</div><div class="line">	<span class="keyword">this</span>.age=age;</div><div class="line">&#125;</div><div class="line">SubType.prototype=<span class="keyword">new</span> SuperType();</div><div class="line">SubType.prototype.constructor=SubType;</div><div class="line">SubType.prototype.sayAge=<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">	alert(<span class="keyword">this</span>.age);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="二-原型式继承"><a href="#二-原型式继承" class="headerlink" title="二.原型式继承"></a>二.原型式继承</h1><p>思想：原型可以基于一个已有的对象创建对象，首先需要有一个对象作为另一个对象的基础</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">object</span>(<span class="params">o</span>)</span>&#123;</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">F</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">	F.prototype=o;</div><div class="line">	<span class="keyword">return</span> <span class="keyword">new</span> F();</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> person=&#123;</div><div class="line">	<span class="attr">namae</span>:<span class="string">'nike'</span>,</div><div class="line">	<span class="attr">friends</span>:[<span class="string">"shek"</span>,<span class="string">"court"</span>,<span class="string">"van"</span>]</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> anotherPerson=object(person);</div><div class="line">anotherPerson.name=<span class="string">"Grag"</span>;</div><div class="line">anotherPerson.friends.push(<span class="string">"Rob"</span>);</div><div class="line">alert(person.friends);<span class="comment">//["shek","court","van","Rob"]</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">另一种：</div><div class="line"><span class="keyword">var</span> anotherPerson=<span class="built_in">Object</span>.create(person,&#123;</div><div class="line">	<span class="attr">name</span>:&#123;</div><div class="line">		<span class="attr">value</span>:<span class="string">'Greg'</span></div><div class="line">	&#125;</div><div class="line">&#125;);</div><div class="line">alert(anotherPerson.name);<span class="comment">//Greg</span></div></pre></td></tr></table></figure>
+<p>在没有必要新师动众的创建构造函数，而只想要一个对象与另一个对象保持类似时，原型继承可以胜任，但是包含引用类型值的属性始终都会共享</p>
+<h1 id="三-寄生式继承"><a href="#三-寄生式继承" class="headerlink" title="三.寄生式继承"></a>三.寄生式继承</h1><p>创建一个用于封装继承过程的函数，该函数在内部以某种方式来争强对象，最后返回这个对象</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createAnother</span><span class="params">(original)</span></span>&#123;</div><div class="line">	<span class="keyword">var</span> <span class="keyword">clone</span>=object(original);</div><div class="line">	<span class="keyword">clone</span>.sayHi=<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">		alert(<span class="string">'hi'</span>);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="keyword">clone</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这种不能做到函数复用，效率低</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/23/jicheng/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-drag" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -624,214 +823,6 @@ chrome : 没有
 
 
   
-    <article id="post-prototype" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/20/prototype/">面向对象，原型，继承</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/20/prototype/" class="archive-article-date">
-  	<time datetime="2017-04-20T14:44:31.387Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://unsplash.it/1002/300/?random" alt=""></p>
-<h1 id="js面向对象的几种模式"><a href="#js面向对象的几种模式" class="headerlink" title="js面向对象的几种模式"></a>js面向对象的几种模式</h1><h2 id="一：普通模式"><a href="#一：普通模式" class="headerlink" title="一：普通模式"></a>一：普通模式</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();  <span class="comment">//创建了一个空的对象</span></div><div class="line">obj.name = <span class="string">'小明'</span>;  <span class="comment">//属性</span></div><div class="line">obj.showName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;  <span class="comment">//方法</span></div><div class="line">	alert(<span class="keyword">this</span>.name);</div><div class="line">&#125;;</div><div class="line"></div><div class="line">obj.showName();</div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/04/20/prototype/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/20/prototype/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-Array" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/20/Array/">JS中some(),every(),forEach(),map(),filter()区别</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/20/Array/" class="archive-article-date">
-  	<time datetime="2017-04-20T08:52:44.530Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://unsplash.it/1001/300/?random" alt=""></p>
-<p>JS在1.6中为Array新增了几个方法map()，filter()，some()，every()，forEach()，也就是一共有这么多方法了。</p>
-<ul>
-<li>1、map():返回一个新的数组，每个元素为调用func的结果</li>
-<li>2、filter():检测数值元素，并返回符合条件所有元素的数组。</li>
-<li>3、some():返回一个boolean值，判断是否有元素符合func</li>
-<li>4、every():返回一个boolean值，判断是否每个元素都符合func</li>
-<li>5、forEach():没有返回值，只是每个元素都执行一次func</li>
-</ul>
-        
-          <a class="article-more-a" href="/2017/04/20/Array/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/20/Array/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-react" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/20/react/">react</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/20/react/" class="archive-article-date">
-  	<time datetime="2017-04-20T05:13:06.971Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
-<p><a href="http://www.ruanyifeng.com/blog/2015/03/react.html">阮一峰老师的react入门教程</a></p>
-<h1 id="一-react简介"><a href="#一-react简介" class="headerlink" title="一.react简介"></a>一.react简介</h1><ul>
-<li>react最主要有三个核心库react.js   react-dom.js  browser.js他们必须首先被加载才能使用。react.js为核心库，react-dom.js提供dom相关操作，brower.js的作用是把jsx语法转化为javasript语法</li>
-<li>react允许将代码封装成组件，然后像插入普通HTML标签一样，在网页中插入这个组件</li>
-<li>组件并不是真实的dom节点，而是存在于内存中的一种数据结构，叫虚拟dom，只有当它插入文档以后才会变成真实的dom，根据react的设计，所有dom的变化都先在虚拟dom上发生，然后再将实际发生的部分反映到真实dom上，这种算法叫做dom diff，它可以极大的提高性能的表现</li>
-<li>需要用ref属性来获取真实的dom节点</li>
-<li>react的创新在于将组建看成是一个状态机，一开始有一个初始状态，用户互动导致状态变化，从而触发重新渲染UI
-        
-          <a class="article-more-a" href="/2017/04/20/react/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/20/react/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -945,11 +936,11 @@ chrome : 没有
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">测试</a>
+                <a href="javascript:void(0)" class="js-tag color2">字符串的操作</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">字符串的操作</a>
+                <a href="javascript:void(0)" class="js-tag color3">测试</a>
               </li>
             
             <div class="clearfix"></div>
