@@ -8,20 +8,17 @@
   <link rel="dns-prefetch" href="http://liumeilian.com.cn">
   <title>继承的几种方法 | 美小妞的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一.组合继承思想：原型链实现对原型的属性和方法的继承，通过借用构造函数实现对实例属性的继承
-1234567891011121314151617function SuperType(name)&amp;#123;	this.name=name;	this.color=[&quot;red&quot;,&quot;blue&quot;];&amp;#125;SuperType.prototype.sayName=function()&amp;#123;	aler">
+  <meta name="description" content="一.组合继承思想：原型链实现对原型的属性和方法的继承，通过借用构造函数实现对实例属性的继承">
 <meta property="og:type" content="article">
 <meta property="og:title" content="继承的几种方法">
 <meta property="og:url" content="http://liumeilian.com.cn/2017/04/23/jicheng/index.html">
 <meta property="og:site_name" content="美小妞的博客">
-<meta property="og:description" content="一.组合继承思想：原型链实现对原型的属性和方法的继承，通过借用构造函数实现对实例属性的继承
-1234567891011121314151617function SuperType(name)&amp;#123;	this.name=name;	this.color=[&quot;red&quot;,&quot;blue&quot;];&amp;#125;SuperType.prototype.sayName=function()&amp;#123;	aler">
+<meta property="og:description" content="一.组合继承思想：原型链实现对原型的属性和方法的继承，通过借用构造函数实现对实例属性的继承">
 <meta property="og:image" content="https://unsplash.it/1000/300/?random">
-<meta property="og:updated_time" content="2017-04-24T04:18:05.825Z">
+<meta property="og:updated_time" content="2017-04-26T13:30:17.626Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="继承的几种方法">
-<meta name="twitter:description" content="一.组合继承思想：原型链实现对原型的属性和方法的继承，通过借用构造函数实现对实例属性的继承
-1234567891011121314151617function SuperType(name)&amp;#123;	this.name=name;	this.color=[&quot;red&quot;,&quot;blue&quot;];&amp;#125;SuperType.prototype.sayName=function()&amp;#123;	aler">
+<meta name="twitter:description" content="一.组合继承思想：原型链实现对原型的属性和方法的继承，通过借用构造函数实现对实例属性的继承">
 <meta name="twitter:image" content="https://unsplash.it/1000/300/?random">
   
     <link rel="alternative" href="/atom.xml" title="美小妞的博客" type="application/atom+xml">
@@ -177,7 +174,7 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
-<h1 id="一-组合继承"><a href="#一-组合继承" class="headerlink" title="一.组合继承"></a>一.组合继承</h1><p>思想：原型链实现对原型的属性和方法的继承，通过借用构造函数实现对实例属性的继承</p>
+<h1 id="一-组合继承"><a href="#一-组合继承" class="headerlink" title="一.组合继承"></a>一.组合继承</h1><p>思想：原型链实现对原型的属性和方法的继承，通过借用构造函数实现对实例属性的继承<br><a id="more"></a></p>
 <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperType</span><span class="params">(name)</span></span>&#123;</div><div class="line">	<span class="keyword">this</span>.name=name;</div><div class="line">	<span class="keyword">this</span>.color=[<span class="string">"red"</span>,<span class="string">"blue"</span>];</div><div class="line">&#125;</div><div class="line">SuperType.prototype.sayName=<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">	alert(<span class="keyword">this</span>.name);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubType</span><span class="params">(name,age)</span></span>&#123;</div><div class="line">	SubType.call(<span class="keyword">this</span>,name);</div><div class="line">	<span class="keyword">this</span>.age=age;</div><div class="line">&#125;</div><div class="line">SubType.prototype=<span class="keyword">new</span> SuperType();</div><div class="line">SubType.prototype.constructor=SubType;</div><div class="line">SubType.prototype.sayAge=<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">	alert(<span class="keyword">this</span>.age);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h1 id="二-原型式继承"><a href="#二-原型式继承" class="headerlink" title="二.原型式继承"></a>二.原型式继承</h1><p>思想：原型可以基于一个已有的对象创建对象，首先需要有一个对象作为另一个对象的基础</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">object</span>(<span class="params">o</span>)</span>&#123;</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">F</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">	F.prototype=o;</div><div class="line">	<span class="keyword">return</span> <span class="keyword">new</span> F();</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> person=&#123;</div><div class="line">	<span class="attr">namae</span>:<span class="string">'nike'</span>,</div><div class="line">	<span class="attr">friends</span>:[<span class="string">"shek"</span>,<span class="string">"court"</span>,<span class="string">"van"</span>]</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> anotherPerson=object(person);</div><div class="line">anotherPerson.name=<span class="string">"Grag"</span>;</div><div class="line">anotherPerson.friends.push(<span class="string">"Rob"</span>);</div><div class="line">alert(person.friends);<span class="comment">//["shek","court","van","Rob"]</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">另一种：</div><div class="line"><span class="keyword">var</span> anotherPerson=<span class="built_in">Object</span>.create(person,&#123;</div><div class="line">	<span class="attr">name</span>:&#123;</div><div class="line">		<span class="attr">value</span>:<span class="string">'Greg'</span></div><div class="line">	&#125;</div><div class="line">&#125;);</div><div class="line">alert(anotherPerson.name);<span class="comment">//Greg</span></div></pre></td></tr></table></figure>
@@ -405,11 +402,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">css3</a>
+                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">css3</a>
               </li>
              
               <li class="article-tag-list-item">
