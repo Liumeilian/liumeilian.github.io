@@ -149,6 +149,75 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-drag" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/23/drag/">拖拽,磁性吸附，碰撞,模拟滚动条控制内容问题的封装</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/23/drag/" class="archive-article-date">
+  	<time datetime="2017-04-23T07:21:14.704Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1001/300/?random" alt=""></p>
+<h1 id="一-拖拽"><a href="#一-拖拽" class="headerlink" title="一.拖拽"></a>一.拖拽</h1><p>先来普及一下全局捕获<br>aInput[0].setCapture();    //设置全局捕获 ，当我们给一个元素设置全局捕获以后，那么这个元素就会监听后续发生的所有事件，当有事件发生的时候，就会被当前设置了全局捕获的元素所触发</p>
+<pre><code>ie : 有，并且有效果
+ff : 有，但是没效果
+chrome : 没有
+</code></pre><p>1.拖拽的时候，如果有文字被选中，会产生问题<br>        原因：当鼠标按下的时候，如果页面中有文字被选中，那么会触发浏览器默认拖拽文字的效果<br>            解决：<br>                标准：阻止默认行为<br>                非标准ie：全局捕获<br>    拖拽图片会有问题，原因，解决的办法同上<br>
+        
+          <a class="article-more-a" href="/2017/04/23/drag/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/23/drag/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-jsdom" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -763,71 +832,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-ajax" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/16/ajax/">ajax的过程</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/16/ajax/" class="archive-article-date">
-  	<time datetime="2017-04-16T15:13:12.031Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
-<h1 id="ajax的过程"><a href="#ajax的过程" class="headerlink" title="ajax的过程"></a>ajax的过程</h1><h2 id="一-创建XMLHttpRequest对象"><a href="#一-创建XMLHttpRequest对象" class="headerlink" title="一.创建XMLHttpRequest对象"></a>一.创建XMLHttpRequest对象</h2><p>ie浏览器和其他浏览器有差别<br>为了兼容该做如下写法<br><figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(window.XMLHttpRequest)&#123;</div><div class="line">	<span class="keyword">var</span> xhr=<span class="keyword">new</span> <span class="type">XMLHttpRequest</span>();</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">	<span class="keyword">var</span> xhr=<span class="keyword">new</span> <span class="type">ActiveXObject</span>();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2017/04/16/ajax/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/16/ajax/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -945,11 +949,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">字符串的操作</a>
+                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">字符串的操作</a>
               </li>
             
             <div class="clearfix"></div>
