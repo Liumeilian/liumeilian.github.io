@@ -6,14 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://liumeilian.com.cn">
-  <title>Archives: 2017/7 | 美小妞的博客</title>
+  <title>作用域恶心两道题 | 美小妞的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="美小妞的博客">
-<meta property="og:url" content="http://liumeilian.com.cn/archives/2017/07/index.html">
+  <meta name="description" content="第一题123456789101112131415161718var n=10;var obj=&amp;#123;	n:20,	fn:(function()&amp;#123;		this.n+=2;		n*=3;		return function()&amp;#123;			this.n*=2;			n+=1;			console.log(n);		&amp;#125;	&amp;#125;)(n)&amp;#125;var fn=obj.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="作用域恶心两道题">
+<meta property="og:url" content="http://liumeilian.com.cn/2017/07/19/erxingzuoyongyu/index.html">
 <meta property="og:site_name" content="美小妞的博客">
+<meta property="og:description" content="第一题123456789101112131415161718var n=10;var obj=&amp;#123;	n:20,	fn:(function()&amp;#123;		this.n+=2;		n*=3;		return function()&amp;#123;			this.n*=2;			n+=1;			console.log(n);		&amp;#125;	&amp;#125;)(n)&amp;#125;var fn=obj.">
+<meta property="og:image" content="https://unsplash.it/1000/300/?random">
+<meta property="og:updated_time" content="2017-07-20T08:27:03.098Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="美小妞的博客">
+<meta name="twitter:title" content="作用域恶心两道题">
+<meta name="twitter:description" content="第一题123456789101112131415161718var n=10;var obj=&amp;#123;	n:20,	fn:(function()&amp;#123;		this.n+=2;		n*=3;		return function()&amp;#123;			this.n*=2;			n+=1;			console.log(n);		&amp;#125;	&amp;#125;)(n)&amp;#125;var fn=obj.">
+<meta name="twitter:image" content="https://unsplash.it/1000/300/?random">
   
     <link rel="alternative" href="/atom.xml" title="美小妞的博客" type="application/atom+xml">
   
@@ -147,36 +153,42 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-erxingzuoyongyu" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      作用域恶心两道题
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/19/erxingzuoyongyu/" class="archive-article-date">
+
+        
+        <a href="/2017/07/19/erxingzuoyongyu/" class="archive-article-date">
   	<time datetime="2017-07-19T14:36:07.522Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-19</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/19/erxingzuoyongyu/">作用域恶心两道题</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
+<h1 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> n=<span class="number">10</span>;</div><div class="line"><span class="keyword">var</span> obj=&#123;</div><div class="line">	<span class="attr">n</span>:<span class="number">20</span>,</div><div class="line">	<span class="attr">fn</span>:(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="keyword">this</span>.n+=<span class="number">2</span>;</div><div class="line">		n*=<span class="number">3</span>;</div><div class="line">		<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">			<span class="keyword">this</span>.n*=<span class="number">2</span>;</div><div class="line">			n+=<span class="number">1</span>;</div><div class="line">			<span class="built_in">console</span>.log(n);</div><div class="line">		&#125;</div><div class="line">	&#125;)(n)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> fn=obj.fn;</div><div class="line">fn();</div><div class="line">obj.fn();</div><div class="line"><span class="built_in">console</span>.log(n,obj.n);</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>函数从上到下执行的时候其实变成了这个样子</p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var n=<span class="number">36</span>;</div><div class="line">obj.n=<span class="number">20</span>;</div><div class="line">obj.<span class="keyword">fn</span>=function()&#123;</div><div class="line">	this.n*=<span class="number">2</span>;</div><div class="line">	n+=<span class="number">1</span>;</div><div class="line">	console.<span class="built_in">log</span>(n);</div><div class="line">&#125;</div><div class="line">var <span class="function"><span class="keyword">fn</span>=obj.<span class="keyword">fn</span></span>;</div><div class="line"><span class="function"><span class="keyword">fn</span><span class="params">()</span></span>;<span class="comment">//this是window window.n=36*2+1=73</span></div><div class="line">obj.<span class="keyword">fn</span>();<span class="comment">//this是obj  window.n=73+1=74   obj.n=20*2=40</span></div><div class="line">console.<span class="built_in">log</span>(n,obj.n);<span class="comment">//74  40</span></div></pre></td></tr></table></figure>
+<p>这样看是不是就一目了然了</p>
+<p>从上到下执行自执行的时候自执行函数里面的this其实是window<br>始终记住一句话this是函数运行时，谁调用这个函数，这个函数里面的this就是谁</p>
+<h1 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	getName=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="number">1</span>);&#125;</div><div class="line">	<span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">&#125;</div><div class="line">Foo.getName=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="number">2</span>);&#125;</div><div class="line">Foo.prototype.getName=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="number">3</span>)&#125;</div><div class="line"><span class="keyword">var</span> getName=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="number">4</span>)&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getName</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="number">5</span>);&#125;</div><div class="line"></div><div class="line">Foo.getName();<span class="comment">//2</span></div><div class="line">getName();<span class="comment">//4</span></div><div class="line">Foo().getName();<span class="comment">//1</span></div><div class="line">getName();<span class="comment">//1</span></div><div class="line"><span class="keyword">new</span> Foo.getName();<span class="comment">//2  </span></div><div class="line"><span class="keyword">new</span> Foo().getName();<span class="comment">//3</span></div><div class="line"><span class="keyword">new</span> <span class="keyword">new</span> Foo().getName();<span class="comment">//3</span></div></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -188,133 +200,106 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://liumeilian.com.cn/2017/07/19/erxingzuoyongyu/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/18/lunbotu/" class="archive-article-date">
-  	<time datetime="2017-07-18T03:11:43.090Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-18</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/18/lunbotu/">原生js写的轮播图</a>
-    </h1>
+  
+    <a href="/2017/07/18/lunbotu/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">原生js写的轮播图</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="erxingzuoyongyu" data-title="作用域恶心两道题" data-url="http://liumeilian.com.cn/2017/07/19/erxingzuoyongyu/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"liumeilian"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/17/alibababshi/" class="archive-article-date">
-  	<time datetime="2017-07-17T02:54:49.189Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/17/alibababshi/">阿里巴巴测评题-点击删除按钮删除父节点</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/13/git/" class="archive-article-date">
-  	<time datetime="2017-07-13T07:54:30.893Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/13/git/">git的常用命令以及多人协作开发流程</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -337,8 +322,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,

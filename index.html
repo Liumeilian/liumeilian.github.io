@@ -149,6 +149,71 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-erxingzuoyongyu" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/19/erxingzuoyongyu/">作用域恶心两道题</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/19/erxingzuoyongyu/" class="archive-article-date">
+  	<time datetime="2017-07-19T14:36:07.522Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
+<h1 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> n=<span class="number">10</span>;</div><div class="line"><span class="keyword">var</span> obj=&#123;</div><div class="line">	<span class="attr">n</span>:<span class="number">20</span>,</div><div class="line">	<span class="attr">fn</span>:(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="keyword">this</span>.n+=<span class="number">2</span>;</div><div class="line">		n*=<span class="number">3</span>;</div><div class="line">		<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">			<span class="keyword">this</span>.n*=<span class="number">2</span>;</div><div class="line">			n+=<span class="number">1</span>;</div><div class="line">			<span class="built_in">console</span>.log(n);</div><div class="line">		&#125;</div><div class="line">	&#125;)(n)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> fn=obj.fn;</div><div class="line">fn();</div><div class="line">obj.fn();</div><div class="line"><span class="built_in">console</span>.log(n,obj.n);</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/07/19/erxingzuoyongyu/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/19/erxingzuoyongyu/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-lunbotu" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -768,73 +833,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-seajs" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/26/seajs/">seajs结合grunt是代码模块化</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/26/seajs/" class="archive-article-date">
-  	<time datetime="2017-04-26T09:17:00.556Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://unsplash.it/1002/300/?random" alt=""></p>
-<h1 id="一-导入seajs库"><a href="#一-导入seajs库" class="headerlink" title="一.导入seajs库"></a>一.导入seajs库</h1><p>1.在官网上下载sea.js<br><a href="http://seajs.org/docs/#downloads">sea.js</a></p>
-<p>2.写index.html文件，在index.html文件中<br><figure class="highlight plain"><figcaption><span>src="sea.js"></script>```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">3.加载入口模块，暂时定为main.js</div><div class="line">```seajs.use(&quot;/main.js&quot;);</div></pre></td></tr></table></figure></p>
-<p>还可以执行指定的回调<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//加载模块 main，并在加载完成时，执行指定回调</span></div><div class="line">seajs.<span class="keyword">use</span>(<span class="string">'./main'</span>, <span class="function"><span class="keyword">function</span><span class="params">(main)</span> </span>&#123;</div><div class="line">  main.init();</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2017/04/26/seajs/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/26/seajs/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -924,11 +922,11 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">布局</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color3">布局</a>
               </li>
              
               <li class="article-tag-list-item">
