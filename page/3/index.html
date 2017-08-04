@@ -149,6 +149,140 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-getstyle" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/22/getstyle/">js获取样式的兼容方法</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/22/getstyle/" class="archive-article-date">
+  	<time datetime="2017-04-22T07:19:05.724Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1004/300/?random" alt=""></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></div><div class="line">    <span class="selector-tag">div</span>&#123;</div><div class="line">      <span class="attribute">color</span>:yellow;</div><div class="line">    &#125;</div><div class="line">  </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"width:100px;height:100px;background-color:red"</span>&gt;</span>This is div<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/04/22/getstyle/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/22/getstyle/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-jsjiexiqi" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/22/jsjiexiqi/">js解析器解析变量和函数</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/22/jsjiexiqi/" class="archive-article-date">
+  	<time datetime="2017-04-22T06:59:50.868Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1003/300/?random" alt=""></p>
+<h1 id="js解析器是如何解析代码的"><a href="#js解析器是如何解析代码的" class="headerlink" title="js解析器是如何解析代码的"></a>js解析器是如何解析代码的</h1><h2 id="第一步：“找一些东西”-：var-function-参数"><a href="#第一步：“找一些东西”-：var-function-参数" class="headerlink" title="第一步：“找一些东西”    ：var  function 参数"></a>第一步：“找一些东西”    ：var  function 参数</h2><p>如何解析:<br>a = …<br>        所有的变量，在正式运行代码之前，都提前赋了一个值：未定义<br>fn1 = function fn1(){ alert(2); }<br>        所有的函数，在正式运行代码之前，都是整个函数块</p>
+<p>JS 的预解析</p>
+<p>遇到重名的：只留一个<br>变量和函数重名了，就只留下函数</p>
+<h2 id="第二步：逐行解读代码："><a href="#第二步：逐行解读代码：" class="headerlink" title="第二步：逐行解读代码："></a>第二步：逐行解读代码：</h2><pre><code>表达式：= + - * / % ++ -- ! 参数……
+
+表达式可以修改预解析的值！
+</code></pre><figure class="highlight delphi"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">alert(a);					<span class="comment">// function a ()&#123; alert(4); &#125;</span></div><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">alert(a);					<span class="comment">// 1</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span> <span class="params">()</span><span class="comment">&#123; alert(2); &#125;</span></span></div><div class="line"><span class="title">alert</span><span class="params">(a)</span>;					<span class="comment">// 1</span></div><div class="line"><span class="keyword">var</span> a = <span class="number">3</span>;		</div><div class="line">alert(a);					<span class="comment">// 3</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span> <span class="params">()</span><span class="comment">&#123; alert(4); &#125;</span></span></div><div class="line"><span class="title">alert</span><span class="params">(a)</span>;					<span class="comment">// 3</span></div><div class="line"></div><div class="line">alert( typeof a );</div><div class="line"><span class="comment">// a();									// 报错</span></div></pre></td></tr></table></figure>
+<figure class="highlight delphi"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn1</span><span class="params">()</span><span class="comment">&#123;</span></span></div><div class="line">	alert(a);						// undefined</div><div class="line">	var a = 2;</div><div class="line">&#125;</div><div class="line"><span class="title">fn1</span><span class="params">()</span>;</div><div class="line">alert(a);							<span class="comment">// 1</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn1</span><span class="params">()</span><span class="comment">&#123;</span></span></div><div class="line">	alert(a);						// 1</div><div class="line">	a = 2;</div><div class="line">&#125;</div><div class="line"><span class="title">fn1</span><span class="params">()</span>;</div><div class="line">alert(a);							<span class="comment">// 2</span></div></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/22/jsjiexiqi/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-headresorce" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -696,148 +830,9 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-layout" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/12/layout/">layout和css的hack详解</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/12/layout/" class="archive-article-date">
-  	<time datetime="2017-04-12T08:35:42.295Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
-<h1 id="一-layout"><a href="#一-layout" class="headerlink" title="一.layout"></a>一.layout</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>看了网上对于layout的各种说法，这里用一句话来总结layout的概念，这个概念仅仅是便于自己的理解，并非官方定义<br>layout：layout是元素的一个属性，有些元素本省具有layout属性，有的元素需要通过设置某些css才能获得layout属性</p>
-<h2 id="一个元素是否具有“layout”可能会引发如下的一些问题："><a href="#一个元素是否具有“layout”可能会引发如下的一些问题：" class="headerlink" title="一个元素是否具有“layout”可能会引发如下的一些问题："></a>一个元素是否具有“layout”可能会引发如下的一些问题：</h2><ul>
-<li>IE 很多常见的浮动 bug 。 </li>
-<li>元素本身对一些基本属性的异常处理问题。 </li>
-<li>容器和其子孙之间的边距重叠(margin collapsing)问题。 </li>
-<li>使用列表时遇到的诸多问题。 </li>
-<li>背景图像的定位偏差问题。 </li>
-<li>使用脚本时遇到的浏览器之间处理不一致的问题。</li>
-</ul>
-        
-          <a class="article-more-a" href="/2017/04/12/layout/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/12/layout/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-flex" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/12/flex/">flex布局</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/12/flex/" class="archive-article-date">
-  	<time datetime="2017-04-12T07:39:59.710Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://unsplash.it/1003/300/?random" alt=""></p>
-<h1 id="flex布局也就是弹性布局"><a href="#flex布局也就是弹性布局" class="headerlink" title="flex布局也就是弹性布局"></a>flex布局也就是弹性布局</h1><p>由于觉得阮一峰老师的博客已经写得非常详细，而且通俗易懂，这里附上他的链接，以后方便复习</p>
-<p><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">Flex 布局教程：语法篇</a><br><a href="http://www.ruanyifeng.com/blog/2015/07/flex-examples.html">Flex 布局教程：实例篇</a></p>
-        
-          <a class="article-more-a" href="/2017/04/12/flex/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">css3</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/12/flex/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
     </nav>
   
 
@@ -932,15 +927,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">css3</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -953,6 +948,10 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">jq</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
               </li>
              
               <li class="article-tag-list-item">
