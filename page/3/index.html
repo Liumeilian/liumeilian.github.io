@@ -149,6 +149,71 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-domoveAndSetOpacity" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/22/domoveAndSetOpacity/">domove和setOpacity和shake的封装</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/22/domoveAndSetOpacity/" class="archive-article-date">
+  	<time datetime="2017-04-22T07:40:10.624Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1005/300/?random" alt=""></p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">function doMove ( obj, attr, <span class="keyword">dir</span>, target, endFn ) &#123;</div><div class="line">	</div><div class="line">	<span class="keyword">dir</span> = parseInt(getStyle( obj, attr )) &lt; target ? <span class="keyword">dir</span> : -<span class="keyword">dir</span>;</div><div class="line">	</div><div class="line">	clearInterval( obj.<span class="keyword">timer</span> );</div><div class="line">	</div><div class="line">	obj.<span class="keyword">timer</span> = setInterval(function () &#123;</div><div class="line">		</div><div class="line">		<span class="keyword">var</span> speed = parseInt(getStyle( obj, attr )) + <span class="keyword">dir</span>;			<span class="comment">// 步长</span></div><div class="line">		</div><div class="line">		<span class="keyword">if</span> ( speed &gt; target &amp;&amp; <span class="keyword">dir</span> &gt; 0 ||  speed &lt; target &amp;&amp; <span class="keyword">dir</span> &lt; 0  ) &#123;</div><div class="line">			speed = target;</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		obj.style[attr] = speed + 'px';</div><div class="line">		</div><div class="line">		<span class="keyword">if</span> ( speed == target ) &#123;</div><div class="line">			clearInterval( obj.<span class="keyword">timer</span> );</div><div class="line">			</div><div class="line">			<span class="comment">/*</div><div class="line">			if ( endFn ) &#123;</div><div class="line">				endFn();</div><div class="line">			&#125;</div><div class="line">			*/</span></div><div class="line">			endFn &amp;&amp; endFn();</div><div class="line">			</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">	&#125;, 30);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/04/22/domoveAndSetOpacity/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/22/domoveAndSetOpacity/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-getstyle" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -765,71 +830,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-cross" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/13/cross/">跨文档通信问题</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/13/cross/" class="archive-article-date">
-  	<time datetime="2017-04-13T02:26:13.700Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
-<h1 id="一-窗口跨域操作问题和postmessage的使用"><a href="#一-窗口跨域操作问题和postmessage的使用" class="headerlink" title="一.窗口跨域操作问题和postmessage的使用"></a>一.窗口跨域操作问题和postmessage的使用</h1><h2 id="当父子页面在同一个域www-a-com下的时候，父子页面有包含关系，服页面通过iframe引入子页面"><a href="#当父子页面在同一个域www-a-com下的时候，父子页面有包含关系，服页面通过iframe引入子页面" class="headerlink" title="当父子页面在同一个域www.a.com下的时候，父子页面有包含关系，服页面通过iframe引入子页面"></a>当父子页面在同一个域www.a.com下的时候，父子页面有包含关系，服页面通过iframe引入子页面</h2><p>这个时候可以用js在父页面中操作子页面的DoM元素，也可以在子页面中用js操作父页面</p>
-        
-          <a class="article-more-a" href="/2017/04/13/cross/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/13/cross/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
@@ -923,11 +923,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">布局</a>
+                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">css3</a>
+                <a href="javascript:void(0)" class="js-tag color3">布局</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -935,7 +935,7 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
+                <a href="javascript:void(0)" class="js-tag color5">css3</a>
               </li>
              
               <li class="article-tag-list-item">

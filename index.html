@@ -149,6 +149,80 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-reactperfect" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/06/reactperfect/">react组件性能优化</a>
+    </h1>
+  
+
+        
+        <a href="/2017/08/06/reactperfect/" class="archive-article-date">
+  	<time datetime="2017-08-06T12:14:16.438Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1001/300/?random" alt=""></p>
+<p>react的diff算法虽然已经很高效了，但是还是有其他更细致的东西可以让我们做到更高效</p>
+<h1 id="先来说一下前情"><a href="#先来说一下前情" class="headerlink" title="先来说一下前情"></a>先来说一下前情</h1><ul>
+<li>1.react在初始化渲染的时候会调用根组件下的所有组件的render方法进行渲染，</li>
+<li>2.但是当从根组件传下来的数据改变了某个子组件的props时，react的默认做法是调用所有子组件的render，</li>
+<li>3.再对生成的虚拟dom进行对比，如不变则不进行更新，这样的render和虚拟dom的对比明显很浪费时间。</li>
+<li>4.而我们希望的是在一开始就只调用关键路径下的子组件的render
+        
+          <a class="article-more-a" href="/2017/08/06/reactperfect/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/06/reactperfect/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-debounce" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -171,7 +245,7 @@ var _hmt = _hmt || [];
       
         <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
 <p>壮哥分享着东西还真是有用</p>
-<p>大部分时候resize,scroll,mousemove和keydown/keyup/keypress发生的太平凡，我们不希望设这样的，所以希望节流</p>
+<p>大部分时候resize,scroll,mousemove和keydown/keyup/keypress发生的太频繁，我们不希望设这样的，所以希望节流</p>
 <h1 id="debounce"><a href="#debounce" class="headerlink" title="debounce"></a>debounce</h1><p>概念：强制一个函数在某个连续时间段内只执行一次，我们希望在用户停止某个操作一段时间之后才执行相应的监听函数，而不是在用户操作过程中，浏览器触发多次事件，就执行多次监听函数</p>
         
           <a class="article-more-a" href="/2017/08/04/debounce/#more">more >></a>
@@ -782,76 +856,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-juzhengshunshizhengshuchu" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/15/juzhengshunshizhengshuchu/">顺时针输出矩阵</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/15/juzhengshunshizhengshuchu/" class="archive-article-date">
-  	<time datetime="2017-05-15T07:56:17.541Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://unsplash.it/1001/300/?random" alt=""></p>
-<figure class="highlight basic"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">1 </span> <span class="number">2</span>  <span class="number">3</span>  <span class="number">4</span></div><div class="line"><span class="symbol">5 </span> <span class="number">6</span>  <span class="number">7</span>  <span class="number">8</span></div><div class="line"><span class="symbol">9 </span><span class="number">10</span> <span class="number">11</span> <span class="number">12</span></div></pre></td></tr></table></figure>
-<p>输出：1 2 3 4 8 12 11 10 9</p>
-        
-          <a class="article-more-a" href="/2017/05/15/juzhengshunshizhengshuchu/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/15/juzhengshunshizhengshuchu/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -945,11 +949,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">布局</a>
+                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">css3</a>
+                <a href="javascript:void(0)" class="js-tag color3">布局</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -957,7 +961,7 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
+                <a href="javascript:void(0)" class="js-tag color5">css3</a>
               </li>
              
               <li class="article-tag-list-item">

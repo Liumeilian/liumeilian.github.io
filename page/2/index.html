@@ -149,6 +149,76 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-juzhengshunshizhengshuchu" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/15/juzhengshunshizhengshuchu/">顺时针输出矩阵</a>
+    </h1>
+  
+
+        
+        <a href="/2017/05/15/juzhengshunshizhengshuchu/" class="archive-article-date">
+  	<time datetime="2017-05-15T07:56:17.541Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1001/300/?random" alt=""></p>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">1 </span> <span class="number">2</span>  <span class="number">3</span>  <span class="number">4</span></div><div class="line"><span class="symbol">5 </span> <span class="number">6</span>  <span class="number">7</span>  <span class="number">8</span></div><div class="line"><span class="symbol">9 </span><span class="number">10</span> <span class="number">11</span> <span class="number">12</span></div></pre></td></tr></table></figure>
+<p>输出：1 2 3 4 8 12 11 10 9</p>
+        
+          <a class="article-more-a" href="/2017/05/15/juzhengshunshizhengshuchu/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/05/15/juzhengshunshizhengshuchu/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-textoverflow" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -754,71 +824,6 @@ chrome : 没有
 
 
   
-    <article id="post-domoveAndSetOpacity" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/22/domoveAndSetOpacity/">domove和setOpacity和shake的封装</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/22/domoveAndSetOpacity/" class="archive-article-date">
-  	<time datetime="2017-04-22T07:40:10.624Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://unsplash.it/1005/300/?random" alt=""></p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">function doMove ( obj, attr, <span class="keyword">dir</span>, target, endFn ) &#123;</div><div class="line">	</div><div class="line">	<span class="keyword">dir</span> = parseInt(getStyle( obj, attr )) &lt; target ? <span class="keyword">dir</span> : -<span class="keyword">dir</span>;</div><div class="line">	</div><div class="line">	clearInterval( obj.<span class="keyword">timer</span> );</div><div class="line">	</div><div class="line">	obj.<span class="keyword">timer</span> = setInterval(function () &#123;</div><div class="line">		</div><div class="line">		<span class="keyword">var</span> speed = parseInt(getStyle( obj, attr )) + <span class="keyword">dir</span>;			<span class="comment">// 步长</span></div><div class="line">		</div><div class="line">		<span class="keyword">if</span> ( speed &gt; target &amp;&amp; <span class="keyword">dir</span> &gt; 0 ||  speed &lt; target &amp;&amp; <span class="keyword">dir</span> &lt; 0  ) &#123;</div><div class="line">			speed = target;</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		obj.style[attr] = speed + 'px';</div><div class="line">		</div><div class="line">		<span class="keyword">if</span> ( speed == target ) &#123;</div><div class="line">			clearInterval( obj.<span class="keyword">timer</span> );</div><div class="line">			</div><div class="line">			<span class="comment">/*</div><div class="line">			if ( endFn ) &#123;</div><div class="line">				endFn();</div><div class="line">			&#125;</div><div class="line">			*/</span></div><div class="line">			endFn &amp;&amp; endFn();</div><div class="line">			</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">	&#125;, 30);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/04/22/domoveAndSetOpacity/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/22/domoveAndSetOpacity/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -912,11 +917,11 @@ chrome : 没有
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">布局</a>
+                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">css3</a>
+                <a href="javascript:void(0)" class="js-tag color3">布局</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -924,7 +929,7 @@ chrome : 没有
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
+                <a href="javascript:void(0)" class="js-tag color5">css3</a>
               </li>
              
               <li class="article-tag-list-item">

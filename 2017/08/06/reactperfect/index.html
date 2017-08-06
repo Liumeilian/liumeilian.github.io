@@ -6,34 +6,31 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://liumeilian.com.cn">
-  <title>JS中some(),every(),forEach(),map(),filter()区别 | 美小妞的博客</title>
+  <title>react组件性能优化 | 美小妞的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JS在1.6中为Array新增了几个方法map()，filter()，some()，every()，forEach()，也就是一共有这么多方法了。
-
-1、map():返回一个新的数组，每个元素为调用func的结果
-2、filter():检测数值元素，并返回符合条件所有元素的数组。
-3、some():返回一个boolean值，判断是否有元素符合func
-4、every():返回一个boolean值">
+  <meta name="description" content="react的diff算法虽然已经很高效了，但是还是有其他更细致的东西可以让我们做到更高效
+先来说一下前情
+1.react在初始化渲染的时候会调用根组件下的所有组件的render方法进行渲染，
+2.但是当从根组件传下来的数据改变了某个子组件的props时，react的默认做法是调用所有子组件的render，
+3.再对生成的虚拟dom进行对比，如不变则不进行更新，这样的render和虚拟dom的对比">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS中some(),every(),forEach(),map(),filter()区别">
-<meta property="og:url" content="http://liumeilian.com.cn/2017/04/20/Array/index.html">
+<meta property="og:title" content="react组件性能优化">
+<meta property="og:url" content="http://liumeilian.com.cn/2017/08/06/reactperfect/index.html">
 <meta property="og:site_name" content="美小妞的博客">
-<meta property="og:description" content="JS在1.6中为Array新增了几个方法map()，filter()，some()，every()，forEach()，也就是一共有这么多方法了。
-
-1、map():返回一个新的数组，每个元素为调用func的结果
-2、filter():检测数值元素，并返回符合条件所有元素的数组。
-3、some():返回一个boolean值，判断是否有元素符合func
-4、every():返回一个boolean值">
+<meta property="og:description" content="react的diff算法虽然已经很高效了，但是还是有其他更细致的东西可以让我们做到更高效
+先来说一下前情
+1.react在初始化渲染的时候会调用根组件下的所有组件的render方法进行渲染，
+2.但是当从根组件传下来的数据改变了某个子组件的props时，react的默认做法是调用所有子组件的render，
+3.再对生成的虚拟dom进行对比，如不变则不进行更新，这样的render和虚拟dom的对比">
 <meta property="og:image" content="https://unsplash.it/1001/300/?random">
-<meta property="og:updated_time" content="2017-04-20T10:13:23.593Z">
+<meta property="og:updated_time" content="2017-08-06T14:25:57.945Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS中some(),every(),forEach(),map(),filter()区别">
-<meta name="twitter:description" content="JS在1.6中为Array新增了几个方法map()，filter()，some()，every()，forEach()，也就是一共有这么多方法了。
-
-1、map():返回一个新的数组，每个元素为调用func的结果
-2、filter():检测数值元素，并返回符合条件所有元素的数组。
-3、some():返回一个boolean值，判断是否有元素符合func
-4、every():返回一个boolean值">
+<meta name="twitter:title" content="react组件性能优化">
+<meta name="twitter:description" content="react的diff算法虽然已经很高效了，但是还是有其他更细致的东西可以让我们做到更高效
+先来说一下前情
+1.react在初始化渲染的时候会调用根组件下的所有组件的render方法进行渲染，
+2.但是当从根组件传下来的数据改变了某个子组件的props时，react的默认做法是调用所有子组件的render，
+3.再对生成的虚拟dom进行对比，如不变则不进行更新，这样的render和虚拟dom的对比">
 <meta name="twitter:image" content="https://unsplash.it/1001/300/?random">
   
     <link rel="alternative" href="/atom.xml" title="美小妞的博客" type="application/atom+xml">
@@ -168,20 +165,20 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Array" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-reactperfect" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      JS中some(),every(),forEach(),map(),filter()区别
+      react组件性能优化
     </h1>
   
 
         
-        <a href="/2017/04/20/Array/" class="archive-article-date">
-  	<time datetime="2017-04-20T08:52:44.530Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-20</time>
+        <a href="/2017/08/06/reactperfect/" class="archive-article-date">
+  	<time datetime="2017-08-06T12:14:16.438Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-06</time>
 </a>
         
       </header>
@@ -189,26 +186,40 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p><img src="https://unsplash.it/1001/300/?random" alt=""></p>
-<p>JS在1.6中为Array新增了几个方法map()，filter()，some()，every()，forEach()，也就是一共有这么多方法了。</p>
-<ul>
-<li>1、map():返回一个新的数组，每个元素为调用func的结果</li>
-<li>2、filter():检测数值元素，并返回符合条件所有元素的数组。</li>
-<li>3、some():返回一个boolean值，判断是否有元素符合func</li>
-<li>4、every():返回一个boolean值，判断是否每个元素都符合func</li>
-<li>5、forEach():没有返回值，只是每个元素都执行一次func</li>
+<p>react的diff算法虽然已经很高效了，但是还是有其他更细致的东西可以让我们做到更高效</p>
+<h1 id="先来说一下前情"><a href="#先来说一下前情" class="headerlink" title="先来说一下前情"></a>先来说一下前情</h1><ul>
+<li>1.react在初始化渲染的时候会调用根组件下的所有组件的render方法进行渲染，</li>
+<li>2.但是当从根组件传下来的数据改变了某个子组件的props时，react的默认做法是调用所有子组件的render，</li>
+<li>3.再对生成的虚拟dom进行对比，如不变则不进行更新，这样的render和虚拟dom的对比明显很浪费时间。</li>
+<li>4.而我们希望的是在一开始就只调用关键路径下的子组件的render<a id="more"></a>
+</li>
 </ul>
-<a id="more"></a>
-<h2 id="map-返回一个新的数组，每个元素为调用func后的返回值"><a href="#map-返回一个新的数组，每个元素为调用func后的返回值" class="headerlink" title="map():返回一个新的数组，每个元素为调用func后的返回值"></a>map():返回一个新的数组，每个元素为调用func后的返回值</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    x = <span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>)</div><div class="line">    x.innerHTML = numbers.map(<span class="built_in">Math</span>.sqrt);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//[2,3,4,5]</span></div></pre></td></tr></table></figure>
-<h2 id="filter-检测数值元素，并返回符合条件所有元素的数组-看元素是否符合return后面那句话。"><a href="#filter-检测数值元素，并返回符合条件所有元素的数组-看元素是否符合return后面那句话。" class="headerlink" title="filter():检测数值元素，并返回符合条件所有元素的数组,看元素是否符合return后面那句话。"></a>filter():检测数值元素，并返回符合条件所有元素的数组,看元素是否符合return后面那句话。</h2><p>该方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素。</p>
-<p>参数说明：array.filter(function(currentValue,index,arr), thisValue)</p>
-<p>参数             描述<br>currentValue     必须。当前元素的值<br>index            可选。当期元素的索引值<br>arr              可选。当期元素属于的数组对象</p>
-<p>thisValue<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ages = [<span class="number">32</span>, <span class="number">33</span>, <span class="number">16</span>, <span class="number">40</span>];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkAdult</span>(<span class="params">age</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> age &gt;= <span class="number">18</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = ages.filter(checkAdult);</div><div class="line">&#125;</div><div class="line"><span class="comment">//[32,33,40]</span></div></pre></td></tr></table></figure></p>
-<p>##　every() 方法用于检测数组所有元素是否都符合指定条件（通过函数提供）。<br>every() 方法使用指定函数检测数组中的所有元素：<br>如果数组中检测到有一个元素不满足，则整个表达式返回 false ，且剩余的元素不会再进行检测。<br>如果所有元素都满足条件，则返回 true。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ages = [<span class="number">32</span>, <span class="number">33</span>, <span class="number">16</span>, <span class="number">40</span>];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkAdult</span>(<span class="params">age</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> age &gt;= <span class="number">18</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = ages.every(checkAdult);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//false</span></div></pre></td></tr></table></figure></p>
-<h2 id="jq中的filter方法返回符合一定条件的元素，该方法让您规定一个条件。不符合条件的元素将从选择中移除，符合条件的元素将被返回。"><a href="#jq中的filter方法返回符合一定条件的元素，该方法让您规定一个条件。不符合条件的元素将从选择中移除，符合条件的元素将被返回。" class="headerlink" title="jq中的filter方法返回符合一定条件的元素，该方法让您规定一个条件。不符合条件的元素将从选择中移除，符合条件的元素将被返回。"></a>jq中的filter方法返回符合一定条件的元素，该方法让您规定一个条件。不符合条件的元素将从选择中移除，符合条件的元素将被返回。</h2><p>$(selector).filter(criteria,function(index))</p>
-<p>参数         描述<br>criteria    可选。规定要从被选元素组合中返回的选择器表达式、jQuery 对象、一个或多个元素。<br>function(index)    可选。为集合中的每个元素规定要运行的函数。如果返回 true，则保留元素，否则元素将被移除。<br>index - 集合中元素的 index 位置。<br>注意： this 是当前的 DOM 元素。</p>
-<h2 id="jq中each-方法为每个匹配元素规定要运行的函数。"><a href="#jq中each-方法为每个匹配元素规定要运行的函数。" class="headerlink" title="jq中each() 方法为每个匹配元素规定要运行的函数。"></a>jq中each() 方法为每个匹配元素规定要运行的函数。</h2><p>$(selector).each(function(index,element))</p>
-<p>参数    描述<br>function(index,element)    必需。为每个匹配元素规定运行的函数。<br>index - 选择器的 index 位置。<br>element - 当前的元素（也可使用 “this” 选择器）。</p>
-<h2 id="jq中map-把当前匹配集合中的每个元素传递给函数，产生包含返回值的新-jQuery-对象"><a href="#jq中map-把当前匹配集合中的每个元素传递给函数，产生包含返回值的新-jQuery-对象" class="headerlink" title="jq中map()把当前匹配集合中的每个元素传递给函数，产生包含返回值的新 jQuery 对象"></a>jq中map()把当前匹配集合中的每个元素传递给函数，产生包含返回值的新 jQuery 对象</h2>
+<h1 id="优化一–shouldComponentUpdate"><a href="#优化一–shouldComponentUpdate" class="headerlink" title="优化一–shouldComponentUpdate"></a>优化一–shouldComponentUpdate</h1><p>react在每个组件生命周期更新的时候都会调用一个<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">shouldComponentUpdate</span><span class="params">(nextProps,nextState)</span></span></div></pre></td></tr></table></figure></p>
+<p>函数,这个函数返回true或false决定需不需要更新，false表示不需要，默认表示需要</p>
+<h2 id="改进方法"><a href="#改进方法" class="headerlink" title="改进方法"></a>改进方法</h2><ul>
+<li><p>1.有些组件完全可以写成无状态组件：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> HelloMessage=<span class="function">(<span class="params">props</span>)=&gt;</span><span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>hello &#123;props.name&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div></pre></td></tr></table></figure>
+</li>
+<li><p>2.不需要更新的组件返回false</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">shouldComponentUpdate()&#123;</div><div class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>3.对数据进行对比后决定要不要更新</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">shouldComponentUpdate(nextProps,nextState)&#123;</div><div class="line">	<span class="keyword">return</span> nextProps.id!==<span class="keyword">this</span>.props.id;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>4.对于原始类型数据可以用插件PureRenderMixin<br>运用方式：</p>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">import PureRenderMixin <span class="keyword">from</span> <span class="string">'react-addons-pure-render-mixin'</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">constructor</span><span class="params">(props,context)</span><span class="comment">&#123;</span></span></div><div class="line">	this.shouldComponentUpdate=PureRenderMixin.shouldComponentUpdate.bind(this)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>5.对于引用类型的数据比较的话，可以直接改变引用</p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> newValue=&#123;</div><div class="line">	...oldValue</div><div class="line">	<span class="comment">//在这里做想要的更改</span></div><div class="line">&#125;</div><div class="line">newValue===oldValue  <span class="comment">//false</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> newValue=object.assign(&#123;&#125;,oldValue)</div><div class="line">newValue=oldValue  <span class="comment">//false</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">shouldComponentUpdate(nextProps) &#123;</div><div class="line">    <span class="keyword">return</span> isObjectEqual(<span class="keyword">this</span>.props, nextProps);</div><div class="line">&#125;</div><div class="line"><span class="keyword">const</span> isObjectEqual = <span class="function">(<span class="params">obj1, obj2</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">if</span>(!isObject(obj1) || !isObject(obj2)) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 引用是否相同</span></div><div class="line">    <span class="keyword">if</span>(obj1 === obj2) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 它们包含的键名是否一致？</span></div><div class="line">    <span class="keyword">const</span> item1Keys = <span class="built_in">Object</span>.keys(obj1).sort();</div><div class="line">    <span class="keyword">const</span> item2Keys = <span class="built_in">Object</span>.keys(obj2).sort();</div><div class="line"></div><div class="line">    <span class="keyword">if</span>(!isArrayEqual(item1Keys, item2Keys)) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 属性所对应的每一个对象是否具有相同的引用？</span></div><div class="line">    <span class="keyword">return</span> item2Keys.every(<span class="function"><span class="params">key</span> =&gt;</span> &#123;</div><div class="line">        <span class="keyword">const</span> value = obj1[key];</div><div class="line">        <span class="keyword">const</span> nextValue = obj2[key];</div><div class="line"></div><div class="line">        <span class="keyword">if</span>(value === nextValue) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">// 数组例外，再检查一个层级的深度</span></div><div class="line">        <span class="keyword">return</span> <span class="built_in">Array</span>.isArray(value) &amp;&amp; </div><div class="line">            <span class="built_in">Array</span>.isArray(nextValue) &amp;&amp; </div><div class="line">            isArrayEqual(value, nextValue);</div><div class="line">    &#125;);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">const</span> isArrayEqual = <span class="function">(<span class="params">array1 = [], array2 = []</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">if</span>(array1 === array2) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 检查一个层级深度</span></div><div class="line">    <span class="keyword">return</span> array1.length === array2.length &amp;&amp;</div><div class="line">        array1.every(<span class="function">(<span class="params">item, index</span>) =&gt;</span> item === array2[index]);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<ul>
+<li>6.对于引用类型 官方推荐immutability Helpers<br><a href="https://discountry.github.io/react/docs/update.html" target="_blank" rel="external">immutability Helpers</a><figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">import <span class="keyword">update</span> from 'react-addons-<span class="keyword">update</span>'<span class="comment">//ES6</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//这个讲起来还挺麻烦的，写几个例子更容易看懂</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> initialArray=[1,2,3];</div><div class="line"><span class="keyword">const</span> newArray=<span class="keyword">update</span>(initialArray,&#123;<span class="variable">$push</span>:[4]&#125;) <span class="comment">//=&gt;[1,2,3,4]</span></div><div class="line"><span class="comment">//此时initialArray 还是[1,2,3]</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> collect=[1,2,&#123;a:[12,17,15]&#125;];</div><div class="line"><span class="keyword">const</span> newCollection =<span class="keyword">update</span>(collection,&#123;2:&#123;a:&#123;<span class="variable">$splice</span>:[[1,1,13,14]]&#125;&#125;&#125;)<span class="comment">//这里的2是序号2</span></div><div class="line"><span class="comment">//=&gt;[1,2,&#123;a:[12,13,14,15]&#125;]</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="列表类组件优化"><a href="#列表类组件优化" class="headerlink" title="列表类组件优化"></a>列表类组件优化</h1><p>列表类组件默认更新方式会比较复杂,所以需要加上一个key属性<br>如果某个组件key值发生改变，react会直接跳过DOM diff，重新渲染，从而节省计算，提高性能</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//如果没有key</span></div><div class="line"><span class="keyword">return</span> items.map((item=&gt;&#123;</div><div class="line">	<span class="keyword">return</span> &lt;img src=&#123;item.src&#125; /&gt;;</div><div class="line">&#125;))<span class="comment">//如果顺序发生改变，react会对元素进行diff操作并计算出最高效的操作是改变几个img元素的src属性，这里又要diff又要计算</span></div><div class="line"></div><div class="line"><span class="comment">//如果有key</span></div><div class="line"><span class="keyword">return</span> &lt;img src=&#123;item.src&#125; key=&#123;item.id&#125; /&gt;</div><div class="line"><span class="comment">//react不会diff，而是直接inserBefore这种类型的操作，而这个操作是移动DOM节点最高效的方法</span></div><div class="line"><span class="comment">//如果要删除哪个组件，只要发下key不存在就直接删除</span></div></pre></td></tr></table></figure>
+
       
 
       
@@ -222,6 +233,10 @@ var _hmt = _hmt || [];
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
         		</li>
       		
 		</ul>
@@ -277,7 +292,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://liumeilian.com.cn/2017/04/20/Array/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://liumeilian.com.cn/2017/08/06/reactperfect/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -291,18 +306,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2017/04/20/prototype/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          面向对象，原型，继承
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/04/20/react/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">react</div>
+    <a href="/2017/08/04/debounce/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于节流问题的debounce和Throttle</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -316,7 +322,7 @@ var _hmt = _hmt || [];
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Array" data-title="JS中some(),every(),forEach(),map(),filter()区别" data-url="http://liumeilian.com.cn/2017/04/20/Array/"></div>
+	<div class="ds-thread" data-thread-key="reactperfect" data-title="react组件性能优化" data-url="http://liumeilian.com.cn/2017/08/06/reactperfect/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
