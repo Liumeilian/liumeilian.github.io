@@ -23,7 +23,7 @@
 2.但是当从根组件传下来的数据改变了某个子组件的props时，react的默认做法是调用所有子组件的render，
 3.再对生成的虚拟dom进行对比，如不变则不进行更新，这样的render和虚拟dom的对比">
 <meta property="og:image" content="https://unsplash.it/1001/300/?random">
-<meta property="og:updated_time" content="2017-08-06T14:25:57.945Z">
+<meta property="og:updated_time" content="2017-08-07T07:45:25.449Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react组件性能优化">
 <meta name="twitter:description" content="react的diff算法虽然已经很高效了，但是还是有其他更细致的东西可以让我们做到更高效
@@ -219,6 +219,7 @@ var _hmt = _hmt || [];
 </ul>
 <h1 id="列表类组件优化"><a href="#列表类组件优化" class="headerlink" title="列表类组件优化"></a>列表类组件优化</h1><p>列表类组件默认更新方式会比较复杂,所以需要加上一个key属性<br>如果某个组件key值发生改变，react会直接跳过DOM diff，重新渲染，从而节省计算，提高性能</p>
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//如果没有key</span></div><div class="line"><span class="keyword">return</span> items.map((item=&gt;&#123;</div><div class="line">	<span class="keyword">return</span> &lt;img src=&#123;item.src&#125; /&gt;;</div><div class="line">&#125;))<span class="comment">//如果顺序发生改变，react会对元素进行diff操作并计算出最高效的操作是改变几个img元素的src属性，这里又要diff又要计算</span></div><div class="line"></div><div class="line"><span class="comment">//如果有key</span></div><div class="line"><span class="keyword">return</span> &lt;img src=&#123;item.src&#125; key=&#123;item.id&#125; /&gt;</div><div class="line"><span class="comment">//react不会diff，而是直接inserBefore这种类型的操作，而这个操作是移动DOM节点最高效的方法</span></div><div class="line"><span class="comment">//如果要删除哪个组件，只要发下key不存在就直接删除</span></div></pre></td></tr></table></figure>
+<p><a href="http://www.imweb.io/topic/577512fe732b4107576230b9" target="_blank" rel="external">react组件性能优化探索实践</a></p>
 
       
 
@@ -305,6 +306,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/2017/08/07/fetch/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          fetch请求数据和开发环境下的数据mock
+        
+      </div>
+    </a>
   
   
     <a href="/2017/08/04/debounce/" id="article-nav-older" class="article-nav-link-wrap">
@@ -430,19 +440,19 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">布局</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">css3</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -454,19 +464,19 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">jq</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">react</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">字符串的操作</a>
+                <a href="javascript:void(0)" class="js-tag color3">jq</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">字符串的操作</a>
               </li>
              
               <li class="article-tag-list-item">
