@@ -23,7 +23,7 @@
 2.在render里onClick={this.handleClick.bind(this)}
 3.箭头函数  onClick={()=&amp;gt;{this.handleClick()}}注意：为什么要绑定，因为需要">
 <meta property="og:image" content="https://unsplash.it/1000/300/?random">
-<meta property="og:updated_time" content="2017-07-20T15:22:50.320Z">
+<meta property="og:updated_time" content="2017-08-07T07:51:05.743Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react小记2">
 <meta name="twitter:description" content="react中的this绑定this的三种方法
@@ -190,9 +190,9 @@ var _hmt = _hmt || [];
 <ul>
 <li>1.在constructor中绑定     this.handleClick=this.handleClick.bind(this);</li>
 <li>2.在render里onClick={this.handleClick.bind(this)}</li>
-<li>3.箭头函数  onClick={()=&gt;{this.handleClick()}}<h3 id="注意：为什么要绑定，因为需要函数里面的this指向该组件对象"><a href="#注意：为什么要绑定，因为需要函数里面的this指向该组件对象" class="headerlink" title="注意：为什么要绑定，因为需要函数里面的this指向该组件对象"></a>注意：为什么要绑定，因为需要函数里面的this指向该组件对象</h3></li>
+<li>3.箭头函数  onClick={()=&gt;{this.handleClick()}}<h3 id="注意：为什么要绑定，因为需要函数里面的this指向该组件对象"><a href="#注意：为什么要绑定，因为需要函数里面的this指向该组件对象" class="headerlink" title="注意：为什么要绑定，因为需要函数里面的this指向该组件对象"></a>注意：为什么要绑定，因为需要函数里面的this指向该组件对象</h3><a id="more"></a>
+<h1 id="key的作用"><a href="#key的作用" class="headerlink" title="key的作用"></a>key的作用</h1>key是用来唯一标识同父同层级的兄弟元素，key其实没有也行，但是会影响效率<br>React在diff两棵树的时候，只要子元素有key属性，便会回去原来的v-dom树中找是否有相同key的元素，如果有相同key则比较是否完全相同，如果两个元素完全相同则复用，如果key同内容不同，则修改内容，若找不到相同的key则创建元素<br>所以key的给定能提高效率</li>
 </ul>
-<h1 id="key的作用"><a href="#key的作用" class="headerlink" title="key的作用"></a>key的作用</h1><p>key是用来唯一标识同父同层级的兄弟元素，key其实没有也行，但是会影响效率<br>React在diff两棵树的时候，只要子元素有key属性，便会回去原来的v-dom树中找是否有相同key的元素，如果有相同key则比较是否完全相同，如果两个元素完全相同则复用，如果key同内容不同，则修改内容，若找不到相同的key则创建元素<br>所以key的给定能提高效率</p>
 <figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//没有key</span></div><div class="line"></div><div class="line"><span class="comment">//旧的v-dom</span></div><div class="line"><span class="params">&lt;ul&gt;</span></div><div class="line"><span class="params">&lt;li&gt;</span><span class="number">1</span><span class="params">&lt;/li&gt;</span></div><div class="line"><span class="params">&lt;li&gt;</span><span class="number">2</span><span class="params">&lt;/li&gt;</span></div><div class="line"><span class="params">&lt;ul&gt;</span></div><div class="line"></div><div class="line"><span class="comment">//新的v-dom</span></div><div class="line"><span class="params">&lt;ul&gt;</span></div><div class="line"><span class="params">&lt;li&gt;</span><span class="number">0</span><span class="params">&lt;/li&gt;</span></div><div class="line"><span class="params">&lt;li&gt;</span><span class="number">1</span><span class="params">&lt;/li&gt;</span></div><div class="line"><span class="params">&lt;li&gt;</span><span class="number">2</span><span class="params">&lt;/li&gt;</span></div><div class="line"><span class="params">&lt;ul&gt;</span></div></pre></td></tr></table></figure>
 <p>上面的情况react会比较新0与旧1，发现不等，把1改成0<br>接着比较新1与旧2，发现不等，把2改成1，<br>接着新2没有，创建一个2添加在后面</p>
 <figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">//有<span class="built_in">key</span></div><div class="line"></div><div class="line">//旧的v-dom</div><div class="line">&lt;ul&gt;</div><div class="line">&lt;<span class="built_in">li</span> <span class="built_in">key</span>=<span class="string">"1"</span>&gt;<span class="number">1</span>&lt;/<span class="built_in">li</span>&gt;</div><div class="line">&lt;<span class="built_in">li</span> <span class="built_in">key</span>=<span class="string">"2"</span>&gt;<span class="number">2</span>&lt;/<span class="built_in">li</span>&gt;</div><div class="line">&lt;ul&gt;</div><div class="line"></div><div class="line">//新的v-dom</div><div class="line">&lt;ul&gt;</div><div class="line">&lt;<span class="built_in">li</span> <span class="built_in">key</span>=<span class="string">"0"</span>&gt;<span class="number">0</span>&lt;/<span class="built_in">li</span>&gt;</div><div class="line">&lt;<span class="built_in">li</span> <span class="built_in">key</span>=<span class="string">"1"</span>&gt;<span class="number">1</span>&lt;/<span class="built_in">li</span>&gt;</div><div class="line">&lt;<span class="built_in">li</span> <span class="built_in">key</span>=<span class="string">"2"</span>&gt;<span class="number">2</span>&lt;/<span class="built_in">li</span>&gt;</div><div class="line">&lt;ul&gt;</div></pre></td></tr></table></figure>
@@ -454,19 +454,19 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">react</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">jq</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">测试</a>
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">字符串的操作</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">测试</a>
               </li>
              
               <li class="article-tag-list-item">
