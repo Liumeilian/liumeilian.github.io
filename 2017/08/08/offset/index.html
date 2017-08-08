@@ -6,14 +6,41 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://liumeilian.com.cn">
-  <title>Archives: 2017/3 | 美小妞的博客</title>
+  <title>js的offset和jQ的offset还有js和jq中的event对象 | 美小妞的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="美小妞的博客">
-<meta property="og:url" content="http://liumeilian.com.cn/archives/2017/03/index.html">
+  <meta name="description" content="时间长了有时候就分不清js和jq了，特别是各种offsetLeft,offsetWidth之类的
+js中的offset在js中关于offset的只有下面几个：
+
+1.offsetLeft
+2.offsetRight
+3.offsetWidth
+4.offsetHeight
+5.offsetParent在 1 2 3 4中在非ie下都是相对于最近的定位祖先，在ie下总是以父元素为参考对象，偏移量会">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js的offset和jQ的offset还有js和jq中的event对象">
+<meta property="og:url" content="http://liumeilian.com.cn/2017/08/08/offset/index.html">
 <meta property="og:site_name" content="美小妞的博客">
+<meta property="og:description" content="时间长了有时候就分不清js和jq了，特别是各种offsetLeft,offsetWidth之类的
+js中的offset在js中关于offset的只有下面几个：
+
+1.offsetLeft
+2.offsetRight
+3.offsetWidth
+4.offsetHeight
+5.offsetParent在 1 2 3 4中在非ie下都是相对于最近的定位祖先，在ie下总是以父元素为参考对象，偏移量会">
+<meta property="og:image" content="https://unsplash.it/1006/300/?random">
+<meta property="og:updated_time" content="2017-08-08T15:28:26.966Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="美小妞的博客">
+<meta name="twitter:title" content="js的offset和jQ的offset还有js和jq中的event对象">
+<meta name="twitter:description" content="时间长了有时候就分不清js和jq了，特别是各种offsetLeft,offsetWidth之类的
+js中的offset在js中关于offset的只有下面几个：
+
+1.offsetLeft
+2.offsetRight
+3.offsetWidth
+4.offsetHeight
+5.offsetParent在 1 2 3 4中在非ie下都是相对于最近的定位祖先，在ie下总是以父元素为参考对象，偏移量会">
+<meta name="twitter:image" content="https://unsplash.it/1006/300/?random">
   
     <link rel="alternative" href="/atom.xml" title="美小妞的博客" type="application/atom+xml">
   
@@ -147,60 +174,174 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-offset" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/25/maxLength/" class="archive-article-date">
-  	<time datetime="2017-03-25T12:48:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-25</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/25/maxLength/">查找两个字符串中最长的公共子串</a>
+    <h1 class="article-title" itemprop="name">
+      js的offset和jQ的offset还有js和jq中的event对象
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/08/08/offset/" class="archive-article-date">
+  	<time datetime="2017-08-08T14:33:04.068Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1006/300/?random" alt=""></p>
+<p>时间长了有时候就分不清js和jq了，特别是各种offsetLeft,offsetWidth之类的</p>
+<h1 id="js中的offset"><a href="#js中的offset" class="headerlink" title="js中的offset"></a>js中的offset</h1><p>在js中关于offset的只有下面几个：</p>
+<ul>
+<li>1.offsetLeft</li>
+<li>2.offsetRight</li>
+<li>3.offsetWidth</li>
+<li>4.offsetHeight</li>
+<li>5.offsetParent<br>在 1 2 3 4中在非ie下都是相对于最近的定位祖先，在ie下总是以父元素为参考对象，偏移量会加上父元素的边框值<br>在5中是最近的定位父级<a id="more"></a>
+<h1 id="jquery中的offset是一个方法"><a href="#jquery中的offset是一个方法" class="headerlink" title="jquery中的offset是一个方法"></a>jquery中的offset是一个方法</h1>只有下面两个值：</li>
+<li>1.top</li>
+<li>2.left<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">offset</span><span class="params">()</span></span>:参照对象永远是<span class="selector-tag">body</span> 而且只有<span class="attribute">top</span>和left</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="jquery中的position是一个方法"><a href="#jquery中的position是一个方法" class="headerlink" title="jquery中的position是一个方法"></a>jquery中的position是一个方法</h1><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">position</span>()<span class="selector-class">.left</span>    <span class="attribute">position</span>()<span class="selector-class">.top</span>他们的参考对象是定位父级，所谓定位父级包括（absolute，relative，fixed）</div></pre></td></tr></table></figure>
+<h1 id="js中的event"><a href="#js中的event" class="headerlink" title="js中的event"></a>js中的event</h1><p>有以下常用值：</p>
+<ul>
+<li>1.clientX  clientY</li>
+<li>2.screenX  screenY<br>上面这两种值在所有浏览器中都有<br>出此之外，ie还特有下面两种</li>
+<li>1.offsetX offsetY参考对象是事件源元素</li>
+</ul>
+<h1 id="jquery中的event"><a href="#jquery中的event" class="headerlink" title="jquery中的event"></a>jquery中的event</h1><p>常用的有：</p>
+<ul>
+<li>1.event.pageX event.pageY相对于文档的</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jquery</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://liumeilian.com.cn/2017/08/08/offset/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/08/07/fetch/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">fetch请求数据和开发环境下的数据mock</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="offset" data-title="js的offset和jQ的offset还有js和jq中的event对象" data-url="http://liumeilian.com.cn/2017/08/08/offset/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"liumeilian"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
   
 
-    
+
 
 
           </div>
@@ -223,8 +364,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
