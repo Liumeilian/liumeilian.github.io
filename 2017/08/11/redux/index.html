@@ -6,14 +6,32 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://liumeilian.com.cn">
-  <title>Tag: css | 美小妞的博客</title>
+  <title>react-redux的用法 | 美小妞的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="美小妞的博客">
-<meta property="og:url" content="http://liumeilian.com.cn/tags/css/index.html">
+  <meta name="description" content="终于有时间来写写react-redux了
+安装react与redux的结合所以安装有两个步骤：
+
+1.npm install redux –save
+2.npm install react-redux –save">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react-redux的用法">
+<meta property="og:url" content="http://liumeilian.com.cn/2017/08/11/redux/index.html">
 <meta property="og:site_name" content="美小妞的博客">
+<meta property="og:description" content="终于有时间来写写react-redux了
+安装react与redux的结合所以安装有两个步骤：
+
+1.npm install redux –save
+2.npm install react-redux –save">
+<meta property="og:image" content="https://unsplash.it/1006/300/?random">
+<meta property="og:updated_time" content="2017-08-11T11:38:47.143Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="美小妞的博客">
+<meta name="twitter:title" content="react-redux的用法">
+<meta name="twitter:description" content="终于有时间来写写react-redux了
+安装react与redux的结合所以安装有两个步骤：
+
+1.npm install redux –save
+2.npm install react-redux –save">
+<meta name="twitter:image" content="https://unsplash.it/1006/300/?random">
   
     <link rel="alternative" href="/atom.xml" title="美小妞的博客" type="application/atom+xml">
   
@@ -147,136 +165,194 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-redux" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      react-redux的用法
+    </h1>
+  
+
+        
+        <a href="/2017/08/11/redux/" class="archive-article-date">
+  	<time datetime="2017-08-11T10:25:07.514Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-11</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1006/300/?random" alt=""></p>
+<p>终于有时间来写写react-redux了</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>react与redux的结合所以安装有两个步骤：</p>
+<ul>
+<li>1.npm install redux –save</li>
+<li>2.npm install react-redux –save<a id="more"></a>
+<h1 id="redux"><a href="#redux" class="headerlink" title="redux"></a>redux</h1>关于redux(这里不包含react)先来看看下面的例子：</li>
+</ul>
+<figure class="highlight pf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">// 定义计算规则，即 </div><div class="line">reducer function counter(<span class="keyword">state</span> = <span class="number">0</span>, action) &#123;</div><div class="line"> 	switch (action.type) &#123; </div><div class="line">	 	case 'INCREMENT':</div><div class="line">	 		 return <span class="keyword">state</span> + <span class="number">1</span> </div><div class="line">	 	case 'DECREMENT': </div><div class="line">	 		return <span class="keyword">state</span> - <span class="number">1</span> </div><div class="line">	 	<span class="keyword">default</span>: </div><div class="line">	 	return <span class="keyword">state</span> </div><div class="line"> 	&#125;</div><div class="line"> &#125; </div><div class="line"></div><div class="line"></div><div class="line">// 根据计算规则生成 </div><div class="line">store let store = createStore(counter) </div><div class="line"></div><div class="line"></div><div class="line">// 定义数据（即 <span class="keyword">state</span>）变化之后的派发规则 </div><div class="line">store.subscribe(() =&gt; &#123; console.<span class="keyword">log</span>('current <span class="keyword">state</span>', store.getState()) &#125;)</div><div class="line"></div><div class="line"></div><div class="line"> // 触发数据变化 </div><div class="line"> store.dispatch(&#123;type: 'INCREMENT'&#125;) </div><div class="line"> store.dispatch(&#123;type: 'INCREMENT'&#125;) </div><div class="line"> store.dispatch(&#123;type: 'DECREMENT'&#125;)</div></pre></td></tr></table></figure>
+<h2 id="redux设计理念："><a href="#redux设计理念：" class="headerlink" title="redux设计理念："></a>redux设计理念：</h2><p>简单几十行代码，就诠释了 Redux 的设计理念，这里简单分析一下：</p>
+<ul>
+<li>1.Redux 是一个管理数据的工具，我们创建一个store变量用来管理数据。而这个store不是凭空创建的，创建它的前提是，得设定一个管理规则。以上代码中，我们的管理规则是：数据（即state）默认是 0，传入INCREMENT就加一，传入DECREMENT就减一</li>
+<li>2.创建store用来管理数据，具体的管理形式是什么呢？第一，要通过一个函数来触发数据的变化，即dispatch，触发的时候一定要符合之前定制的规则，否则无效。第二，数据一旦发生变化时，会导致怎样后果，即subscribe中定义的函数会执行。第三，如何取得当前的数据，即store.getState()。这一块，熟悉设计模式的同学不难理解，这就是普通的发布和订阅的设计模式，也是js种惯用的设计模式。</li>
+<li>3.还有一点特别要注意，即在规则函数中，数据变化时要return一个新的值，而不是直接修改原来的值。这一点和之前提到的Immutable.js一样，都是使用了不可变数据这一概念。这种设计方式明确了数据的变化时段，使得数据管理更清晰，复杂度更低。</li>
+</ul>
+<h1 id="redux和react结合"><a href="#redux和react结合" class="headerlink" title="redux和react结合"></a>redux和react结合</h1><p>这里我就我自己的项目来说</p>
+<h2 id="创建规则"><a href="#创建规则" class="headerlink" title="创建规则"></a>创建规则</h2><ul>
+<li><p>1.我在app/constants/userinfo.js中声明了一个常亮并导出，这没什么，只是这个常量经常用我才提出来写的</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//app/constants/userinfo.js</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> USERINFO_UPDATE = <span class="string">'USERINFO_UPDATE'</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>2.我在app/reduces/userinfo.js里创建规则</p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//app/reduces/userinfo.js</span></div><div class="line"><span class="keyword">import</span> * <span class="keyword">as</span> actionTypes <span class="keyword">from</span> <span class="string">'../constants/userinfo'</span></div><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"><span class="keyword">const</span> initialState=&#123;&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">userinfo</span>(<span class="params">state=initialState,action</span>)</span>&#123;</div><div class="line">	<span class="keyword">switch</span>(action.type)&#123;</div><div class="line">		<span class="keyword">case</span> actionTypes.USERINFO_UPDATE:</div><div class="line">			<span class="keyword">return</span> action.data</div><div class="line">		<span class="keyword">default</span>:</div><div class="line">		<span class="keyword">return</span> state</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>3.在app/reducers/index.js中对规则做一些处理</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//app/reducers/index.js</span></div><div class="line"><span class="keyword">import</span> &#123;combineReducers&#125; <span class="keyword">from</span> <span class="string">'redux'</span></div><div class="line"><span class="keyword">import</span> userinfo <span class="keyword">from</span> <span class="string">'./userinfo'</span></div><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> combineReducers(&#123;</div><div class="line">	userinfo</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>我为什么要做这个处理呢，因为这样的话当我再定义另一个规则的时候可以直接添加在里面，合起来一起定义一个store，就像下面这样</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//app/reducers/index.js</span></div><div class="line"><span class="keyword">import</span> &#123;combineReducers&#125; <span class="keyword">from</span> <span class="string">'redux'</span></div><div class="line"><span class="keyword">import</span> userinfo <span class="keyword">from</span> <span class="string">'./userinfo'</span></div><div class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'./store'</span></div><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> combineReducers(&#123;</div><div class="line">	userinfo,</div><div class="line">	store</div><div class="line">&#125;)</div><div class="line"><span class="comment">//这里的store是其他的规则</span></div></pre></td></tr></table></figure>
+<p>这样就完成了定义规则部分</p>
+<h2 id="根据规则创建store"><a href="#根据规则创建store" class="headerlink" title="根据规则创建store"></a>根据规则创建store</h2><p>这里很简单只有一步：在app/store/configureStore.js中创建store<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//app/store/configureStore.js</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> rootReducer <span class="keyword">from</span> <span class="string">'../reducers'</span></div><div class="line"><span class="keyword">import</span> &#123;createStore&#125; <span class="keyword">from</span> <span class="string">'redux'</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">configureStore</span>(<span class="params">initialState</span>)</span>&#123;</div><div class="line">	<span class="keyword">const</span> store=createStore(rootReducer,initialState,<span class="built_in">window</span>.devToolsExtension?<span class="built_in">window</span>.devToolsExtension():<span class="literal">undefined</span>);</div><div class="line">	<span class="keyword">return</span> store</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="触发数据变化也就是dispatch部分"><a href="#触发数据变化也就是dispatch部分" class="headerlink" title="触发数据变化也就是dispatch部分"></a>触发数据变化也就是dispatch部分</h2><p>这里比较复杂</p>
+<ul>
+<li>1.关于项目的路由的配置我放在了app/router/routeMap.jsx文件下</li>
+</ul>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//app/router/routeMap.jsx</span></div><div class="line"><span class="keyword">import</span> <span class="type">React</span> from <span class="symbol">'reac</span>t'</div><div class="line"><span class="keyword">import</span> &#123; <span class="type">Router</span>, <span class="type">Route</span>, <span class="type">IndexRoute</span> &#125; from <span class="symbol">'react</span>-router'</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">RouterMap</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">    render() &#123;</div><div class="line">        <span class="keyword">return</span> (</div><div class="line">           &lt;<span class="type">Router</span> history=&#123;<span class="keyword">this</span>.props.history&#125;&gt;</div><div class="line">                &lt;<span class="type">Route</span> path='/' component=&#123;<span class="type">City</span>&#125; /&gt;</div><div class="line">           &lt;/<span class="type">Router</span>&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">export <span class="keyword">default</span> <span class="type">RouterMap</span></div></pre></td></tr></table></figure>
+<ul>
+<li><p>2.这里比以前多了一个步骤，以前直接把routerMap这个组件放到app/index.jsx中</p>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//以前app/index.jsx</span></div><div class="line">render(</div><div class="line">        &lt;RouteMap history=&#123;hashHistory&#125;/&gt;,</div><div class="line">    document.getElementById(<span class="string">'root'</span>)</div><div class="line">)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//现在redux的结合后app/index.jsx</span></div><div class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span></div><div class="line"><span class="keyword">import</span> &#123; render &#125; <span class="keyword">from</span> <span class="string">'react-dom'</span></div><div class="line"><span class="keyword">import</span> &#123; Provider &#125; <span class="keyword">from</span> <span class="string">'react-redux'</span></div><div class="line"><span class="keyword">import</span> &#123; hashHistory &#125; <span class="keyword">from</span> <span class="string">'react-router'</span></div><div class="line"><span class="keyword">import</span> configureStore <span class="keyword">from</span> <span class="string">'./store/configureStore'</span></div><div class="line"><span class="keyword">import</span> RouteMap <span class="keyword">from</span> <span class="string">'./router/routeMap'</span></div><div class="line"></div><div class="line">const store=configureStore()</div><div class="line"></div><div class="line">render(</div><div class="line">	&lt;Provider store=&#123;store&#125;&gt;</div><div class="line">        &lt;RouteMap history=&#123;hashHistory&#125;/&gt;</div><div class="line">    &lt;/Provider&gt;,</div><div class="line">    document.getElementById(<span class="string">'root'</span>)</div><div class="line">)</div></pre></td></tr></table></figure>
+</li>
+<li><p>3.在city组件中触发disptch</p>
+</li>
+</ul>
+<p>这里city的输出要用connect做一些改变</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span></div><div class="line"><span class="keyword">import</span> PureRenderMixin <span class="keyword">from</span> <span class="string">'react-addons-pure-render-mixin'</span></div><div class="line"><span class="keyword">import</span> &#123; bindActionCreators &#125; <span class="keyword">from</span> <span class="string">'redux'</span></div><div class="line"><span class="keyword">import</span> &#123; connect &#125; <span class="keyword">from</span> <span class="string">'react-redux'</span></div><div class="line"><span class="keyword">import</span> &#123; hashHistory &#125; <span class="keyword">from</span> <span class="string">'react-router'</span></div><div class="line"><span class="keyword">import</span> * <span class="keyword">as</span> userInfoActionsFromOtherFile <span class="keyword">from</span> <span class="string">'../../actions/userinfo'</span></div><div class="line"><span class="keyword">import</span> Header <span class="keyword">from</span> <span class="string">'../../components/Header'</span></div><div class="line"><span class="keyword">import</span> CityList <span class="keyword">from</span> <span class="string">'../../components/CityList'</span></div><div class="line"><span class="keyword">import</span> localStore <span class="keyword">from</span> <span class="string">'../../util/localStore'</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">City</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> &#123;</span></div><div class="line">    constructor(props, context) &#123;</div><div class="line">        <span class="keyword">super</span>(props, context);</div><div class="line">        <span class="keyword">this</span>.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(<span class="keyword">this</span>);</div><div class="line">    &#125;</div><div class="line">    render() &#123;</div><div class="line">        <span class="keyword">return</span> (</div><div class="line">            &lt;div&gt;</div><div class="line">                &lt;Header title=<span class="string">"选择城市"</span>/&gt;</div><div class="line">                &lt;CityList changeFn=&#123;<span class="keyword">this</span>.changeCity.bind(<span class="keyword">this</span>)&#125;/&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">    changeCity(newCity) &#123;</div><div class="line">       const userinfo=<span class="keyword">this</span>.props.userinfo</div><div class="line">       userinfo.cityName=newCity</div><div class="line">       <span class="keyword">this</span>.props.userInfoActions.update(userinfo)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="regexp">//</span>------------redux react绑定-------------</div><div class="line"></div><div class="line">function mapStateToProps(state)&#123;</div><div class="line">    <span class="keyword">return</span> &#123;userinfo:state.userinfo&#125;</div><div class="line">&#125;</div><div class="line">function mapDispatchToProps(dispatch)&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        userInfoActions:bindActionCreators(userInfoActionsFromOtherFile,dispatch)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> connect(</div><div class="line">    mapStateToProps,</div><div class="line">    mapDispatchToProps</div><div class="line">)(City)</div></pre></td></tr></table></figure>
+<p>这里通过connect这样的绑定这个页面就可以用this.props.userinfo取出store里的状态，其实这个就是reducer规则返回的state，也就是或action.data<br>可以通过this.props.userInfoActions.update触发dispatch，使得store里的状态改变，update函数return回去的就会到store里面<br>我的理解就是store里面保存了很多的状态<br>在这里update函数一执行就会把新的状态存到store里面</p>
+<p>好了我的水平现在就只能到这了</p>
+<p><a href="http://www.imooc.com/article/14958" target="_blank" rel="external">参考</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/13/textoverflow/" class="archive-article-date">
-  	<time datetime="2017-05-13T13:12:45.405Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/13/textoverflow/">css实现文本省略用...代替</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://liumeilian.com.cn/2017/08/11/redux/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/14/img/" class="archive-article-date">
-  	<time datetime="2017-04-14T12:40:24.288Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-14</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/14/img/">如何解决div里面img图片下方有空白的问题</a>
-    </h1>
+  
+    <a href="/2017/08/08/offset/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js的offset和jQ的offset还有js和jq中的event对象</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="redux" data-title="react-redux的用法" data-url="http://liumeilian.com.cn/2017/08/11/redux/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"liumeilian"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/12/layout/" class="archive-article-date">
-  	<time datetime="2017-04-12T08:35:42.295Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/12/layout/">layout和css的hack详解</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -299,9 +375,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		root: "/",
