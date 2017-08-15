@@ -149,6 +149,77 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-react" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/20/react/">react</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/20/react/" class="archive-article-date">
+  	<time datetime="2017-04-20T05:13:06.971Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
+<p><a href="http://www.ruanyifeng.com/blog/2015/03/react.html">阮一峰老师的react入门教程</a></p>
+<h1 id="一-react简介"><a href="#一-react简介" class="headerlink" title="一.react简介"></a>一.react简介</h1><ul>
+<li>react最主要有三个核心库react.js   react-dom.js  browser.js他们必须首先被加载才能使用。react.js为核心库，react-dom.js提供dom相关操作，brower.js的作用是把jsx语法转化为javasript语法</li>
+<li>react允许将代码封装成组件，然后像插入普通HTML标签一样，在网页中插入这个组件</li>
+<li>组件并不是真实的dom节点，而是存在于内存中的一种数据结构，叫虚拟dom，只有当它插入文档以后才会变成真实的dom，根据react的设计，所有dom的变化都先在虚拟dom上发生，然后再将实际发生的部分反映到真实dom上，这种算法叫做dom diff，它可以极大的提高性能的表现</li>
+<li>需要用ref属性来获取真实的dom节点</li>
+<li>react的创新在于将组建看成是一个状态机，一开始有一个初始状态，用户互动导致状态变化，从而触发重新渲染UI
+        
+          <a class="article-more-a" href="/2017/04/20/react/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/20/react/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-ajax" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -766,82 +837,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-function" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/08/function/">函数的定义 函数声明 函数表达式 立即执行函数</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/08/function/" class="archive-article-date">
-  	<time datetime="2017-04-08T12:28:16.653Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://unsplash.it/1007/300/?random" alt=""></p>
-<h1 id="函数的定义"><a href="#函数的定义" class="headerlink" title="函数的定义"></a>函数的定义</h1><ul>
-<li>1.函数通常是使用函数声明语法定义的，如下</li>
-</ul>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="title">sum</span>(num1,num2)&#123;</div><div class="line">	<span class="keyword">return</span> <span class="type">num1+num2</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>2.也可以用函数表达式定义,如下</li>
-</ul>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> sum=<span class="function"><span class="keyword">function</span><span class="params">(num1,num2)</span></span>&#123;</div><div class="line">	<span class="keyword">return</span> num1+num2;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>3.还可以用Function构造函数定义，如下</li>
-</ul>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> sum=<span class="keyword">new</span> <span class="function"><span class="keyword">Function</span><span class="params">(<span class="string">"num1"</span>,<span class="string">"num2"</span>,<span class="string">"return num1+num2"</span>)</span></span>;<span class="comment">//不推荐</span></div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/04/08/function/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/08/function/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
@@ -935,11 +930,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">布局</a>
+                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
+                <a href="javascript:void(0)" class="js-tag color3">布局</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -951,11 +946,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -971,11 +966,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">字符串的操作</a>
+                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
+                <a href="javascript:void(0)" class="js-tag color2">字符串的操作</a>
               </li>
             
             <div class="clearfix"></div>

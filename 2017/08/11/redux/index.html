@@ -23,7 +23,7 @@
 1.npm install redux –save
 2.npm install react-redux –save">
 <meta property="og:image" content="https://unsplash.it/1006/300/?random">
-<meta property="og:updated_time" content="2017-08-11T11:38:47.143Z">
+<meta property="og:updated_time" content="2017-08-11T11:47:43.146Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react-redux的用法">
 <meta name="twitter:description" content="终于有时间来写写react-redux了
@@ -201,7 +201,7 @@ var _hmt = _hmt || [];
 <li>3.还有一点特别要注意，即在规则函数中，数据变化时要return一个新的值，而不是直接修改原来的值。这一点和之前提到的Immutable.js一样，都是使用了不可变数据这一概念。这种设计方式明确了数据的变化时段，使得数据管理更清晰，复杂度更低。</li>
 </ul>
 <h1 id="redux和react结合"><a href="#redux和react结合" class="headerlink" title="redux和react结合"></a>redux和react结合</h1><p>这里我就我自己的项目来说</p>
-<h2 id="创建规则"><a href="#创建规则" class="headerlink" title="创建规则"></a>创建规则</h2><ul>
+<h2 id="一-创建规则"><a href="#一-创建规则" class="headerlink" title="一.创建规则"></a>一.创建规则</h2><ul>
 <li><p>1.我在app/constants/userinfo.js中声明了一个常亮并导出，这没什么，只是这个常量经常用我才提出来写的</p>
 <figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//app/constants/userinfo.js</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> USERINFO_UPDATE = <span class="string">'USERINFO_UPDATE'</span></div></pre></td></tr></table></figure>
 </li>
@@ -216,8 +216,8 @@ var _hmt = _hmt || [];
 <p>我为什么要做这个处理呢，因为这样的话当我再定义另一个规则的时候可以直接添加在里面，合起来一起定义一个store，就像下面这样</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//app/reducers/index.js</span></div><div class="line"><span class="keyword">import</span> &#123;combineReducers&#125; <span class="keyword">from</span> <span class="string">'redux'</span></div><div class="line"><span class="keyword">import</span> userinfo <span class="keyword">from</span> <span class="string">'./userinfo'</span></div><div class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'./store'</span></div><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> combineReducers(&#123;</div><div class="line">	userinfo,</div><div class="line">	store</div><div class="line">&#125;)</div><div class="line"><span class="comment">//这里的store是其他的规则</span></div></pre></td></tr></table></figure>
 <p>这样就完成了定义规则部分</p>
-<h2 id="根据规则创建store"><a href="#根据规则创建store" class="headerlink" title="根据规则创建store"></a>根据规则创建store</h2><p>这里很简单只有一步：在app/store/configureStore.js中创建store<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//app/store/configureStore.js</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> rootReducer <span class="keyword">from</span> <span class="string">'../reducers'</span></div><div class="line"><span class="keyword">import</span> &#123;createStore&#125; <span class="keyword">from</span> <span class="string">'redux'</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">configureStore</span>(<span class="params">initialState</span>)</span>&#123;</div><div class="line">	<span class="keyword">const</span> store=createStore(rootReducer,initialState,<span class="built_in">window</span>.devToolsExtension?<span class="built_in">window</span>.devToolsExtension():<span class="literal">undefined</span>);</div><div class="line">	<span class="keyword">return</span> store</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="触发数据变化也就是dispatch部分"><a href="#触发数据变化也就是dispatch部分" class="headerlink" title="触发数据变化也就是dispatch部分"></a>触发数据变化也就是dispatch部分</h2><p>这里比较复杂</p>
+<h2 id="二-根据规则创建store"><a href="#二-根据规则创建store" class="headerlink" title="二.根据规则创建store"></a>二.根据规则创建store</h2><p>这里很简单只有一步：在app/store/configureStore.js中创建store<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//app/store/configureStore.js</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> rootReducer <span class="keyword">from</span> <span class="string">'../reducers'</span></div><div class="line"><span class="keyword">import</span> &#123;createStore&#125; <span class="keyword">from</span> <span class="string">'redux'</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">configureStore</span>(<span class="params">initialState</span>)</span>&#123;</div><div class="line">	<span class="keyword">const</span> store=createStore(rootReducer,initialState,<span class="built_in">window</span>.devToolsExtension?<span class="built_in">window</span>.devToolsExtension():<span class="literal">undefined</span>);</div><div class="line">	<span class="keyword">return</span> store</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="三-触发数据变化也就是dispatch部分"><a href="#三-触发数据变化也就是dispatch部分" class="headerlink" title="三.触发数据变化也就是dispatch部分"></a>三.触发数据变化也就是dispatch部分</h2><p>这里比较复杂</p>
 <ul>
 <li>1.关于项目的路由的配置我放在了app/router/routeMap.jsx文件下</li>
 </ul>
@@ -316,6 +316,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/2017/08/15/baidusearch/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          模拟百度提示框
+        
+      </div>
+    </a>
   
   
     <a href="/2017/08/08/offset/" id="article-nav-older" class="article-nav-link-wrap">
@@ -441,11 +450,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">布局</a>
+                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
+                <a href="javascript:void(0)" class="js-tag color3">布局</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -457,11 +466,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -477,11 +486,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">字符串的操作</a>
+                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
+                <a href="javascript:void(0)" class="js-tag color2">字符串的操作</a>
               </li>
             
             <div class="clearfix"></div>
