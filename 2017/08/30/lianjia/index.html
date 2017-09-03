@@ -6,14 +6,46 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://liumeilian.com.cn">
-  <title>Archives: 2017/4 | 美小妞的博客</title>
+  <title>链家一面 | 美小妞的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="美小妞的博客">
-<meta property="og:url" content="http://liumeilian.com.cn/archives/2017/04/index.html">
+  <meta name="description" content="所有问题：
+TCP
+如何返回页面顶部
+排序
+定位
+布局
+难点如何解决
+http请求头
+深度和广度选择哪个学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="链家一面">
+<meta property="og:url" content="http://liumeilian.com.cn/2017/08/30/lianjia/index.html">
 <meta property="og:site_name" content="美小妞的博客">
+<meta property="og:description" content="所有问题：
+TCP
+如何返回页面顶部
+排序
+定位
+布局
+难点如何解决
+http请求头
+深度和广度选择哪个学习">
+<meta property="og:image" content="https://unsplash.it/1000/300/?random">
+<meta property="og:image" content="http://www.2cto.com/uploadfile/2013/1022/20131022025346218.png">
+<meta property="og:image" content="http://s2.51cto.com/wyfs02/M02/80/1D/wKioL1c4ayTwcSdcAAApEGh-R7Y592.png">
+<meta property="og:updated_time" content="2017-09-02T06:09:46.673Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="美小妞的博客">
+<meta name="twitter:title" content="链家一面">
+<meta name="twitter:description" content="所有问题：
+TCP
+如何返回页面顶部
+排序
+定位
+布局
+难点如何解决
+http请求头
+深度和广度选择哪个学习">
+<meta name="twitter:image" content="https://unsplash.it/1000/300/?random">
   
     <link rel="alternative" href="/atom.xml" title="美小妞的博客" type="application/atom+xml">
   
@@ -147,1186 +179,262 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-lianjia" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      链家一面
+    </h1>
+  
+
+        
+        <a href="/2017/08/30/lianjia/" class="archive-article-date">
+  	<time datetime="2017-08-30T02:52:12.615Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-30</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://unsplash.it/1000/300/?random" alt=""></p>
+<h1 id="所有问题："><a href="#所有问题：" class="headerlink" title="所有问题："></a>所有问题：</h1><ul>
+<li>TCP</li>
+<li>如何返回页面顶部</li>
+<li>排序</li>
+<li>定位</li>
+<li>布局</li>
+<li>难点如何解决</li>
+<li>http请求头</li>
+<li>深度和广度选择哪个学习</li>
+</ul>
+ <a id="more"></a>
+<h1 id="笔试题"><a href="#笔试题" class="headerlink" title="笔试题"></a>笔试题</h1><ul>
+<li>1.给定一个数组Arr，给定确定的数n，n=arr[i]+arr[j],输出所有的i和j的组合</li>
+<li>2.求二叉树中两个节点的公共父节点</li>
+<li>3.一个袋子里有m个球，每个球都不同的编号，可以从袋子里取出(1-m)个球，如果袋子里的球的编号的和大于编号的积就为幸运袋，求有多少个幸福袋</li>
+<li>4.每个城市对应一段ip，输入ip，输出ip所在的城市</li>
+<li>5.阿里笔试里的那个undo和redo，题目我也几部清楚了</li>
+</ul>
+<h2 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h2><ul>
+<li>ISO参考模型有七层:应用层，表示层，会话层，传输层，网络层，链路层，物理层。</li>
+<li>TCP/IP模型只有四层：<br>应用层：HTTP[超文本传输协议],FTP[文件传输协议],DNS[动态域名系统传输协议],SMTP[邮件传输协议],RIP[路由信息协议],SNMP[简单网络传输协议]<br>传输层：TCP[传输控制协议],UDP[用户数据包协议，不需要建立连接，不可靠]<br>网络层：IP[],ICMP,IGMP<br>链路层:ARP,RARP</li>
+</ul>
+<h3 id="网络层和传输层的区别"><a href="#网络层和传输层的区别" class="headerlink" title="网络层和传输层的区别"></a>网络层和传输层的区别</h3><p>网络层是用ip协议解决主机到主机之间的链接问题<br>传输层解决的是进程与进程之间的链接问题，用的是TCP协议</p>
+<p>ip协议是不可靠的，TCP协议是在ip层上提供的可靠的传输服务。</p>
+<h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><p>负责处理特定的应用程序的细节</p>
+<h3 id="链路层"><a href="#链路层" class="headerlink" title="链路层"></a>链路层</h3><p>主要包括操作系统中的设备驱动程序，计算机中对于的网络接口卡</p>
+<h3 id="TCP和UDP的区别"><a href="#TCP和UDP的区别" class="headerlink" title="TCP和UDP的区别"></a>TCP和UDP的区别</h3><ul>
+<li>TCP可靠,UDP不可靠</li>
+<li>TCP是并发型[两边都可发可收]，UDP是重复性[只有一端可发一端可收]</li>
+</ul>
+<h3 id="TCP三次握手"><a href="#TCP三次握手" class="headerlink" title="TCP三次握手"></a>TCP三次握手</h3><p><img src="http://www.2cto.com/uploadfile/2013/1022/20131022025346218.png" alt="三次握手"></p>
+<ul>
+<li>ACK是标志位,只有ACK=1时确认序号ack才有效，ack=seq+1，seq是发送序号</li>
+<li>SYN标志位为1时表示要建立连接</li>
+<li>FIN标志位为1时表示要取消连接</li>
+</ul>
+<h4 id="三次握手描述："><a href="#三次握手描述：" class="headerlink" title="三次握手描述："></a>三次握手描述：</h4><ul>
+<li>1.客户端发送seq=200序列号，此时标志位SYN=1表示要建立连接</li>
+<li>2.服务端发送确认序号ack=seq[客户端发过来的200]+1，发送自己的seq发送序列号seq[随机的300],此时SYN=1,ACK=1</li>
+<li>3.客户端发送确认序号ack=seq[300]+1,此时ACK=1;</li>
+</ul>
+<h4 id="四次挥手描述"><a href="#四次挥手描述" class="headerlink" title="四次挥手描述"></a>四次挥手描述</h4><p><img src="http://s2.51cto.com/wyfs02/M02/80/1D/wKioL1c4ayTwcSdcAAApEGh-R7Y592.png" alt="altName"></p>
+<ul>
+<li>1.客户端发送序号seq=200，此时FIN=1表示要取消连接</li>
+<li>2.服务端发送确认序号ack=seq[200]+1,,此时标志位ACK=1</li>
+<li>3.服务端发送序号seq=300，此时FIN=1表示要取消连接</li>
+<li>4.客户端发送确认序号ack=seq[300]+1,此时ACK=1</li>
+</ul>
+<h2 id="返回顶部"><a href="#返回顶部" class="headerlink" title="返回顶部"></a>返回顶部</h2><ul>
+<li><p>1.a标签的href里面什么都不写就返回顶部了</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>返回顶部<span class="tag">&lt;<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>2.返回想要到达的地方</p>
+</li>
+</ul>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//在想要的返回到的地方写a</span></div><div class="line">&lt;<span class="selector-tag">a</span> name=<span class="string">"top"</span>&gt;&lt;a&gt;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//在返回顶部的a里</span></div><div class="line">&lt;<span class="selector-tag">a</span> href=<span class="string">"#top"</span>&gt;&lt;/a&gt;</div></pre></td></tr></table></figure>
+<p>但是这第二个方法的url会带上#top</p>
+<ul>
+<li><p>3.用scrollTo函数</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:scrollTo(0,0)"</span>&gt;</span>返回顶部<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>4.scrollTop函数</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$<span class="comment">(window)</span>.scrollTop<span class="comment">(0)</span>;</div><div class="line">$<span class="comment">('body')</span>.scrollTop<span class="comment">(0)</span>;</div><div class="line">$<span class="comment">('html')</span>.scrollTop<span class="comment">(0)</span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p>5.animate函数</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$(</span><span class="string">'body'</span>).animate(&#123;<span class="symbol">scrollTop:</span><span class="number">0</span>&#125;,<span class="number">500</span>);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="随便写一个快速排序"><a href="#随便写一个快速排序" class="headerlink" title="随便写一个快速排序"></a>随便写一个快速排序</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//快速排序</span></div><div class="line"> quickSort(arr);</div><div class="line"><span class="built_in">console</span>.log(arr);</div><div class="line"><span class="comment">//快速排序</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">quickSort</span>(<span class="params">arr</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> n=arr.length;</div><div class="line">    _quickSort(arr,<span class="number">0</span>,n<span class="number">-1</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//排列arr数组中l到r下标的数字</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">_quickSort</span>(<span class="params">arr,l,r</span>)</span>&#123;</div><div class="line">   <span class="keyword">if</span>(l&gt;=r)&#123;</div><div class="line">    <span class="keyword">return</span>;</div><div class="line">   &#125;</div><div class="line">    <span class="keyword">var</span> p=position(arr,l,r);<span class="comment">//arr[l,l+1....p-1]&lt;arr[p],arr[p]&gt;arr[p+1,...r]</span></div><div class="line">    _quickSort(arr,l,p<span class="number">-1</span>);</div><div class="line">    _quickSort(arr,p+<span class="number">1</span>,r);</div><div class="line"></div><div class="line">&#125;</div><div class="line"><span class="comment">//返回j，使得arr[l,l+1....j-1]&lt;arr[j],arr[j]&gt;arr[j+1,...r]</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">position</span>(<span class="params">arr,l,r</span>)</span>&#123;</div><div class="line">     <span class="keyword">var</span> rand=<span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()*(r-l+<span class="number">1</span>)+l);<span class="comment">//随机生成一个下标用来跟arr[l]交换，这样能够提高算法的效率</span></div><div class="line">    <span class="keyword">var</span> temp=arr[rand];</div><div class="line">    arr[rand]=arr[l];</div><div class="line">    arr[l]=temp;</div><div class="line">    <span class="keyword">var</span> v=arr[l];</div><div class="line">    <span class="keyword">var</span> j=l;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=l+<span class="number">1</span>;i&lt;=r;i++)&#123;</div><div class="line">        <span class="keyword">if</span>(arr[i]&lt;v)&#123;</div><div class="line">            j++;</div><div class="line">            <span class="keyword">var</span> temp=arr[j];</div><div class="line">            arr[j]=arr[i];</div><div class="line">            arr[i]=temp;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    temp=arr[j];</div><div class="line">    arr[j]=arr[l];</div><div class="line">    arr[l]=temp;</div><div class="line">    <span class="keyword">return</span> j;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果想要进一步改进则<br><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">//返回j，使得arr<span class="string">[l,l+1....j-1]</span>&lt;arr<span class="string">[j]</span>,arr<span class="string">[j]</span>&gt;arr<span class="string">[j+1,...r]</span></div><div class="line">       function position2(arr,l,r)&#123;</div><div class="line">            var rand=Math.floor(Math.random()*(r-l+<span class="number">1</span>)+l);//随机生成一个下标用来跟arr<span class="string">[l]</span>交换，这样能够提高算法的效率</div><div class="line">           var temp=arr<span class="string">[rand]</span>;</div><div class="line">           arr<span class="string">[rand]</span>=arr<span class="string">[l]</span>;</div><div class="line">           arr<span class="string">[l]</span>=temp;</div><div class="line">           var v=arr<span class="string">[l]</span>;</div><div class="line">           var i=l+<span class="number">1</span>;</div><div class="line">           var j=r;</div><div class="line">           while(true)&#123;</div><div class="line">               while(i&lt;=r &amp;&amp; arr<span class="string">[i]</span>&lt;v)i++;</div><div class="line">               while(j&gt;=l &amp;&amp; arr<span class="string">[j]</span>&gt;v)j--;</div><div class="line">               if(i&gt;j)break;</div><div class="line">               if(i&lt;j)&#123;</div><div class="line">                   temp=arr<span class="string">[i]</span>;</div><div class="line">                   arr<span class="string">[i]</span>=arr<span class="string">[j]</span>;</div><div class="line">                   arr<span class="string">[j]</span>=temp;</div><div class="line">               &#125;</div><div class="line">               i++;</div><div class="line">               j--;</div><div class="line">           &#125;</div><div class="line">           temp=arr<span class="string">[j]</span>;</div><div class="line">           arr<span class="string">[j]</span>=arr<span class="string">[l]</span>;</div><div class="line">           arr<span class="string">[l]</span>=temp;</div><div class="line">           return j;</div><div class="line">       &#125;</div></pre></td></tr></table></figure></p>
+<h2 id="http"><a href="#http" class="headerlink" title="http"></a>http</h2><h3 id="http请求头"><a href="#http请求头" class="headerlink" title="http请求头"></a>http请求头</h3><p>多得记不住：</p>
+<ul>
+<li>1.Accept：指定客户端接收的内容的类型</li>
+<li>2.Accept-language:浏览器可接收的语言</li>
+<li>3.connection:表示是否要进行持久连接(http1.1默认是持久连接)</li>
+<li>4.host：浏览器访问的主机名</li>
+<li>5.referer：先前访问的网页的地址，当前网页紧随其后而来</li>
+<li>6.user-Agent：浏览器引擎</li>
+<li>7.cache-control:指定请求和响应的缓存机制</li>
+</ul>
+<h3 id="http的请求方式有："><a href="#http的请求方式有：" class="headerlink" title="http的请求方式有："></a>http的请求方式有：</h3><p>get,post, delete, head ,options, put, trace</p>
+<h3 id="get和post的区别"><a href="#get和post的区别" class="headerlink" title="get和post的区别"></a>get和post的区别</h3><ul>
+<li>1.get的请求参数作为url的一部分</li>
+<li>2.post的请求参数在实体内容中传递</li>
+<li>3.get的传输数据的大小有限制</li>
+<li>4.post的传输数据大小没有限制</li>
+</ul>
+<h3 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h3><ul>
+<li>1.100-199:成功接收请求，客户端进一步提交才能继续</li>
+<li>2.200-299：成功接收请求，并已经完成处理</li>
+<li>3.300-399:为了完成请求客户端需要进一步请求</li>
+<li>4.400-499：客户端请求有错</li>
+<li>5.500-599：服务端出现错误</li>
+</ul>
+<p>常见状态码：</p>
+<ul>
+<li>301：永久重定向</li>
+<li>307:零时重定向</li>
+<li><p>304：请使用缓存</p>
+</li>
+<li><p>404：访问的资源不存在</p>
+</li>
+<li>500：服务器出错</li>
+<li>503：服务器零时出错</li>
+</ul>
+<h2 id="输出arr中n-arr-i-arr-j-的所有i-j下标"><a href="#输出arr中n-arr-i-arr-j-的所有i-j下标" class="headerlink" title="输出arr中n=arr[i]+arr[j]的所有i,j下标"></a>输出arr中n=arr[i]+arr[j]的所有i,j下标</h2><figure class="highlight scilab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span><span class="params">(ar,n)</span>&#123;</span></div><div class="line">	<span class="keyword">for</span>(vaar i=<span class="number">0</span>;i&lt;arr.<span class="built_in">length</span>;i++)&#123;</div><div class="line">		<span class="keyword">for</span>(var j=i+<span class="number">1</span>;j&lt;arr.<span class="built_in">length</span>;j++)&#123;</div><div class="line">			var <span class="built_in">sum</span>=arr[i]+arr[j];</div><div class="line">			<span class="keyword">if</span>(<span class="built_in">sum</span>==n)&#123;</div><div class="line">				console.<span class="built_in">log</span>(i,j);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="幸运袋子的个数"><a href="#幸运袋子的个数" class="headerlink" title="幸运袋子的个数"></a>幸运袋子的个数</h2><p><a href="http://blog.csdn.net/huzhigenlaohu/article/details/52263821" target="_blank" rel="external">原题和思路在这个链接</a><br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span><span class="params">(arr)</span></span>&#123;</div><div class="line">	<span class="comment">//arr排序</span></div><div class="line">	arr.sort(<span class="function"><span class="keyword">function</span><span class="params">(a,b)</span></span>&#123;</div><div class="line">		<span class="keyword">return</span> a-b;</div><div class="line">	&#125;);</div><div class="line">	<span class="keyword">var</span> currentSum=<span class="number">0</span>;</div><div class="line">	<span class="keyword">var</span> currentJi=<span class="number">1</span>;</div><div class="line">	<span class="keyword">var</span> nextSum=<span class="number">0</span>;</div><div class="line">	<span class="keyword">var</span> nextJi=<span class="number">1</span>;</div><div class="line">	vaar count=<span class="number">0</span>;;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</div><div class="line">		currentSum+=arr[i];</div><div class="line">		currentJi*=arr[i];</div><div class="line">		<span class="keyword">if</span>(currentSum&gt;currentJi)&#123;</div><div class="line">           count++;</div><div class="line">           <span class="keyword">if</span>((i+<span class="number">1</span>)&lt;(length<span class="number">-1</span>))&#123;</div><div class="line">           		nextSum=currentSum+arr[i+<span class="number">1</span>];</div><div class="line">           		nextJi=currentJi*arr[i+<span class="number">1</span>];</div><div class="line">           		<span class="comment">//只要出现不是幸运袋就可以break了，不用再循环了</span></div><div class="line">           		<span class="keyword">if</span>(nextSum&lt;=nextJi)&#123;</div><div class="line">           			<span class="keyword">break</span>;</div><div class="line">           		&#125;</div><div class="line">           &#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/28/gongyueshu/" class="archive-article-date">
-  	<time datetime="2017-04-28T12:12:33.568Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/28/gongyueshu/">最大公约数和互质数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面经</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://liumeilian.com.cn/2017/08/30/lianjia/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/26/seajs/" class="archive-article-date">
-  	<time datetime="2017-04-26T09:17:00.556Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/26/seajs/">seajs结合grunt是代码模块化</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/26/grunt/" class="archive-article-date">
-  	<time datetime="2017-04-26T03:40:54.315Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/26/grunt/">grunt打包压缩的使用</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/24/delegate/" class="archive-article-date">
-  	<time datetime="2017-04-24T15:23:54.838Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/24/delegate/">事件委托的实现</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/23/jicheng/" class="archive-article-date">
-  	<time datetime="2017-04-23T14:56:52.931Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/23/jicheng/">继承的几种方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/23/drag/" class="archive-article-date">
-  	<time datetime="2017-04-23T07:21:14.704Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/23/drag/">拖拽,磁性吸附，碰撞,模拟滚动条控制内容问题的封装</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/22/jsdom/" class="archive-article-date">
-  	<time datetime="2017-04-22T14:48:52.312Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/22/jsdom/">js操作节点</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/22/time/" class="archive-article-date">
-  	<time datetime="2017-04-22T08:06:51.131Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/22/time/">关于时间和时间戳</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/22/domoveAndSetOpacity/" class="archive-article-date">
-  	<time datetime="2017-04-22T07:40:10.624Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/22/domoveAndSetOpacity/">domove和setOpacity和shake的封装</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/22/getstyle/" class="archive-article-date">
-  	<time datetime="2017-04-22T07:19:05.724Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/22/getstyle/">js获取样式的兼容方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/22/jsjiexiqi/" class="archive-article-date">
-  	<time datetime="2017-04-22T06:59:50.868Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/22/jsjiexiqi/">js解析器解析变量和函数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/21/headresorce/" class="archive-article-date">
-  	<time datetime="2017-04-21T08:09:24.858Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/21/headresorce/">头部信息header</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/20/prototype/" class="archive-article-date">
-  	<time datetime="2017-04-20T14:44:31.387Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/20/prototype/">面向对象，原型，继承</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/20/Array/" class="archive-article-date">
-  	<time datetime="2017-04-20T08:52:44.530Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/20/Array/">JS中some(),every(),forEach(),map(),filter()区别</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/20/react/" class="archive-article-date">
-  	<time datetime="2017-04-20T05:13:06.971Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/20/react/">react</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/16/ajax/" class="archive-article-date">
-  	<time datetime="2017-04-16T15:13:12.031Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/16/ajax/">ajax的过程</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/14/img/" class="archive-article-date">
-  	<time datetime="2017-04-14T12:40:24.288Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/14/img/">如何解决div里面img图片下方有空白的问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/13/XXS/" class="archive-article-date">
-  	<time datetime="2017-04-13T14:10:04.579Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/13/XXS/">xxs和cors</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/13/cross/" class="archive-article-date">
-  	<time datetime="2017-04-13T02:26:13.700Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/13/cross/">跨文档通信问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/12/layout/" class="archive-article-date">
-  	<time datetime="2017-04-12T08:35:42.295Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/12/layout/">layout和css的hack详解</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/12/flex/" class="archive-article-date">
-  	<time datetime="2017-04-12T07:39:59.710Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/12/flex/">flex布局</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">css3</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/11/funcaera/" class="archive-article-date">
-  	<time datetime="2017-04-11T13:50:58.577Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/11/funcaera/">关于变量的作用域</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/11/originjquery/" class="archive-article-date">
-  	<time datetime="2017-04-11T08:13:39.563Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/11/originjquery/">原生jquery是如何写出来的</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">jq</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/11/hotelnum/" class="archive-article-date">
-  	<time datetime="2017-04-11T02:19:59.970Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/11/hotelnum/">笔试中hotelnum</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/08/function/" class="archive-article-date">
-  	<time datetime="2017-04-08T12:28:16.653Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/08/function/">函数的定义 函数声明 函数表达式 立即执行函数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/08/maxstr/" class="archive-article-date">
-  	<time datetime="2017-04-08T11:53:17.281Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-08</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/08/maxstr/">找出字符串中出现最多的字符和次数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+    <a href="/2017/09/02/wangyibishiti/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          网易笔试题
+        
+      </div>
+    </a>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/08/reg/" class="archive-article-date">
-  	<time datetime="2017-04-08T08:15:21.110Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-08</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/08/reg/">正则表达式</a>
-    </h1>
+    <a href="/2017/08/15/baidusearch/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">模拟百度提示框</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
+</nav>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/08/replacestring/" class="archive-article-date">
-  	<time datetime="2017-04-08T02:35:32.848Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/08/replacestring/">用对象下的属性替换字符串中的字符</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">字符串的操作</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/07/a/" class="archive-article-date">
-  	<time datetime="2017-04-07T13:50:25.437Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/07/a/">右边固定宽左边自适应的布局和左边固定宽度右边自适应的布局</a>
-    </h1>
-  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="lianjia" data-title="链家一面" data-url="http://liumeilian.com.cn/2017/08/30/lianjia/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"liumeilian"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/04/text/" class="archive-article-date">
-  	<time datetime="2017-04-04T13:40:13.757Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-04</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/04/text/">刘美莲博客测试</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">测试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
 
 
           </div>
@@ -1349,8 +457,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,

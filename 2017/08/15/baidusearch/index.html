@@ -12,11 +12,11 @@
 <meta property="og:title" content="模拟百度提示框">
 <meta property="og:url" content="http://liumeilian.com.cn/2017/08/15/baidusearch/index.html">
 <meta property="og:site_name" content="美小妞的博客">
-<meta property="og:image" content="https://unsplash.it/1006/300/?random">
-<meta property="og:updated_time" content="2017-08-15T10:35:23.217Z">
+<meta property="og:image" content="https://unsplash.it/1000/300/?random">
+<meta property="og:updated_time" content="2017-08-15T10:37:01.481Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="模拟百度提示框">
-<meta name="twitter:image" content="https://unsplash.it/1006/300/?random">
+<meta name="twitter:image" content="https://unsplash.it/1000/300/?random">
   
     <link rel="alternative" href="/atom.xml" title="美小妞的博客" type="application/atom+xml">
   
@@ -170,7 +170,7 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://unsplash.it/1006/300/?random" alt=""><br><a id="more"></a></p>
+        <p><img src="https://unsplash.it/1000/300/?random" alt=""><br><a id="more"></a></p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">style</span> <span class="attr">media</span>=<span class="string">"screen"</span>&gt;</span><span class="undefined"></span></div><div class="line">        *&#123;</div><div class="line">            margin:0;</div><div class="line">            padding: 0;</div><div class="line">        &#125;</div><div class="line">        #search-content&#123;</div><div class="line">            width: 200px;</div><div class="line">            color: #000;</div><div class="line">            float: left;</div><div class="line">            outline: none;</div><div class="line">            border: 1px solid #ccc;</div><div class="line">            font-family: sans-serif;</div><div class="line">            //下面6行可以兼容各个浏览器</div><div class="line">            height: 25px;//解决chrome的height</div><div class="line">            line-height: 15px;//解决firefox</div><div class="line">            font-size: 12px;</div><div class="line">            padding: 0 0.5em;//chrome有这样的默认样式</div><div class="line">            overflow: visible;//这样ie才有padding</div><div class="line">            </div><div class="line">        &#125;</div><div class="line">        #search-button&#123;</div><div class="line">            height: 27px;</div><div class="line">            padding: 0 10px;</div><div class="line">            background-color: blue;</div><div class="line">            font-size: 12px;</div><div class="line">            line-height: 27px;</div><div class="line">            border: none;</div><div class="line">            color: white;</div><div class="line">            float: left;</div><div class="line">        &#125;</div><div class="line">        .search-wrap:after&#123;</div><div class="line">            content:'';</div><div class="line">            display: table;</div><div class="line">            clear: both;</div><div class="line">        &#125;</div><div class="line">        .search-list&#123;</div><div class="line">            border: 1px solid #ccc;</div><div class="line">            border-top: none;</div><div class="line">            width: 200px;</div><div class="line">            display: none;</div><div class="line">        &#125;</div><div class="line">        li&#123;</div><div class="line">            list-style: none;</div><div class="line"></div><div class="line">        &#125;</div><div class="line">        <span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> &gt;</span><span class="javascript"></span></div><div class="line">                <span class="built_in">window</span>.onload=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                    <span class="keyword">var</span> nSearchContent=<span class="built_in">document</span>.getElementById(<span class="string">'search-content'</span>);</div><div class="line">                    <span class="keyword">var</span> nSearchButton=<span class="built_in">document</span>.getElementById(<span class="string">'search-button'</span>);</div><div class="line">                    <span class="keyword">var</span> nUl=<span class="built_in">document</span>.getElementById(<span class="string">'search-ul'</span>);</div><div class="line">                    <span class="keyword">var</span> nSearchList=<span class="built_in">document</span>.getElementById(<span class="string">'search-list'</span>);</div><div class="line">                    <span class="keyword">var</span> arr=[<span class="string">'a'</span>,<span class="string">'aa'</span>,<span class="string">'aaa'</span>,<span class="string">'o'</span>,<span class="string">'aaaa'</span>,<span class="string">'aaaaa'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>,<span class="string">'ee'</span>];</div><div class="line">                    nSearchContent.onkeyup=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                        <span class="keyword">var</span> value=nSearchContent.value;</div><div class="line">                        <span class="keyword">var</span> newArr=[];</div><div class="line">                        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</div><div class="line">                            <span class="keyword">if</span>(arr[i].indexOf(value)!=<span class="number">-1</span>)&#123;</div><div class="line">                                newArr.push(arr[i]);</div><div class="line">                            &#125;</div><div class="line">                        &#125;</div><div class="line">                        <span class="comment">//没有比配数据据返回</span></div><div class="line">                        <span class="keyword">if</span>(newArr.length&lt;<span class="number">1</span>)&#123;</div><div class="line">                            <span class="keyword">return</span>;</div><div class="line">                        &#125;</div><div class="line">                        <span class="comment">//这里是创建片段，减少dom操作</span></div><div class="line">                        <span class="keyword">var</span> fragment=<span class="built_in">document</span>.createDocumentFragment();</div><div class="line">                        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;newArr.length;i++)&#123;</div><div class="line">                            <span class="keyword">var</span> nLi=<span class="built_in">document</span>.createElement(<span class="string">'li'</span>);</div><div class="line">                            nLi.innerHTML=newArr[i];</div><div class="line">                            fragment.appendChild(nLi);</div><div class="line">                        &#125;</div><div class="line">                        nUl.appendChild(fragment);</div><div class="line">                        nSearchList.style.display=<span class="string">'block'</span>;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">        <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"search-wrap"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"search-content"</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"content"</span> <span class="attr">value</span>=<span class="string">""</span> <span class="attr">placeholder</span>=<span class="string">"请输入关键字"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"search-button"</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">name</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"百度一下"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"search-list"</span> <span class="attr">id</span>=<span class="string">"search-list"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"search-ul"</span>&gt;</span></div><div class="line"></div><div class="line">            <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
       
 
@@ -253,6 +253,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/2017/08/30/lianjia/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          链家一面
+        
+      </div>
+    </a>
   
   
     <a href="/2017/08/11/redux/" id="article-nav-older" class="article-nav-link-wrap">
@@ -382,10 +391,6 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">布局</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">css3</a>
               </li>
              
@@ -402,7 +407,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">jq</a>
+                <a href="javascript:void(0)" class="js-tag color3">布局</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">面经</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -414,11 +423,19 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔试</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">字符串的操作</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">jq</a>
               </li>
             
             <div class="clearfix"></div>
